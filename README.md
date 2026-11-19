@@ -29,6 +29,8 @@ To turn on GitHub Pages: repository Settings > Pages > Deploy from a branch > pi
 - Every file has a **Main drawings** section: upload your own drawings of the character, rename them, and pick which one is the main one. The main drawing becomes the file's picture (you can switch back to the game sprite). On the Files page, "Main drawings" in the picture menu shows them on the cards.
 - **Sprites in the game** shows every extra picture the game has for that character: forms (Lycion's Rage Form, Hole's Devil Form, Velara's Sinner form...), mini forms (Clown.x25's armored half and doll), attack and knocked-out poses, drawings already in the game, skins and recolours. Click one to see it big.
 - These live in `sprites/alt/`.
+- **Sprite versions**: when a character's game sprite was replaced, every version is kept as V1, V2... (`sprites/ver/`, taken from the game's history, v258 to v289). Pick a version under the In game tab.
+- On the Files cards a drawing is centred on the character. The site finds the character by itself; use "Center on card" under a drawing to fix it by clicking the middle of the character.
 
 ## drawings/
 

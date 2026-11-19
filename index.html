@@ -211,10 +211,16 @@ details.scenes summary { cursor: pointer; font-family: var(--f-mono); font-size:
 .gal .g .cap { padding: 6px 8px; font-size: 12.5px; line-height: 1.3; border-top: 1px solid var(--line); min-height: 2.6em; }
 .gal .g .star { position: absolute; top: 5px; left: 5px; font-family: var(--f-mono); font-size: 10px; letter-spacing: .08em; background: var(--stamp); color: #fff; padding: 1px 5px; border-radius: 2px; }
 .art-tools { display: flex; gap: 6px; flex-wrap: wrap; padding: 6px 8px 8px; }
-.card .pic img.cover { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; }
+.card .pic { overflow: hidden; }
+.card .pic img.cover { position: absolute; left: 50%; top: 50%; width: auto; max-width: none; max-height: none; }
 .hero { margin: 0 0 22px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
 .hero .pswitch { justify-content: flex-start; }
 .hero .pswitch button { flex: 0 0 auto; padding: 9px 16px; }
+.vchips { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px 12px; border-bottom: 1px solid var(--line); }
+.vchips button { border: 1px solid var(--line); background: var(--panel); border-radius: var(--r); padding: 4px 10px; cursor: pointer; font-family: var(--f-mono); font-size: 12.5px; display: inline-flex; gap: 6px; align-items: baseline; }
+.vchips button small { color: var(--muted); font-size: 10.5px; }
+.vchips button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.vchips button[aria-pressed="true"] small { color: var(--paper); opacity: .75; }
 .hero-img { display: grid; place-items: center; width: 100%; height: clamp(260px, 50vw, 600px); padding: 10px; border: 0; cursor: zoom-in; background-color: var(--tint); background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 22px 22px; }
 .hero-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
 .hero-img .initials { font-size: 72px; }
@@ -743,7 +749,7 @@ function renderFiles() {
   $('#count').textContent = list.length + ' of ' + allChars().length + ' files';
   $('#cards').innerHTML = list.length ? list.map(c => `
     <a class="card" href="#file-${esc(c.key)}">
-      <div class="pic"><span class="swatch" style="background:${esc(c.color)}"></span>${c.mine ? '<span class="mine-tag">NEW</span>' : ''}${F.pic === 'drawing' && mainArt(c.key) ? `<img class="cover" src="${esc(artSrc(mainArt(c.key)))}" alt="${esc(c.name)}" loading="lazy" style="${coverStyle(mainArt(c.key))}">` : picHtml(c)}</div>
+      <div class="pic"${F.pic === 'drawing' && mainArt(c.key) && mainArt(c.key).crop && mainArt(c.key).crop.bg ? ` style="background:${esc(mainArt(c.key).crop.bg)}"` : ''}><span class="swatch" style="background:${esc(c.color)}"></span>${c.mine ? '<span class="mine-tag">NEW</span>' : ''}${F.pic === 'drawing' && mainArt(c.key) ? coverImg(mainArt(c.key), c.name) : picHtml(c)}</div>
       <div class="meta"><span class="id">FAL-${esc(c.id || '????')}</span><span class="nm">${esc(c.name)}</span><span class="tg">${esc([c.role, c.type].filter(Boolean).join(' · ') || 'Not decided')}</span></div>
     </a>`).join('') : '<div class="empty">No files match. Try fewer words.</div>';
 }
@@ -760,13 +766,47 @@ function effAbility(c) {
   if (sh && (sh.sheet.abilities || []).length) return sh.sheet.abilities.map(x => x.text ? `${x.name}: ${x.text}` : x.name).join('; ');
   return (c.book || {}).ability || '';
 }
-function coverStyle(a) {
-  const fx = a && a.sheet && typeof a.sheet.focus_x === 'number' ? Math.min(1, Math.max(0, a.sheet.focus_x)) : 0.5;
-  const r = a && a.ar ? a.ar : 0;
-  if (r && r < 1) return 'object-position:50% 25%';
-  const v = r ? 1 / r : 0.55;
-  const pct = Math.round(Math.min(1, Math.max(0, (fx - v / 2) / (1 - v))) * 100);
-  return `object-position:${pct}% 50%`;
+/* Where the character sits in a drawing (0..1 from the left and top), so cards can put it in the middle. */
+function cropOf(a) {
+  if (a && a.crop && typeof a.crop.x === 'number') return a.crop;
+  if (a && a.sheet && typeof a.sheet.focus_x === 'number') return { x: a.sheet.focus_x, y: 0.5 };
+  return { x: 0.5, y: 0.5 };
+}
+function coverImg(a, alt) {
+  const k = cropOf(a), z = (a.crop && a.crop.zoom) || 0.92;
+  const x = Math.min(1, Math.max(0, k.x)), y = Math.min(1, Math.max(0, k.y));
+  return `<img class="cover" src="${esc(artSrc(a))}" alt="${esc(alt)}" loading="lazy" style="height:${(z * 100).toFixed(0)}%;transform:translate(-${(x * 100).toFixed(1)}%,-${(y * 100).toFixed(1)}%)">`;
+}
+async function autoCrop(blob) {
+  const bmp = await createImageBitmap(blob);
+  const W = 240, H = Math.max(8, Math.round(bmp.height * W / bmp.width));
+  const cv = document.createElement('canvas'); cv.width = W; cv.height = H;
+  const cx = cv.getContext('2d', { willReadFrequently: true }); cx.fillStyle = '#fff'; cx.fillRect(0, 0, W, H); cx.drawImage(bmp, 0, 0, W, H);
+  const d = cx.getImageData(0, 0, W, H).data, at = (x, y) => (y * W + x) * 4;
+  const border = []; for (let x = 0; x < W; x++) { border.push(at(x, 0), at(x, H - 1)); } for (let y = 0; y < H; y++) { border.push(at(0, y), at(W - 1, y)); }
+  const bg = [0, 1, 2].map(i => border.map(o => d[o + i]).sort((a, b) => a - b)[border.length >> 1]);
+  /* ink mask, then a big box blur: thick, filled drawing beats thin handwriting */
+  const I = new Float64Array((W + 1) * (H + 1));
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) { const o = at(x, y); const ink = Math.abs(d[o] - bg[0]) + Math.abs(d[o + 1] - bg[1]) + Math.abs(d[o + 2] - bg[2]) > 60 ? 1 : 0; I[(y + 1) * (W + 1) + x + 1] = ink + I[y * (W + 1) + x + 1] + I[(y + 1) * (W + 1) + x] - I[y * (W + 1) + x]; }
+  const r = Math.max(4, Math.floor(H / 14));
+  const den = (x, y) => { const x0 = Math.max(0, x - r), x1 = Math.min(W, x + r + 1), y0 = Math.max(0, y - r), y1 = Math.min(H, y + r + 1); return (I[y1 * (W + 1) + x1] - I[y0 * (W + 1) + x1] - I[y1 * (W + 1) + x0] + I[y0 * (W + 1) + x0]) / ((x1 - x0) * (y1 - y0)); };
+  const D = new Float64Array(W * H); for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) { const v = den(x, y); D[y * W + x] = v * v; }
+  const cols = new Float64Array(W); for (let x = 0; x < W; x++) { let s = 0; for (let y = 0; y < H; y++) s += D[y * W + x]; cols[x] = s; }
+  const win = Math.min(W, Math.round(H * 0.75)); let best = -1, bx = 0, run = 0;
+  for (let x = 0; x < W; x++) { run += cols[x]; if (x >= win) run -= cols[x - win]; if (x >= win - 1 && run > best) { best = run; bx = x - win + 1; } }
+  let tx = 0, sx = 0; for (let x = bx; x < bx + win; x++) { tx += x * cols[x]; sx += cols[x]; }
+  let ty = 0, sy = 0; for (let y = 0; y < H; y++) { let rw = 0; for (let x = bx; x < bx + win; x++) rw += D[y * W + x]; ty += y * rw; sy += rw; }
+  const hex = n => n.toString(16).padStart(2, '0');
+  return { x: sx ? +(tx / sx / W).toFixed(3) : 0.5, y: sy ? +(ty / sy / H).toFixed(3) : 0.5, bg: '#' + bg.map(hex).join('') };
+}
+function pickCenter(a, done) {
+  const el = document.createElement('div'); el.className = 'lightbox';
+  el.innerHTML = `<div class="lb-cap">Click the middle of the character. That spot will be the centre of its card.</div><img alt="" style="cursor:crosshair"><div class="lb-bar"><button type="button">Cancel</button></div>`;
+  const img = $('img', el); img.src = artSrc(a);
+  img.onclick = e => { const r = img.getBoundingClientRect(); const k = { x: +((e.clientX - r.left) / r.width).toFixed(3), y: +((e.clientY - r.top) / r.height).toFixed(3) }; el.remove(); done(k); };
+  $('button', el).onclick = () => el.remove();
+  el.onclick = e => { if (e.target === el) el.remove(); };
+  document.body.appendChild(el);
 }
 function renderFile(key) {
   const c = allChars().find(x => x.key === key);
@@ -797,7 +837,7 @@ function renderFile(key) {
   if (c.mine && c.ident) sec('lore', 'Description and lore', `<div class="entry">${esc(c.ident)}</div>`);
   if (c.passive || (c.skills || []).length) sec('game', 'In the game', `${c.ident && !c.mine ? `<p>${esc(c.ident)}</p>` : ''}${c.passive ? `<div class="skill"><b>Passive</b>${esc(c.passive)}</div>` : ''}${c.skills.map(s => `<div class="skill"><b>${esc(s.name)}</b>${esc(s.desc)}</div>`).join('')}`);
   sec('drawings', 'Main drawings', `<div class="row" style="justify-content:flex-end;margin:-6px 0 10px"><button class="btn small" type="button" id="artAdd">+ Add drawings</button><input type="file" id="artFile" accept="image/*" multiple hidden></div>
-    ${arts.length ? `<div class="gal">${arts.map((a, i) => `<div class="g" style="cursor:default"><button type="button" class="im" data-lb="art:${i}" style="border:0;padding:0;cursor:zoom-in" aria-label="Open ${esc(a.caption || 'drawing')}">${a.main ? '<span class="star">MAIN</span>' : ''}<img src="${esc(artSrc(a))}" alt="${esc(a.caption || c.name)}" loading="lazy"></button><div class="cap">${esc(a.caption || 'Drawing')}</div><div class="art-tools">${a.main ? '' : `<button class="btn small" type="button" data-artmain="${esc(a.id)}">Make main</button>`}<button class="btn small" type="button" data-artcap="${esc(a.id)}">Rename</button><button class="btn small danger" type="button" data-artdel="${esc(a.id)}">Delete</button></div></div>`).join('')}</div>`
+    ${arts.length ? `<div class="gal">${arts.map((a, i) => `<div class="g" style="cursor:default"><button type="button" class="im" data-lb="art:${i}" style="border:0;padding:0;cursor:zoom-in" aria-label="Open ${esc(a.caption || 'drawing')}">${a.main ? '<span class="star">MAIN</span>' : ''}<img src="${esc(artSrc(a))}" alt="${esc(a.caption || c.name)}" loading="lazy"></button><div class="cap">${esc(a.caption || 'Drawing')}</div><div class="art-tools">${a.main ? '' : `<button class="btn small" type="button" data-artmain="${esc(a.id)}">Make main</button>`}<button class="btn small" type="button" data-artcap="${esc(a.id)}">Rename</button><button class="btn small" type="button" data-artcrop="${esc(a.id)}">Center on card</button><button class="btn small danger" type="button" data-artdel="${esc(a.id)}">Delete</button></div></div>`).join('')}</div>`
       : `<p class="note" style="margin:0">No main drawing yet. Add your own drawings of ${esc(c.name)}; the one marked main becomes the big picture at the top of this page, and the notes written on it become the ability text.</p>`}`);
   sec('sprites', 'Sprites in the game', galleryHtml(c));
   if ((c.archive || []).length) sec('archive', 'Archive entries', c.archive.map(a => `<p class="entry">${esc(a)}</p>`).join(''));
@@ -810,6 +850,7 @@ function renderFile(key) {
       <div class="row">${c.mine ? `<a class="btn" href="#edit-${esc(c.key)}">Edit</a><button class="btn danger" type="button" id="delChar">Delete</button>` : ''}<button class="btn" type="button" id="toReview">Review with Claude</button><button class="btn" type="button" id="toAbil">Ability ideas</button></div></div>
     <figure class="hero">
       <div class="pswitch" role="group" aria-label="Picture">${main ? '<button type="button" data-pv="drawing" aria-pressed="true">Main drawing</button>' : ''}<button type="button" data-pv="sprite" aria-pressed="${main ? 'false' : 'true'}">In game</button></div>
+      <div class="vchips" id="vchips" ${main ? 'hidden' : ''}>${(c.versions || []).length > 1 ? c.versions.map((v, i) => `<button type="button" data-ver="${i}" aria-pressed="${i === c.versions.length - 1}">${esc(v.label.replace(' (now)', ''))}<small>${i === c.versions.length - 1 ? 'now' : esc(v.note.replace('game ', ''))}</small></button>`).join('') : ''}</div>
       <button type="button" class="hero-img" id="heroPic" aria-label="Open picture">${main ? heroDrawing : picHtml(c)}</button>
       <figcaption class="hero-cap" id="heroCap">${main ? esc(main.caption || 'Main drawing') : 'In-game sprite' + (arts.length ? '' : ' · no main drawing yet, add one in Main drawings below')}</figcaption>
     </figure>
@@ -820,24 +861,35 @@ function renderFile(key) {
       </article>
       <aside class="infobox">
         <div class="ib-title" style="border-top-color:${esc(c.color)}">${esc(c.name)}</div>
-        ${main ? `<button type="button" class="ib-pic" data-pv-go="sprite" aria-label="Show the in-game version">${picHtml(c)}<span>In-game version</span></button>` : (c.sprite ? '' : '')}
+        ${main ? `<button type="button" class="ib-pic" data-pv-go="sprite" aria-label="Show the in-game version">${picHtml(c)}<span>In-game version${(c.versions || []).length > 1 ? ' · ' + c.versions.length + ' versions' : ''}</span></button>` : ''}
         <dl class="kv">${kv.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
         ${c.stats ? `<div class="stats">${statRow('HP', c.stats.hp, 220)}${statRow('ATK', c.stats.atk, 30)}${statRow('DEF', c.stats.def, 25)}${statRow('SPD', c.stats.spd, 20)}</div>` : ''}
       </aside>
     </div>`;
   if (c.mine && c.raw.review) $('#fileReview').innerHTML = reviewHtml(c.raw.review, [], { compact: true });
-  let heroMode = main ? 'drawing' : 'sprite';
+  let heroMode = main ? 'drawing' : 'sprite', heroVer = -1;
+  const vers = c.versions || [];
   const setHero = m => {
     heroMode = m;
     $$('#v-file [data-pv]').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.pv === m)));
     $('#heroPic').innerHTML = m === 'drawing' ? heroDrawing : picHtml(c);
-    $('#heroCap').textContent = m === 'drawing' ? (main.caption || 'Main drawing') : 'In-game sprite';
+    $('#heroCap').textContent = m === 'drawing' ? (main.caption || 'Main drawing') : 'In-game sprite' + (vers.length > 1 ? ' · ' + vers[vers.length - 1].label : '');
+    $('#vchips').hidden = m === 'drawing' || vers.length < 2;
+    $$('#vchips [data-ver]').forEach(x => x.setAttribute('aria-pressed', String(+x.dataset.ver === vers.length - 1)));
   };
+  $$('#vchips [data-ver]').forEach(x => x.onclick = () => {
+    const v = vers[+x.dataset.ver];
+    $$('#vchips [data-ver]').forEach(y => y.setAttribute('aria-pressed', String(y === x)));
+    $('#heroPic').innerHTML = `<img src="${esc(v.src)}" alt="${esc(c.name)} ${esc(v.label)}">`;
+    $('#heroCap').textContent = `In-game sprite · ${v.label} · ${v.note}`;
+    heroVer = +x.dataset.ver;
+  });
   $$('#v-file [data-pv]').forEach(x => x.onclick = () => setHero(x.dataset.pv));
   $$('#v-file [data-pv-go]').forEach(x => x.onclick = () => { setHero(x.dataset.pvGo); $('.hero').scrollIntoView({ behavior: 'smooth', block: 'start' }); });
   $$('#v-file [data-toc]').forEach(x => x.onclick = () => $('#sec-' + x.dataset.toc).scrollIntoView({ behavior: 'smooth', block: 'start' }));
   const lbItems = { art: arts.map(a => ({ src: artSrc(a), label: a.caption || 'Main drawing' })), gal: galleryItems(c) };
-  $('#heroPic').onclick = () => heroMode === 'drawing' ? openLightbox(lbItems.art, 0) : (c.sprite && openLightbox([{ src: c.sprite, label: c.name + ' · in game' }].concat(lbItems.gal), 0));
+  $('#heroPic').onclick = () => heroMode === 'drawing' ? openLightbox(lbItems.art, 0) : (vers.length > 1 ? openLightbox(lbItems.gal, heroVer >= 0 ? heroVer : vers.length - 1) : c.sprite && openLightbox([{ src: c.sprite, label: c.name + ' · in game' }].concat(lbItems.gal), 0));
+  if (!main && vers.length > 1) setHero('sprite');
   $$('#v-file [data-lb]').forEach(x => x.onclick = () => { const [set, i] = x.dataset.lb.split(':'); openLightbox(lbItems[set], +i); });
   $('#artAdd').onclick = () => $('#artFile').click();
   $('#artFile').onchange = async e => { const files = [...e.target.files]; e.target.value = ''; await addArt(c.key, files); };
@@ -849,6 +901,7 @@ function renderFile(key) {
     const done = async () => { await save('art', Object.assign({}, a, { caption: inp.value.trim() })); renderFile(c.key); };
     inp.onkeydown = ev => { if (ev.key === 'Enter') done(); if (ev.key === 'Escape') renderFile(c.key); }; inp.onblur = done;
   });
+  $$('#v-file [data-artcrop]').forEach(x => x.onclick = () => { const a = arts.find(y => y.id === x.dataset.artcrop); pickCenter(a, async k => { await save('art', Object.assign({}, a, { crop: Object.assign({}, a.crop || {}, k) }), 'Card centre saved'); renderFile(c.key); }); });
   $$('#v-file [data-artdel]').forEach(x => x.onclick = () => confirmBtn(x, async () => {
     const a = arts.find(y => y.id === x.dataset.artdel);
     await Store.del('art', a.id);
@@ -919,7 +972,7 @@ async function addArt(key, files) {
   for (const f of files) {
     const doc = { id: uid('a'), char: key, caption: f.name.replace(/\.[^.]+$/, '').replace(/[_-]+/g, ' ').slice(0, 80), main: had === 0 && n === 0, created: Date.now() + n };
     try {
-      try { const bm = await createImageBitmap(f); doc.ar = +(bm.width / bm.height).toFixed(3); } catch (e) {}
+      try { const bm = await createImageBitmap(f); doc.ar = +(bm.width / bm.height).toFixed(3); doc.crop = await autoCrop(f); } catch (e) {}
       if (Store.mode === 'cloud' && Store.assets) {
         const up = await Store.assets.upload(await shrinkToBlob(f, 2400));
         doc.assetId = up.id;
@@ -940,20 +993,22 @@ async function shrinkToBlob(blob, max) {
   return await new Promise(res => c.toBlob(b => res(b || blob), 'image/webp', 0.9));
 }
 const GAL_GROUPS = [['form', 'Forms'], ['mini', 'Mini forms'], ['pose', 'Poses'], ['drawing', 'Drawings already in the game'], ['skin', 'Skins'], ['recolour', 'Recolours']];
+function versionItems(c) { const v = c.versions || []; return v.length > 1 ? v.map(x => ({ src: x.src, filter: '', label: `${x.label} · ${x.note}` })) : []; }
 function galleryItems(c) {
   const g = c.gallery || [];
-  return GAL_GROUPS.flatMap(([k]) => g.filter(x => x.kind === k)).map(x => ({ src: x.src || c.sprite, filter: x.filter || '', label: x.label }));
+  return versionItems(c).concat(GAL_GROUPS.flatMap(([k]) => g.filter(x => x.kind === k)).map(x => ({ src: x.src || c.sprite, filter: x.filter || '', label: x.label })));
 }
 function galleryHtml(c) {
-  const g = c.gallery || [];
-  if (!g.length) return '';
+  const g = c.gallery || [], vi = versionItems(c);
+  if (!g.length && !vi.length) return '';
   let i = 0;
-  const secs = GAL_GROUPS.map(([k, title]) => {
+  const vsec = vi.length ? `<div class="gal-sec"><h3>Sprite versions <span class="count">${vi.length}</span></h3><div class="gal">${vi.map(x => `<button type="button" class="g" data-lb="gal:${i++}"><span class="im"><img src="${esc(x.src)}" alt="${esc(x.label)}" loading="lazy"></span><span class="cap">${esc(x.label)}</span></button>`).join('')}</div></div>` : '';
+  const secs = vsec + GAL_GROUPS.map(([k, title]) => {
     const items = g.filter(x => x.kind === k);
     if (!items.length) return '';
     return `<div class="gal-sec"><h3>${title} <span class="count">${items.length}</span></h3><div class="gal">${items.map(x => `<button type="button" class="g" data-lb="gal:${i++}"><span class="im"><img src="${esc(x.src || c.sprite)}" alt="${esc(x.label)}" loading="lazy"${x.filter ? ` style="filter:${esc(x.filter)}"` : ''}></span><span class="cap">${esc(x.label)}</span></button>`).join('')}</div></div>`;
   }).join('');
-  return `<div class="panel"><h2 style="margin-bottom:12px">Sprites in the game</h2>${secs}</div>`;
+  return secs;
 }
 const LB = { items: [], i: 0, el: null };
 function openLightbox(items, i) {

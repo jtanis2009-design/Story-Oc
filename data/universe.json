@@ -1,5 +1,5 @@
 {
-"version": "FAL-125 v288",
+"version": "FAL-125 v289",
 "characters": [
 {
 "key": "book1",
@@ -29,6 +29,7 @@
 "notes": "Playable in the side quest Never Ending Battle (v181) as God. 6 moves, cannot be defeated. Not part of the normal roster.",
 "source": "Book"
 },
+"versions": [],
 "gallery": []
 },
 {
@@ -59,6 +60,7 @@
 "notes": "Playable in the side quest Never Ending Battle (v181) as Satan. 6 moves, cannot be defeated. Not part of the normal roster.",
 "source": "Book"
 },
+"versions": [],
 "gallery": []
 },
 {
@@ -113,6 +115,7 @@
 },
 "sprite": "sprites/snavo.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Horror Drawing",
@@ -185,7 +188,29 @@
 },
 "sprite": "sprites/sna.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v258–v288",
+"src": "sprites/ver/sna_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v289",
+"src": "sprites/ver/sna_v2.webp"
+}
+],
 "gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/sna_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/sna_ko.webp"
+},
 {
 "label": "Horror Drawing",
 "kind": "drawing",
@@ -264,6 +289,7 @@
 },
 "sprite": "sprites/bearer.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Classic",
@@ -348,6 +374,7 @@
 },
 "sprite": "sprites/fuja.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Prologue look (temporary art)",
@@ -434,6 +461,7 @@
 },
 "sprite": "sprites/radiant.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Prologue look (temporary art)",
@@ -510,6 +538,7 @@
 },
 "sprite": "sprites/eyianix.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Horror Drawing",
@@ -584,6 +613,7 @@
 },
 "sprite": "sprites/tulu.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Classic",
@@ -663,6 +693,7 @@
 },
 "sprite": "sprites/vor.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Scribble Original",
@@ -737,6 +768,7 @@
 },
 "sprite": "sprites/renku.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Scribble Original",
@@ -811,6 +843,7 @@
 },
 "sprite": "sprites/lovesick.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Horror Drawing",
@@ -878,6 +911,7 @@
 },
 "sprite": "sprites/void.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Ember Void",
@@ -945,6 +979,7 @@
 },
 "sprite": "sprites/sevalio.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Original Drawing",
@@ -1017,6 +1052,7 @@
 },
 "sprite": "sprites/monstro.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Original Drawing",
@@ -1089,6 +1125,7 @@
 },
 "sprite": "sprites/wugang.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Original Drawing",
@@ -1156,6 +1193,7 @@
 },
 "sprite": "sprites/anigari.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Original Drawing",
@@ -1223,6 +1261,7 @@
 },
 "sprite": "sprites/sadie.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Classic",
@@ -1238,11 +1277,6 @@
 "label": "Scrapyard Gold",
 "kind": "skin",
 "src": "sprites/alt/skin_sadie_s1.webp"
-},
-{
-"label": "Static Stray",
-"kind": "skin",
-"src": "sprites/alt/skin_sadie_s2.webp"
 },
 {
 "label": "Old Stray",
@@ -1300,6 +1334,7 @@
 },
 "sprite": "sprites/flick.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Deep Flipside",
@@ -1362,6 +1397,7 @@
 },
 "sprite": "sprites/hounddog.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Rust Protocol",
@@ -1424,6 +1460,7 @@
 },
 "sprite": "sprites/cloak.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Static Discharge",
@@ -1486,6 +1523,7 @@
 },
 "sprite": "sprites/serpentine.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Plague Doctor",
@@ -1548,6 +1586,7 @@
 },
 "sprite": "sprites/felodese.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Ashen Vow",
@@ -1610,6 +1649,7 @@
 },
 "sprite": "sprites/dragonfire.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Classic",
@@ -1677,7 +1717,29 @@
 },
 "sprite": "sprites/devic.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v258–v288",
+"src": "sprites/ver/devic_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v289",
+"src": "sprites/ver/devic_v2.webp"
+}
+],
 "gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/devic_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/devic_ko.webp"
+},
 {
 "label": "Toxic Bloom",
 "kind": "recolour",
@@ -1739,6 +1801,7 @@
 },
 "sprite": "sprites/smiley.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Classic",
@@ -1806,6 +1869,7 @@
 },
 "sprite": "sprites/iris.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Frostbite",
@@ -1868,6 +1932,7 @@
 },
 "sprite": "sprites/nero.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Classic",
@@ -1935,6 +2000,7 @@
 },
 "sprite": "sprites/kitsuna.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Spirit Fire",
@@ -2002,6 +2068,7 @@
 },
 "sprite": "sprites/lifewire.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Overvolt",
@@ -2071,6 +2138,7 @@
 },
 "sprite": "sprites/cy.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Mossy Stripes",
@@ -2133,6 +2201,7 @@
 },
 "sprite": "sprites/dia.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Classic",
@@ -2200,6 +2269,7 @@
 },
 "sprite": "sprites/sunshine.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Dusk Scale",
@@ -2262,6 +2332,7 @@
 },
 "sprite": "sprites/akuna.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Hollow Maw",
@@ -2324,6 +2395,7 @@
 },
 "sprite": "sprites/kano.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Cursed Linen",
@@ -2386,6 +2458,7 @@
 },
 "sprite": "sprites/sleepy.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Moonlit Moth",
@@ -2448,7 +2521,29 @@
 },
 "sprite": "sprites/whorl.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v258–v288",
+"src": "sprites/ver/whorl_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v289",
+"src": "sprites/ver/whorl_v2.webp"
+}
+],
 "gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/whorl_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/whorl_ko.webp"
+},
 {
 "label": "Bruised Spiral",
 "kind": "recolour",
@@ -2517,6 +2612,7 @@
 },
 "sprite": "sprites/nukasaurus.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Meltdown Green",
@@ -2586,6 +2682,7 @@
 },
 "sprite": "sprites/moon.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Who's 6.6 (Helper)",
@@ -2660,6 +2757,7 @@
 },
 "sprite": "sprites/sinkhole.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Original Drawing",
@@ -2734,6 +2832,7 @@
 },
 "sprite": "sprites/intervein.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Original Drawing",
@@ -2801,6 +2900,7 @@
 },
 "sprite": "sprites/nose.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Original Drawing",
@@ -2868,6 +2968,7 @@
 },
 "sprite": "sprites/watcher.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Original Drawing",
@@ -2942,6 +3043,7 @@
 },
 "sprite": "sprites/maw.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Horror Drawing",
@@ -3016,6 +3118,7 @@
 },
 "sprite": "sprites/shatter.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Active form",
@@ -3088,6 +3191,7 @@
 },
 "sprite": "sprites/weepingangel.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Moonstone Mourner",
@@ -3150,6 +3254,7 @@
 },
 "sprite": "sprites/rue.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Holy Hoodie",
@@ -3219,6 +3324,7 @@
 },
 "sprite": "sprites/marrow.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Original Drawing",
@@ -3291,7 +3397,29 @@
 },
 "sprite": "sprites/seam.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v258–v288",
+"src": "sprites/ver/seam_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v289",
+"src": "sprites/ver/seam_v2.webp"
+}
+],
 "gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/seam_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/seam_ko.webp"
+},
 {
 "label": "Deprecated Build",
 "kind": "recolour",
@@ -3353,7 +3481,29 @@
 },
 "sprite": "sprites/glitch.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v258–v288",
+"src": "sprites/ver/glitch_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v289",
+"src": "sprites/ver/glitch_v2.webp"
+}
+],
 "gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/glitch_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/glitch_ko.webp"
+},
 {
 "label": "Blue Screen",
 "kind": "recolour",
@@ -3415,6 +3565,7 @@
 },
 "sprite": "sprites/thorn.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Infrared Scope",
@@ -3477,6 +3628,7 @@
 },
 "sprite": "sprites/goodbye.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Cheshire Purple",
@@ -3546,6 +3698,7 @@
 },
 "sprite": "sprites/eyeofsin.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Bloodshot",
@@ -3620,6 +3773,7 @@
 },
 "sprite": "sprites/envival.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Original Drawing",
@@ -3702,6 +3856,7 @@
 },
 "sprite": "sprites/inkating.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Blood Ink",
@@ -3769,6 +3924,7 @@
 },
 "sprite": "sprites/ruckus.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Neon Riot",
@@ -3833,6 +3989,7 @@
 },
 "sprite": "sprites/ox.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Cobalt Bull",
@@ -3902,6 +4059,7 @@
 },
 "sprite": "sprites/stalker.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Hallway Fog",
@@ -3964,6 +4122,7 @@
 },
 "sprite": "sprites/haz225.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Biohazard Orange",
@@ -4026,6 +4185,7 @@
 },
 "sprite": "sprites/haz378.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Meltdown Green",
@@ -4088,6 +4248,7 @@
 },
 "sprite": "sprites/claire.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Midnight Squeak",
@@ -4155,6 +4316,7 @@
 },
 "sprite": "sprites/stillborn.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Bubblegum Hush",
@@ -4217,6 +4379,7 @@
 },
 "sprite": "sprites/creep.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Rust Riot",
@@ -4281,6 +4444,7 @@
 },
 "sprite": "sprites/sunburst.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Original Drawing",
@@ -4345,6 +4509,7 @@
 },
 "sprite": "sprites/proto_0065.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Original Drawing",
@@ -4409,6 +4574,7 @@
 },
 "sprite": "sprites/proto_0066.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Original Drawing",
@@ -4473,6 +4639,7 @@
 },
 "sprite": "sprites/smileywires.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Original Sketch",
@@ -4541,6 +4708,7 @@
 },
 "sprite": "sprites/walker.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Frostbitten",
@@ -4603,6 +4771,7 @@
 },
 "sprite": "sprites/xekna.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Ash Demon",
@@ -4665,7 +4834,29 @@
 },
 "sprite": "sprites/ronin.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v258–v288",
+"src": "sprites/ver/ronin_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v289",
+"src": "sprites/ver/ronin_v2.webp"
+}
+],
 "gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/ronin_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/ronin_ko.webp"
+},
 {
 "label": "Dusk Hood",
 "kind": "recolour",
@@ -4729,6 +4920,7 @@
 },
 "sprite": "sprites/hollowpoint.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Pale Wound",
@@ -4793,6 +4985,7 @@
 },
 "sprite": "sprites/ghost_0072.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Dead Channel",
@@ -4857,6 +5050,7 @@
 },
 "sprite": "sprites/voltage77.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Dead Battery",
@@ -4923,6 +5117,7 @@
 },
 "sprite": "sprites/mindbender.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Dream Violet",
@@ -4988,6 +5183,7 @@
 },
 "sprite": "sprites/bonesaw.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "His friend",
@@ -5063,6 +5259,7 @@
 },
 "sprite": "sprites/kaleido.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Violet Prism",
@@ -5127,6 +5324,7 @@
 },
 "sprite": "sprites/pyrelash.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Blue Flame",
@@ -5192,6 +5390,7 @@
 },
 "sprite": "sprites/outbreak.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Code Green",
@@ -5257,6 +5456,7 @@
 },
 "sprite": "sprites/cruin.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Red Shift",
@@ -5323,6 +5523,7 @@
 },
 "sprite": "sprites/shamoon.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Blue Hour",
@@ -5388,6 +5589,7 @@
 },
 "sprite": "sprites/triggerfinger.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Lost Soul Blue",
@@ -5453,6 +5655,7 @@
 },
 "sprite": "sprites/nanenane.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Alternate Crimson",
@@ -5518,6 +5721,7 @@
 },
 "sprite": "sprites/reflux.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Blood Moon",
@@ -5583,6 +5787,7 @@
 },
 "sprite": "sprites/kasugu.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Overload Red",
@@ -5648,6 +5853,7 @@
 },
 "sprite": "sprites/conquer.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Pale Conqueror",
@@ -5713,6 +5919,7 @@
 },
 "sprite": "sprites/tearwing.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Blue Weep",
@@ -5778,7 +5985,29 @@
 },
 "sprite": "sprites/stitchheart.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v258–v288",
+"src": "sprites/ver/stitchheart_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v289",
+"src": "sprites/ver/stitchheart_v2.webp"
+}
+],
 "gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/stitchheart_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/stitchheart_ko.webp"
+},
 {
 "label": "Valentine",
 "kind": "recolour",
@@ -5843,6 +6072,7 @@
 },
 "sprite": "sprites/bloodspike.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Blood Prism",
@@ -5908,6 +6138,7 @@
 },
 "sprite": "sprites/naginata.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Frostbite",
@@ -5973,7 +6204,29 @@
 },
 "sprite": "sprites/uquna.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v258–v288",
+"src": "sprites/ver/uquna_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v289",
+"src": "sprites/ver/uquna_v2.webp"
+}
+],
 "gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/uquna_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/uquna_ko.webp"
+},
 {
 "label": "Blood Hell",
 "kind": "recolour",
@@ -6036,6 +6289,7 @@
 },
 "sprite": "sprites/ripper.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Morgue Pale",
@@ -6099,6 +6353,7 @@
 },
 "sprite": "sprites/clownx2.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Enemy form (Clown's Massacre)",
@@ -6184,6 +6439,7 @@
 },
 "sprite": "sprites/clownx33.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Enemy form (Clown's Massacre)",
@@ -6254,6 +6510,7 @@
 },
 "sprite": "sprites/devourer.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Marrow White",
@@ -6319,6 +6576,7 @@
 },
 "sprite": "sprites/hush.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Candle Wax",
@@ -6384,6 +6642,7 @@
 },
 "sprite": "sprites/clownx25.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Fused, enemy form",
@@ -6475,6 +6734,7 @@
 },
 "sprite": "sprites/vendor.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Shop pose: show",
@@ -6574,6 +6834,7 @@
 },
 "sprite": "sprites/velara.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Sinner form",
@@ -6654,6 +6915,7 @@
 },
 "sprite": "sprites/whiplash.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Cold Stuffing",
@@ -6719,6 +6981,7 @@
 },
 "sprite": "sprites/crushdeath.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Rust Heap",
@@ -6784,6 +7047,7 @@
 },
 "sprite": "sprites/flokelore.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Midnight Frost",
@@ -6857,6 +7121,7 @@
 },
 "sprite": "sprites/gutter.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Cold Storage",
@@ -6925,6 +7190,7 @@
 },
 "sprite": "sprites/marrowline.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Gunmetal",
@@ -6993,6 +7259,7 @@
 },
 "sprite": "sprites/demure.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Dead of Winter",
@@ -7061,6 +7328,18 @@
 },
 "sprite": "sprites/caspic.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v258–v277",
+"src": "sprites/ver/caspic_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v278–v289",
+"src": "sprites/ver/caspic_v2.webp"
+}
+],
 "gallery": [
 {
 "label": "Attack pose",
@@ -7139,6 +7418,18 @@
 },
 "sprite": "sprites/soundemon.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v258–v277",
+"src": "sprites/ver/soundemon_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v278–v289",
+"src": "sprites/ver/soundemon_v2.webp"
+}
+],
 "gallery": [
 {
 "label": "Attack pose",
@@ -7217,6 +7508,7 @@
 },
 "sprite": "sprites/slinder.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Dried Blood",
@@ -7285,6 +7577,7 @@
 },
 "sprite": "sprites/luckster.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Four-Leaf",
@@ -7353,6 +7646,7 @@
 },
 "sprite": "sprites/punchline.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Rubber Nose",
@@ -7421,6 +7715,18 @@
 },
 "sprite": "sprites/ixis.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v258–v267",
+"src": "sprites/ver/ixis_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v268–v289",
+"src": "sprites/ver/ixis_v2.webp"
+}
+],
 "gallery": [
 {
 "label": "Attack pose",
@@ -7499,6 +7805,18 @@
 },
 "sprite": "sprites/tangler.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v259–v275",
+"src": "sprites/ver/tangler_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v276–v289",
+"src": "sprites/ver/tangler_v2.webp"
+}
+],
 "gallery": [
 {
 "label": "Attack pose",
@@ -7582,6 +7900,18 @@
 },
 "sprite": "sprites/bearable.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v259–v287",
+"src": "sprites/ver/bearable_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v288–v289",
+"src": "sprites/ver/bearable_v2.webp"
+}
+],
 "gallery": [
 {
 "label": "Cold Clock",
@@ -7650,6 +7980,18 @@
 },
 "sprite": "sprites/blackbird.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v259–v276",
+"src": "sprites/ver/blackbird_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v277–v289",
+"src": "sprites/ver/blackbird_v2.webp"
+}
+],
 "gallery": [
 {
 "label": "Attack pose",
@@ -7733,6 +8075,18 @@
 },
 "sprite": "sprites/rainbowripper.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v259–v267",
+"src": "sprites/ver/rainbowripper_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v268–v289",
+"src": "sprites/ver/rainbowripper_v2.webp"
+}
+],
 "gallery": [
 {
 "label": "Attack pose",
@@ -7811,6 +8165,18 @@
 },
 "sprite": "sprites/hole.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v260–v265",
+"src": "sprites/ver/hole_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v266–v289",
+"src": "sprites/ver/hole_v2.webp"
+}
+],
 "gallery": [
 {
 "label": "Devil Form",
@@ -7884,6 +8250,18 @@
 },
 "sprite": "sprites/tomb.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v261–v275",
+"src": "sprites/ver/tomb_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v276–v289",
+"src": "sprites/ver/tomb_v2.webp"
+}
+],
 "gallery": [
 {
 "label": "Attack pose",
@@ -7962,6 +8340,18 @@
 },
 "sprite": "sprites/gloom.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v262–v267",
+"src": "sprites/ver/gloom_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v268–v289",
+"src": "sprites/ver/gloom_v2.webp"
+}
+],
 "gallery": [
 {
 "label": "Attack pose",
@@ -8040,6 +8430,18 @@
 },
 "sprite": "sprites/ano.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v262–v267",
+"src": "sprites/ver/ano_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v268–v289",
+"src": "sprites/ver/ano_v2.webp"
+}
+],
 "gallery": [
 {
 "label": "Attack pose",
@@ -8118,6 +8520,18 @@
 },
 "sprite": "sprites/lycion.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v262–v275",
+"src": "sprites/ver/lycion_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v276–v289",
+"src": "sprites/ver/lycion_v2.webp"
+}
+],
 "gallery": [
 {
 "label": "Attack pose",
@@ -8201,6 +8615,18 @@
 },
 "sprite": "sprites/parda.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v263–v276",
+"src": "sprites/ver/parda_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v277–v289",
+"src": "sprites/ver/parda_v2.webp"
+}
+],
 "gallery": [
 {
 "label": "Attack pose",
@@ -8279,6 +8705,18 @@
 },
 "sprite": "sprites/xainbow.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v263–v275",
+"src": "sprites/ver/xainbow_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v276–v289",
+"src": "sprites/ver/xainbow_v2.webp"
+}
+],
 "gallery": [
 {
 "label": "Attack pose",
@@ -8357,6 +8795,18 @@
 },
 "sprite": "sprites/dollion.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v263–v275",
+"src": "sprites/ver/dollion_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v276–v289",
+"src": "sprites/ver/dollion_v2.webp"
+}
+],
 "gallery": [
 {
 "label": "Attack pose",
@@ -8435,6 +8885,18 @@
 },
 "sprite": "sprites/veinripper.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v263–v276",
+"src": "sprites/ver/veinripper_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v277–v289",
+"src": "sprites/ver/veinripper_v2.webp"
+}
+],
 "gallery": [
 {
 "label": "Attack pose",
@@ -8513,6 +8975,18 @@
 },
 "sprite": "sprites/redwalker.webp",
 "origin": "game",
+"versions": [
+{
+"label": "V1",
+"note": "game v264–v275",
+"src": "sprites/ver/redwalker_v1.webp"
+},
+{
+"label": "V2 (now)",
+"note": "game v276–v289",
+"src": "sprites/ver/redwalker_v2.webp"
+}
+],
 "gallery": [
 {
 "label": "Attack pose",
@@ -8591,6 +9065,7 @@
 },
 "sprite": "sprites/hemo.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Attack pose",
@@ -8669,6 +9144,7 @@
 },
 "sprite": "sprites/toon.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Attack pose",
@@ -8747,6 +9223,7 @@
 },
 "sprite": "sprites/limit.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Attack pose",
@@ -8825,6 +9302,7 @@
 },
 "sprite": "sprites/painter.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Attack pose",
@@ -8903,6 +9381,7 @@
 },
 "sprite": "sprites/glacier.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Attack pose",
@@ -8981,6 +9460,7 @@
 },
 "sprite": "sprites/unbreakable.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Attack pose",
@@ -9059,6 +9539,7 @@
 },
 "sprite": "sprites/chaser.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Attack pose",
@@ -9137,6 +9618,7 @@
 },
 "sprite": "sprites/furnace.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Attack pose",
@@ -9215,6 +9697,7 @@
 },
 "sprite": "sprites/doommaster.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Attack pose",
@@ -9293,6 +9776,7 @@
 },
 "sprite": "sprites/copyright.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Attack pose",
@@ -9371,6 +9855,7 @@
 },
 "sprite": "sprites/doghunter.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Attack pose",
@@ -9449,6 +9934,7 @@
 },
 "sprite": "sprites/kuikya.webp",
 "origin": "game",
+"versions": [],
 "gallery": [
 {
 "label": "Attack pose",
