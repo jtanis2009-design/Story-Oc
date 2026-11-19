@@ -32,4 +32,4 @@ To turn on GitHub Pages: repository Settings > Pages > Deploy from a branch > pi
 
 ## drawings/
 
-The author's main drawings (character sheets), kept here as a backup copy. In the Claude app version they are uploaded into the archive as the main drawing of each file.
+The author's main drawings (character sheets), kept here as a backup copy, and `notes.json` with the notes written on each sheet. In the Claude app version they are uploaded into the archive as the main drawing of each file, and their notes are the ability text.

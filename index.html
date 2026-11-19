@@ -211,6 +211,29 @@ details.scenes summary { cursor: pointer; font-family: var(--f-mono); font-size:
 .gal .g .cap { padding: 6px 8px; font-size: 12.5px; line-height: 1.3; border-top: 1px solid var(--line); min-height: 2.6em; }
 .gal .g .star { position: absolute; top: 5px; left: 5px; font-family: var(--f-mono); font-size: 10px; letter-spacing: .08em; background: var(--stamp); color: #fff; padding: 1px 5px; border-radius: 2px; }
 .art-tools { display: flex; gap: 6px; flex-wrap: wrap; padding: 6px 8px 8px; }
+.card .pic img.cover { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; }
+.hero { margin: 0 0 22px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.hero .pswitch { justify-content: flex-start; }
+.hero .pswitch button { flex: 0 0 auto; padding: 9px 16px; }
+.hero-img { display: grid; place-items: center; width: 100%; height: clamp(260px, 50vw, 600px); padding: 10px; border: 0; cursor: zoom-in; background-color: var(--tint); background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 22px 22px; }
+.hero-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.hero-img .initials { font-size: 72px; }
+.hero-cap { padding: 8px 14px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); }
+.wiki { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 28px; align-items: start; }
+.wiki-main { min-width: 0; }
+.infobox { position: sticky; top: calc(76px + env(safe-area-inset-top, 0px)); background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.ib-title { font-family: var(--f-display); font-size: 20px; padding: 10px 14px; border-top: 4px solid var(--ink); border-bottom: 1px solid var(--line); }
+.ib-pic { display: flex; flex-direction: column; align-items: center; gap: 4px; width: 100%; border: 0; border-bottom: 1px solid var(--line); background: var(--tint); padding: 12px; cursor: pointer; color: var(--link); font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; }
+.ib-pic img { height: 150px; width: auto; max-width: 100%; object-fit: contain; }
+.ib-pic:hover span { text-decoration: underline; }
+.toc { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--r); background: var(--panel); margin-bottom: 8px; }
+.toc button { border: 0; background: none; padding: 2px 0; color: var(--link); cursor: pointer; font-size: 14px; }
+.toc button:hover { text-decoration: underline; }
+.wsec { padding-top: 18px; scroll-margin-top: calc(70px + env(safe-area-inset-top, 0px)); }
+.wsec > h2 { padding-bottom: 6px; border-bottom: 1px solid var(--line); margin-bottom: 12px; }
+.wsec ul { margin: 6px 0 0; padding-left: 20px; }
+.wsec li { margin: 4px 0; }
+@media (max-width: 860px) { .wiki { grid-template-columns: 1fr; } .infobox { position: static; order: -1; } }
 .lightbox { position: fixed; inset: 0; z-index: 30; background: rgba(10, 12, 14, .88); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
 .lightbox img { max-width: 100%; max-height: calc(100% - 90px); object-fit: contain; image-rendering: auto; background: rgba(255,255,255,.04); }
 .lightbox .lb-cap { color: #eef0eb; font-size: 15px; text-align: center; }
@@ -257,7 +280,7 @@ hr.sep { border: 0; border-top: 1px solid var(--line); margin: 6px 0; }
       <select id="typeSel" aria-label="Type"><option value="">Any type</option><option>Angel</option><option>Demon</option><option>Human</option><option>Hybrid</option><option>Other</option></select>
       <select id="originSel" aria-label="Source"><option value="">All files</option><option value="game">In the game</option><option value="book">Book only</option><option value="mine">My new ones</option></select>
       <select id="sortSel" aria-label="Sort"><option value="id">Sort by ID</option><option value="name">Sort by name</option><option value="new">Newest first</option></select>
-      <select id="picSel" aria-label="Pictures on cards"><option value="sprite">Game sprites</option><option value="drawing">Main drawings</option></select>
+      <select id="picSel" aria-label="Pictures on cards"><option value="drawing">Main drawings first</option><option value="sprite">Game sprites only</option></select>
       <span class="count" id="count"></span>
     </div>
     <div class="cards" id="cards"><div class="empty">Opening the archive…</div></div>
@@ -651,7 +674,7 @@ function nextFreeId() { let m = 0; for (const c of allChars()) { const n = parse
 function charLine(c) {
   const b = c.book || {};
   const desc = c.mine ? c.ident : (c.ident || c.passive);
-  return `${c.id || '----'} ${c.name} | ${c.role || '?'}/${c.type || '?'}${c.title ? ' | ' + c.title : ''}${b.ability ? ' | Ability: ' + trim(b.ability, 90) : ''} | ${trim(desc, 170)}${c.mine ? ' | NEW (author is still working on this one)' : ''}${c.origin === 'book' ? ' | only in the Character Book' : ''}`;
+  return `${c.id || '----'} ${c.name} | ${c.role || '?'}/${c.type || '?'}${c.title ? ' | ' + c.title : ''}${effAbility(c) ? ' | Ability: ' + trim(effAbility(c), 160) : ''} | ${trim(desc, 170)}${c.mine ? ' | NEW (author is still working on this one)' : ''}${c.origin === 'book' ? ' | only in the Character Book' : ''}`;
 }
 function digest() {
   const L = ['=== EXISTING CHARACTERS (ID | name | role/type | title | ability | short description) ==='];
@@ -700,7 +723,7 @@ function rerender() {
 }
 
 /* ---------- files ---------- */
-const F = { role: '', type: '', origin: '', sort: 'id', q: '', pic: lsGet('pic', 'sprite') };
+const F = { role: '', type: '', origin: '', sort: 'id', q: '', pic: lsGet('pic2', 'drawing') };
 function picHtml(c, cls = '') {
   if (c.sprite) return `<img src="${esc(c.sprite)}" alt="${esc(c.name)}" loading="lazy" class="${cls}">`;
   const ini = (c.name || '?').replace(/\(.*?\)/g, '').split(/[^A-Za-z0-9]+/).filter(Boolean).map(w => w[0]).join('').slice(0, 2).toUpperCase() || '?';
@@ -709,7 +732,7 @@ function picHtml(c, cls = '') {
 function matches(c, q) {
   if (!q) return true;
   const b = c.book || {};
-  const hay = [c.id, c.name, c.title, c.role, c.type, c.passive, c.ident, b.ability, b.abilityPlus, b.scent, b.containment, b.notes, c.note, (c.skills || []).map(s => s.name).join(' ')].join(' ').toLowerCase();
+  const hay = [c.id, c.name, c.title, c.role, c.type, c.passive, c.ident, effAbility(c), b.ability, b.abilityPlus, b.scent, b.containment, b.notes, c.note, (c.skills || []).map(s => s.name).join(' ')].join(' ').toLowerCase();
   return q.toLowerCase().split(/\s+/).every(w => hay.includes(w));
 }
 function renderFiles() {
@@ -720,71 +743,138 @@ function renderFiles() {
   $('#count').textContent = list.length + ' of ' + allChars().length + ' files';
   $('#cards').innerHTML = list.length ? list.map(c => `
     <a class="card" href="#file-${esc(c.key)}">
-      <div class="pic"><span class="swatch" style="background:${esc(c.color)}"></span>${c.mine ? '<span class="mine-tag">NEW</span>' : ''}${F.pic === 'drawing' && mainArt(c.key) ? `<img src="${esc(artSrc(mainArt(c.key)))}" alt="${esc(c.name)}" loading="lazy">` : picHtml(c)}</div>
+      <div class="pic"><span class="swatch" style="background:${esc(c.color)}"></span>${c.mine ? '<span class="mine-tag">NEW</span>' : ''}${F.pic === 'drawing' && mainArt(c.key) ? `<img class="cover" src="${esc(artSrc(mainArt(c.key)))}" alt="${esc(c.name)}" loading="lazy" style="${coverStyle(mainArt(c.key))}">` : picHtml(c)}</div>
       <div class="meta"><span class="id">FAL-${esc(c.id || '????')}</span><span class="nm">${esc(c.name)}</span><span class="tg">${esc([c.role, c.type].filter(Boolean).join(' · ') || 'Not decided')}</span></div>
     </a>`).join('') : '<div class="empty">No files match. Try fewer words.</div>';
 }
 function statRow(k, v, max) { return `<div class="stat"><span>${k}</span><span class="track"><span class="fill" style="width:${Math.min(100, v / max * 100)}%"></span></span><span>${v}</span></div>`; }
+/* The notes written on the author's drawing win over the Character Book, unless the drawing has none. */
+function sheetFor(key) {
+  const has = a => a.sheet && ((a.sheet.abilities || []).length || (a.sheet.info || []).length);
+  const arts = artFor(key);
+  const a = arts.find(x => x.main && has(x)) || arts.find(has);
+  return a ? { art: a, sheet: a.sheet } : null;
+}
+function effAbility(c) {
+  const sh = sheetFor(c.key);
+  if (sh && (sh.sheet.abilities || []).length) return sh.sheet.abilities.map(x => x.text ? `${x.name}: ${x.text}` : x.name).join('; ');
+  return (c.book || {}).ability || '';
+}
+function coverStyle(a) {
+  const fx = a && a.sheet && typeof a.sheet.focus_x === 'number' ? Math.min(1, Math.max(0, a.sheet.focus_x)) : 0.5;
+  const r = a && a.ar ? a.ar : 0;
+  if (r && r < 1) return 'object-position:50% 25%';
+  const v = r ? 1 / r : 0.55;
+  const pct = Math.round(Math.min(1, Math.max(0, (fx - v / 2) / (1 - v))) * 100);
+  return `object-position:${pct}% 50%`;
+}
 function renderFile(key) {
   const c = allChars().find(x => x.key === key);
   const el = $('#v-file');
   if (!c) { el.innerHTML = '<div class="empty">This file does not exist. <a href="#files">Back to all files</a></div>'; return; }
   const b = c.book || {};
   const arts = artFor(c.key);
+  const main = arts[0] || null;
+  const sh = sheetFor(c.key);
+  const sheet = sh ? sh.sheet : null;
+  const fromDrawing = sheet && (sheet.abilities || []).length;
   const guess = b.source === 'Generated' ? '<span class="guess" title="These sheet values were guessed when the Character Book was filled in, not written by you">Guess</span>' : '';
-  const kv = [['Role', c.role], ['Type', c.type || b.bookType], ['Build', c.build], ['Containment', b.containment], ['Threat', b.threat], ['Scent', b.scent], ['Awakened', b.awakened]].filter(x => x[1]);
+  const kv = [['File', 'FAL-' + (c.id || '????')], ['Role', c.role], ['Type', c.type || b.bookType], ['Build', c.build], ['Containment', b.containment], ['Threat', b.threat], ['Scent', b.scent], ['Awakened', b.awakened], ['Drawn', sheet && sheet.date]].filter(x => x[1]);
+  const sections = [];
+  const sec = (id, title, html) => { if (html) sections.push({ id, title, html }); };
+  const abil = fromDrawing
+    ? `${sheet.abilities.map(x => `<div class="skill"><b>${esc(x.name)}</b>${x.text ? esc(x.text) : ''}</div>`).join('')}
+       <p class="note">From your drawing${sheet.date ? ' (' + esc(sheet.date) + ')' : ''}.${b.ability && !sheet.abilities.some(x => (x.name || '').toLowerCase() === b.ability.toLowerCase()) ? ` The Character Book says: ${esc(b.ability)}.` : ''}</p>`
+    : (b.ability || b.abilityPlus ? `<dl class="kv" style="padding:0">${b.ability ? `<dt>Ability</dt><dd>${esc(b.ability)} ${guess}</dd>` : ''}${b.abilityPlus ? `<dt>Ability+</dt><dd>${esc(b.abilityPlus)}</dd>` : ''}</dl>${main ? '<p class="note">Your drawing has no ability notes, so this comes from the Character Book.</p>' : ''}` : '');
+  const info = sheet && (sheet.info || []).length ? `<h3 style="margin-top:14px">Written on the drawing</h3><ul>${sheet.info.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : '';
+  const unclear = sheet && (sheet.unclear || []).length ? `<p class="note"><b>Could not read for sure:</b> ${esc(sheet.unclear.join('; '))}</p>` : '';
+  const sheetTools = main ? `<div class="row" style="margin-top:10px">${AI.mode !== 'none' ? `<button class="btn small" type="button" id="sheetRead">${sheet ? 'Read the drawing again' : 'Read the notes on the drawing'}</button>` : ''}<button class="btn small" type="button" id="sheetEdit">Edit drawing notes</button></div><form id="sheetForm" class="panel" hidden style="margin-top:10px" autocomplete="off">
+      <label class="field"><span>Abilities, one per line (Name: what it does)</span><textarea id="sf-ab" rows="4"></textarea></label>
+      <label class="field" style="margin-top:10px"><span>Other notes, one per line</span><textarea id="sf-info" rows="4"></textarea></label>
+      <label class="field" style="margin-top:10px"><span>Date on the drawing</span><input type="text" id="sf-date"></label>
+      <div class="row" style="margin-top:10px"><button class="btn primary small" type="submit">Save notes</button><button class="btn small" type="button" id="sf-cancel">Cancel</button></div></form>` : '';
+  sec('abilities', 'Abilities', (abil || info) ? abil + (b.notes && !fromDrawing ? `<p class="note"><b>Book notes:</b> ${esc(b.notes)}</p>` : '') + info + unclear + sheetTools : (main ? '<p class="note">No ability written yet.</p>' + sheetTools : ''));
+  if (c.mine && c.ident) sec('lore', 'Description and lore', `<div class="entry">${esc(c.ident)}</div>`);
+  if (c.passive || (c.skills || []).length) sec('game', 'In the game', `${c.ident && !c.mine ? `<p>${esc(c.ident)}</p>` : ''}${c.passive ? `<div class="skill"><b>Passive</b>${esc(c.passive)}</div>` : ''}${c.skills.map(s => `<div class="skill"><b>${esc(s.name)}</b>${esc(s.desc)}</div>`).join('')}`);
+  sec('drawings', 'Main drawings', `<div class="row" style="justify-content:flex-end;margin:-6px 0 10px"><button class="btn small" type="button" id="artAdd">+ Add drawings</button><input type="file" id="artFile" accept="image/*" multiple hidden></div>
+    ${arts.length ? `<div class="gal">${arts.map((a, i) => `<div class="g" style="cursor:default"><button type="button" class="im" data-lb="art:${i}" style="border:0;padding:0;cursor:zoom-in" aria-label="Open ${esc(a.caption || 'drawing')}">${a.main ? '<span class="star">MAIN</span>' : ''}<img src="${esc(artSrc(a))}" alt="${esc(a.caption || c.name)}" loading="lazy"></button><div class="cap">${esc(a.caption || 'Drawing')}</div><div class="art-tools">${a.main ? '' : `<button class="btn small" type="button" data-artmain="${esc(a.id)}">Make main</button>`}<button class="btn small" type="button" data-artcap="${esc(a.id)}">Rename</button><button class="btn small danger" type="button" data-artdel="${esc(a.id)}">Delete</button></div></div>`).join('')}</div>`
+      : `<p class="note" style="margin:0">No main drawing yet. Add your own drawings of ${esc(c.name)}; the one marked main becomes the big picture at the top of this page, and the notes written on it become the ability text.</p>`}`);
+  sec('sprites', 'Sprites in the game', galleryHtml(c));
+  if ((c.archive || []).length) sec('archive', 'Archive entries', c.archive.map(a => `<p class="entry">${esc(a)}</p>`).join(''));
+  if ((c.recruit || []).length) sec('seen', 'First seen', c.recruit.map(a => `<p class="entry">${esc(a)}</p>`).join(''));
+  if (c.mine && c.raw.review) sec('review', 'Last review', '<div id="fileReview"></div>');
+  sec('notes', 'Your notes', `<textarea id="noteBox" rows="4" placeholder="Anything to remember about ${esc(c.name)}…">${esc(c.mine ? (c.raw.notes || '') : c.note)}</textarea><div class="row" style="margin-top:8px"><button class="btn small" type="button" id="noteSave">Save note</button></div>`);
+  const heroDrawing = main ? `<img src="${esc(artSrc(main))}" alt="${esc(c.name)}, main drawing">` : '';
   el.innerHTML = `
     <div class="head"><div><a href="#files" class="note">← All files</a><div class="file-no" style="margin-top:8px">ITEM FAL-${esc(c.id || '????')}${c.origin === 'book' ? ' · CHARACTER BOOK ONLY' : c.mine ? ' · NEW FILE' : ''}</div><h1>${esc(c.name)}</h1>${c.title ? `<p class="lede">${esc(c.title)}</p>` : ''}</div>
       <div class="row">${c.mine ? `<a class="btn" href="#edit-${esc(c.key)}">Edit</a><button class="btn danger" type="button" id="delChar">Delete</button>` : ''}<button class="btn" type="button" id="toReview">Review with Claude</button><button class="btn" type="button" id="toAbil">Ability ideas</button></div></div>
-    <div class="dossier">
-      <aside class="portrait">
-        ${arts.length ? `<div class="pswitch" role="group" aria-label="Picture"><button type="button" data-pv="drawing" aria-pressed="true">Main drawing</button><button type="button" data-pv="sprite" aria-pressed="false">Game sprite</button></div>` : ''}
-        <div class="pic" id="portraitPic">${arts.length ? `<img src="${esc(artSrc(arts[0]))}" alt="${esc(c.name)}, main drawing">` : picHtml(c)}</div>
+    <figure class="hero">
+      <div class="pswitch" role="group" aria-label="Picture">${main ? '<button type="button" data-pv="drawing" aria-pressed="true">Main drawing</button>' : ''}<button type="button" data-pv="sprite" aria-pressed="${main ? 'false' : 'true'}">In game</button></div>
+      <button type="button" class="hero-img" id="heroPic" aria-label="Open picture">${main ? heroDrawing : picHtml(c)}</button>
+      <figcaption class="hero-cap" id="heroCap">${main ? esc(main.caption || 'Main drawing') : 'In-game sprite' + (arts.length ? '' : ' · no main drawing yet, add one in Main drawings below')}</figcaption>
+    </figure>
+    <div class="wiki">
+      <article class="wiki-main">
+        <nav class="toc" aria-label="Contents"><span class="eyebrow">Contents</span>${sections.map((x, i) => `<button type="button" data-toc="${x.id}">${i + 1}. ${esc(x.title)}</button>`).join('')}</nav>
+        ${sections.map(x => `<section class="wsec" id="sec-${x.id}"><h2>${esc(x.title)}</h2>${x.html}</section>`).join('')}
+      </article>
+      <aside class="infobox">
+        <div class="ib-title" style="border-top-color:${esc(c.color)}">${esc(c.name)}</div>
+        ${main ? `<button type="button" class="ib-pic" data-pv-go="sprite" aria-label="Show the in-game version">${picHtml(c)}<span>In-game version</span></button>` : (c.sprite ? '' : '')}
         <dl class="kv">${kv.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
         ${c.stats ? `<div class="stats">${statRow('HP', c.stats.hp, 220)}${statRow('ATK', c.stats.atk, 30)}${statRow('DEF', c.stats.def, 25)}${statRow('SPD', c.stats.spd, 20)}</div>` : ''}
       </aside>
-      <div class="docs">
-        ${b.ability || b.abilityPlus || b.notes ? `<div class="panel"><h2>Sheet ${guess}</h2><dl class="kv" style="padding:0">${b.ability ? `<dt>Ability</dt><dd>${esc(b.ability)}</dd>` : ''}${b.abilityPlus ? `<dt>Ability+</dt><dd>${esc(b.abilityPlus)}</dd>` : ''}${b.notes ? `<dt>Notes</dt><dd>${esc(b.notes)}</dd>` : ''}</dl></div>` : ''}
-        ${c.mine && c.ident ? `<div class="panel"><h2>Description and lore</h2><div class="entry">${esc(c.ident)}</div></div>` : ''}
-        ${c.passive || (c.skills || []).length ? `<div class="panel"><h2>In the game</h2>${c.ident ? `<p>${esc(c.ident)}</p>` : ''}${c.passive ? `<div class="skill"><b>Passive</b>${esc(c.passive)}</div>` : ''}${c.skills.map(s => `<div class="skill"><b>${esc(s.name)}</b>${esc(s.desc)}</div>`).join('')}</div>` : ''}
-        <div class="panel"><div class="row" style="justify-content:space-between;margin-bottom:10px"><h2>Main drawings</h2><button class="btn small" type="button" id="artAdd">+ Add drawings</button><input type="file" id="artFile" accept="image/*" multiple hidden></div>
-          ${arts.length ? `<div class="gal">${arts.map((a, i) => `<div class="g" style="cursor:default"><button type="button" class="im" data-lb="art:${i}" style="border:0;padding:0;cursor:zoom-in" aria-label="Open ${esc(a.caption || 'drawing')}">${a.main ? '<span class="star">MAIN</span>' : ''}<img src="${esc(artSrc(a))}" alt="${esc(a.caption || c.name)}" loading="lazy"></button><div class="cap">${esc(a.caption || 'Drawing')}</div><div class="art-tools">${a.main ? '' : `<button class="btn small" type="button" data-artmain="${esc(a.id)}">Make main</button>`}<button class="btn small" type="button" data-artcap="${esc(a.id)}">Rename</button><button class="btn small danger" type="button" data-artdel="${esc(a.id)}">Delete</button></div></div>`).join('')}</div>`
-            : `<p class="note" style="margin:0">No main drawing yet. The pictures above are the stylized in-game sprites. Add your own drawings of ${esc(c.name)} here; the one marked main becomes the picture on this file.</p>`}
-        </div>
-        ${galleryHtml(c)}
-        ${(c.archive || []).length ? `<div class="panel"><h2>Archive entries</h2>${c.archive.map(a => `<p class="entry">${esc(a)}</p>`).join('')}</div>` : ''}
-        ${(c.recruit || []).length ? `<div class="panel"><h2>First seen</h2>${c.recruit.map(a => `<p class="entry">${esc(a)}</p>`).join('')}</div>` : ''}
-        ${c.mine && c.raw.review ? `<div class="panel"><h2>Last review</h2><div id="fileReview"></div></div>` : ''}
-        <div class="panel"><h2>Your notes</h2>
-          <textarea id="noteBox" rows="4" placeholder="Anything to remember about ${esc(c.name)}…">${esc(c.mine ? (c.raw.notes || '') : c.note)}</textarea>
-          <div class="row" style="margin-top:8px"><button class="btn small" type="button" id="noteSave">Save note</button></div>
-        </div>
-      </div>
     </div>`;
   if (c.mine && c.raw.review) $('#fileReview').innerHTML = reviewHtml(c.raw.review, [], { compact: true });
-  $$('#v-file [data-pv]').forEach(b => b.onclick = () => {
-    $$('#v-file [data-pv]').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
-    $('#portraitPic').innerHTML = b.dataset.pv === 'drawing' ? `<img src="${esc(artSrc(arts[0]))}" alt="${esc(c.name)}, main drawing">` : picHtml(c);
-  });
+  let heroMode = main ? 'drawing' : 'sprite';
+  const setHero = m => {
+    heroMode = m;
+    $$('#v-file [data-pv]').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.pv === m)));
+    $('#heroPic').innerHTML = m === 'drawing' ? heroDrawing : picHtml(c);
+    $('#heroCap').textContent = m === 'drawing' ? (main.caption || 'Main drawing') : 'In-game sprite';
+  };
+  $$('#v-file [data-pv]').forEach(x => x.onclick = () => setHero(x.dataset.pv));
+  $$('#v-file [data-pv-go]').forEach(x => x.onclick = () => { setHero(x.dataset.pvGo); $('.hero').scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+  $$('#v-file [data-toc]').forEach(x => x.onclick = () => $('#sec-' + x.dataset.toc).scrollIntoView({ behavior: 'smooth', block: 'start' }));
   const lbItems = { art: arts.map(a => ({ src: artSrc(a), label: a.caption || 'Main drawing' })), gal: galleryItems(c) };
-  $$('#v-file [data-lb]').forEach(b => b.onclick = () => { const [set, i] = b.dataset.lb.split(':'); openLightbox(lbItems[set], +i); });
+  $('#heroPic').onclick = () => heroMode === 'drawing' ? openLightbox(lbItems.art, 0) : (c.sprite && openLightbox([{ src: c.sprite, label: c.name + ' · in game' }].concat(lbItems.gal), 0));
+  $$('#v-file [data-lb]').forEach(x => x.onclick = () => { const [set, i] = x.dataset.lb.split(':'); openLightbox(lbItems[set], +i); });
   $('#artAdd').onclick = () => $('#artFile').click();
   $('#artFile').onchange = async e => { const files = [...e.target.files]; e.target.value = ''; await addArt(c.key, files); };
-  $$('#v-file [data-artmain]').forEach(b => b.onclick = async () => { for (const a of arts) if (a.main || a.id === b.dataset.artmain) await save('art', Object.assign({}, a, { main: a.id === b.dataset.artmain })); toast('Main drawing changed'); renderFile(c.key); });
-  $$('#v-file [data-artcap]').forEach(b => b.onclick = () => {
-    const a = arts.find(x => x.id === b.dataset.artcap); const cap = b.closest('.g').querySelector('.cap');
+  $$('#v-file [data-artmain]').forEach(x => x.onclick = async () => { for (const a of arts) if (a.main || a.id === x.dataset.artmain) await save('art', Object.assign({}, a, { main: a.id === x.dataset.artmain })); toast('Main drawing changed'); renderFile(c.key); });
+  $$('#v-file [data-artcap]').forEach(x => x.onclick = () => {
+    const a = arts.find(y => y.id === x.dataset.artcap); const cap = x.closest('.g').querySelector('.cap');
     cap.innerHTML = `<input type="text" value="${esc(a.caption || '')}" aria-label="Drawing name" style="padding:4px 6px">`;
     const inp = $('input', cap); inp.focus(); inp.select();
     const done = async () => { await save('art', Object.assign({}, a, { caption: inp.value.trim() })); renderFile(c.key); };
     inp.onkeydown = ev => { if (ev.key === 'Enter') done(); if (ev.key === 'Escape') renderFile(c.key); }; inp.onblur = done;
   });
-  $$('#v-file [data-artdel]').forEach(b => b.onclick = () => confirmBtn(b, async () => {
-    const a = arts.find(x => x.id === b.dataset.artdel);
+  $$('#v-file [data-artdel]').forEach(x => x.onclick = () => confirmBtn(x, async () => {
+    const a = arts.find(y => y.id === x.dataset.artdel);
     await Store.del('art', a.id);
     if (a.assetId && Store.assets) { try { await Store.assets.delete(a.assetId); } catch (e) {} }
     if (a.main) { const rest = artFor(c.key); if (rest[0]) await save('art', Object.assign({}, rest[0], { main: true })); }
     toast('Drawing deleted'); renderFile(c.key);
   }));
+  const target = sh ? sh.art : main;
+  const rd = $('#sheetRead'); if (rd) rd.onclick = () => readSheet(target, c);
+  const ed = $('#sheetEdit');
+  if (ed) ed.onclick = () => {
+    const f = $('#sheetForm'); const s0 = (target && target.sheet) || {};
+    $('#sf-ab').value = (s0.abilities || []).map(x => x.text ? x.name + ': ' + x.text : x.name).join('\n');
+    $('#sf-info').value = (s0.info || []).join('\n'); $('#sf-date').value = s0.date || '';
+    f.hidden = false; $('#sf-ab').focus();
+  };
+  const sf = $('#sheetForm');
+  if (sf) {
+    $('#sf-cancel').onclick = () => { sf.hidden = true; };
+    sf.onsubmit = async e => {
+      e.preventDefault();
+      const abilities = $('#sf-ab').value.split('\n').map(l => l.trim()).filter(Boolean).map(l => { const i = l.indexOf(':'); return i > 0 ? { name: l.slice(0, i).trim(), text: l.slice(i + 1).trim() } : { name: l, text: '' }; });
+      const sheet0 = Object.assign({}, (target && target.sheet) || {}, { abilities, info: $('#sf-info').value.split('\n').map(l => l.trim()).filter(Boolean), date: $('#sf-date').value.trim(), unclear: [] });
+      await save('art', Object.assign({}, target, { sheet: sheet0 }), 'Notes saved'); renderFile(c.key);
+    };
+  }
   $('#noteSave').onclick = async () => {
     const text = $('#noteBox').value;
     if (c.mine) await save('chars', Object.assign({}, c.raw, { notes: text }), 'Note saved');
@@ -793,6 +883,27 @@ function renderFile(key) {
   $('#toReview').onclick = () => { $('#rv-existing').value = c.key; location.hash = '#review'; };
   $('#toAbil').onclick = () => { $('#ab-char').value = c.key; location.hash = '#abilities'; };
   if (c.mine) $('#delChar').onclick = e => confirmBtn(e.currentTarget, async () => { await Store.del('chars', c.key); toast('File deleted'); location.hash = '#files'; });
+}
+async function readSheet(a, c) {
+  if (!a) return;
+  if (AI.mode === 'none') { toast('Connect Claude in Setup to read drawings.'); return; }
+  toast('Reading the notes on the drawing…');
+  try {
+    const src = artSrc(a);
+    const blob = src.startsWith('data:') ? dataUrlToBlob(src) : await (await fetch(src)).blob();
+    const prompt = `=== TASK ===
+The attached picture is the author's own drawing of ${c ? c.name + ' (file FAL-' + (c.id || '????') + ')' : 'a character'}. It may have handwritten notes: name, ID, abilities with descriptions, info, limitations, age, a date.
+Copy the notes exactly as written. Only fix spelling. Do not add, explain or invent anything. A limitation or weakness of an ability goes in that ability's text.
+If there are no notes, return empty lists. If you cannot read a word, give your best reading and also list it in "unclear".
+"focus_x" is where the drawn character's centre is from left to right (0 = left edge, 1 = right edge).
+Answer with this JSON shape:
+{"name":"","id":"","date":"","abilities":[{"name":"","text":""}],"info":[""],"unclear":[""],"focus_x":0.5}`;
+    const { data } = await AI.run({ prompt, images: [blob], search: false, effort: 'medium' });
+    const sheet = { name: data.name || '', id: data.id || '', date: data.date || '', abilities: (data.abilities || []).filter(x => x && x.name), info: (data.info || []).filter(Boolean), unclear: (data.unclear || []).filter(Boolean), focus_x: typeof data.focus_x === 'number' ? data.focus_x : 0.5, read: Date.now() };
+    const fresh = S.user.art.find(x => x.id === a.id) || a;
+    await save('art', Object.assign({}, fresh, { sheet }), sheet.abilities.length ? 'Ability notes copied from the drawing' : 'No ability notes found on the drawing');
+    if (c && (location.hash || '').slice(1) === 'file-' + c.key) renderFile(c.key);
+  } catch (e) { toast(e.message || 'Could not read the drawing.'); }
 }
 
 /* ---------- main drawings (your own art) and the game's alternate sprites ---------- */
@@ -804,19 +915,21 @@ async function addArt(key, files) {
   if (!files.length) return;
   const had = artFor(key).length;
   toast('Adding ' + files.length + ' drawing' + (files.length > 1 ? 's' : '') + '…');
-  let n = 0;
+  let n = 0; const added = [];
   for (const f of files) {
     const doc = { id: uid('a'), char: key, caption: f.name.replace(/\.[^.]+$/, '').replace(/[_-]+/g, ' ').slice(0, 80), main: had === 0 && n === 0, created: Date.now() + n };
     try {
+      try { const bm = await createImageBitmap(f); doc.ar = +(bm.width / bm.height).toFixed(3); } catch (e) {}
       if (Store.mode === 'cloud' && Store.assets) {
         const up = await Store.assets.upload(await shrinkToBlob(f, 2400));
         doc.assetId = up.id;
       } else doc.src = Store.mode === 'cloud' ? await shrinkToDataUrl(f, 1000) : await shrinkToDataUrl(f, 2000);
-      await save('art', doc); n++;
+      await save('art', doc); n++; added.push(doc);
     } catch (e) { toast('One drawing could not be added. Try a JPG or PNG under 20 MB.'); }
   }
   if (n) toast(n + ' drawing' + (n > 1 ? 's' : '') + ' added');
   if ((location.hash || '').slice(1) === 'file-' + key) renderFile(key);
+  if (AI.mode !== 'none') { const c = allChars().find(x => x.key === key); for (const d of added) await readSheet(d, c); }
 }
 async function shrinkToBlob(blob, max) {
   const bmp = await createImageBitmap(blob);
@@ -1205,7 +1318,7 @@ function wire() {
   $('#originSel').onchange = e => { F.origin = e.target.value; renderFiles(); };
   $('#sortSel').onchange = e => { F.sort = e.target.value; renderFiles(); };
   $('#picSel').value = F.pic;
-  $('#picSel').onchange = e => { F.pic = e.target.value; lsSet('pic', F.pic); renderFiles(); };
+  $('#picSel').onchange = e => { F.pic = e.target.value; lsSet('pic2', F.pic); renderFiles(); };
   document.addEventListener('keydown', e => { if (!LB.items.length) return; if (e.key === 'Escape') closeLightbox(); if (e.key === 'ArrowRight') stepLightbox(1); if (e.key === 'ArrowLeft') stepLightbox(-1); });
 
   wireDrop($('#cf-drop'), $('#cf-file'), async files => { if (!files[0]) return; try { editImage = await shrinkToDataUrl(files[0]); drawEditThumb(); } catch (e) { toast('That picture could not be read.'); } });

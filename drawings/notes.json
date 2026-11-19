@@ -1,0 +1,228 @@
+{
+ "gutter": {
+  "sheet": {
+   "date": "Nov 15, 2026",
+   "id": "0102",
+   "focus_x": 0.22,
+   "abilities": [
+    {
+     "name": "Human Storage",
+     "text": "The user creates a pocket dimension where they can store anything they want. In there, there's infinite space. They spit out what the user needs on demand. A limitation is he can't enter it physically himself."
+    }
+   ],
+   "info": [
+    "He likes to create weapons from things/people he's defeated.",
+    "He's a contracted merc for Fal-125.",
+    "The red on his eye is a tumor.",
+    "He's 19."
+   ],
+   "unclear": [],
+   "name": ""
+  },
+  "ar": 1.779
+ },
+ "shamoon": {
+  "sheet": {
+   "date": "April 21, 2025",
+   "id": "",
+   "focus_x": 0.56,
+   "abilities": [
+    {
+     "name": "Absorbing Light",
+     "text": ""
+    },
+    {
+     "name": "Shadow Puppeteering",
+     "text": ""
+    },
+    {
+     "name": "Shadow Sword",
+     "text": "Shadow Slash"
+    },
+    {
+     "name": "Umbra Claw",
+     "text": ""
+    },
+    {
+     "name": "Shadow Armour",
+     "text": ""
+    }
+   ],
+   "info": [
+    "Sinister 7 (1/7)"
+   ],
+   "unclear": [],
+   "name": ""
+  },
+  "ar": 1.85
+ },
+ "watcher": {
+  "sheet": {
+   "date": "Oct 9, 2023",
+   "id": "0043",
+   "focus_x": 0.54,
+   "abilities": [
+    {
+     "name": "Screech",
+     "text": ""
+    }
+   ],
+   "info": [],
+   "unclear": [],
+   "name": ""
+  },
+  "ar": 1.85
+ },
+ "seam": {
+  "sheet": {
+   "date": "Jan 4, 2026",
+   "id": "0049",
+   "focus_x": 0.25,
+   "abilities": [],
+   "info": [],
+   "unclear": [],
+   "name": ""
+  },
+  "ar": 1.781
+ },
+ "nukasaurus": {
+  "sheet": {
+   "date": "March 24, 2026",
+   "id": "0038",
+   "focus_x": 0.64,
+   "abilities": [
+    {
+     "name": "Poison Nuke",
+     "text": "+ Domain Expansion: the Nuke Field gives a 100% hit success and no way to escape."
+    }
+   ],
+   "info": [
+    "Fal-125's attempt to create new life with old dinosaur DNA mixed with living entities, to create a new weapon. It sort of worked, leading to this."
+   ],
+   "unclear": [],
+   "name": ""
+  },
+  "ar": 1.857
+ },
+ "whorl": {
+  "sheet": {
+   "date": "Sep 27, 2026",
+   "id": "0037",
+   "focus_x": 0.75,
+   "abilities": [],
+   "info": [],
+   "unclear": [],
+   "name": ""
+  },
+  "ar": 1.857
+ },
+ "glitch": {
+  "sheet": {
+   "date": "Nov 27, 2023",
+   "id": "0050",
+   "focus_x": 0.55,
+   "abilities": [
+    {
+     "name": "Chaos Pulse",
+     "text": ""
+    },
+    {
+     "name": "Digital Death",
+     "text": ""
+    }
+   ],
+   "info": [
+    "Drawn in three sizes, growing from small to huge."
+   ],
+   "unclear": [],
+   "name": ""
+  },
+  "ar": 1.781
+ },
+ "voltage77": {
+  "sheet": {
+   "date": "Oct 22, 2025",
+   "id": "0073",
+   "focus_x": 0.21,
+   "abilities": [
+    {
+     "name": "Adrenaline Spike",
+     "text": "When hit with something, adrenaline immediately kicks in, increasing speed and damage massively."
+    },
+    {
+     "name": "Sound Spikes",
+     "text": "It can launch huge shock waves from its body, and can increase its power by using an (easily replaceable) spike. It can also use the spikes as melee weapons."
+    }
+   ],
+   "info": [],
+   "unclear": [],
+   "name": ""
+  },
+  "ar": 1.85
+ },
+ "cruin": {
+  "sheet": {
+   "date": "April 21, 2025",
+   "id": "0079",
+   "focus_x": 0.45,
+   "abilities": [
+    {
+     "name": "Gravitational Manipulation",
+     "text": ""
+    },
+    {
+     "name": "Side Swap",
+     "text": ""
+    },
+    {
+     "name": "Slowing Time",
+     "text": ""
+    }
+   ],
+   "info": [],
+   "unclear": [],
+   "name": ""
+  },
+  "ar": 1.85
+ },
+ "smiley": {
+  "sheet": {
+   "date": "May 18, 2026",
+   "id": "0026",
+   "focus_x": 0.2,
+   "abilities": [
+    {
+     "name": "Smiling Glitch",
+     "text": "Once you are targeted by it, your vision will blur till you pass out. Usually he grabs you, then drowns you or slits your throat. A smiley appears randomly close to the area of the murder."
+    }
+   ],
+   "info": [
+    "Moved to the new universe."
+   ],
+   "unclear": [
+    "The ability name looks like \"Smiling Glitch\"; the Character Book has \"Smiling Blight\"."
+   ],
+   "name": ""
+  },
+  "ar": 1.779
+ },
+ "devic": {
+  "sheet": {
+   "date": "Feb 15, 2025",
+   "id": "0025",
+   "focus_x": 0.33,
+   "abilities": [
+    {
+     "name": "Forced Fusion",
+     "text": "Forces things together to make something new."
+    }
+   ],
+   "info": [
+    "Moved to the new universe."
+   ],
+   "unclear": [],
+   "name": ""
+  },
+  "ar": 1.896
+ }
+}
