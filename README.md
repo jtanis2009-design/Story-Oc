@@ -23,3 +23,9 @@ To turn on GitHub Pages: repository Settings > Pages > Deploy from a branch > pi
 - `data/universe.json`: characters and worlds, taken from the game (v288) and `FAL125_Character_Book.xlsx`.
 - `sprites/*.webp`: small copies of the game sprites.
 - `vendor/anthropic-sdk-1.4.0.mjs`: the official Anthropic SDK in one file, used only in API-key mode.
+
+## Pictures
+
+- Every file has a **Main drawings** section: upload your own drawings of the character, rename them, and pick which one is the main one. The main drawing becomes the file's picture (you can switch back to the game sprite). On the Files page, "Main drawings" in the picture menu shows them on the cards.
+- **Sprites in the game** shows every extra picture the game has for that character: forms (Lycion's Rage Form, Hole's Devil Form, Velara's Sinner form...), mini forms (Clown.x25's armored half and doll), attack and knocked-out poses, drawings already in the game, skins and recolours. Click one to see it big.
+- These live in `sprites/alt/`.

@@ -28,7 +28,8 @@
 "awakened": "???",
 "notes": "Playable in the side quest Never Ending Battle (v181) as God. 6 moves, cannot be defeated. Not part of the normal roster.",
 "source": "Book"
-}
+},
+"gallery": []
 },
 {
 "key": "book2",
@@ -57,7 +58,8 @@
 "awakened": "???",
 "notes": "Playable in the side quest Never Ending Battle (v181) as Satan. 6 moves, cannot be defeated. Not part of the normal roster.",
 "source": "Book"
-}
+},
+"gallery": []
 },
 {
 "key": "snavo",
@@ -92,8 +94,6 @@
 ],
 "archive": [
 "Item FAL-0003 is to be kept in a reinforced cell with four separate feeding ports. Do not address the heads individually. Staff report that the left-most head watches the door.",
-"null",
-"null",
 "When Snavo's containment was tested, the heads stopped arguing. It lasted eleven seconds. Nobody on site has asked it to happen again."
 ],
 "recruit": [
@@ -112,7 +112,29 @@
 "source": "Book"
 },
 "sprite": "sprites/snavo.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Horror Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_snavo_drawing.webp"
+},
+{
+"label": "Viper Venom",
+"kind": "recolour",
+"filter": "hue-rotate(85deg) saturate(1.2)"
+},
+{
+"label": "Candy Coil",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(2)"
+},
+{
+"label": "Snavo · Legendary",
+"kind": "skin",
+"src": "sprites/alt/skin_snavo_legend.webp"
+}
+]
 },
 {
 "key": "sna",
@@ -162,7 +184,29 @@
 "source": "Book"
 },
 "sprite": "sprites/sna.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Horror Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_sna_drawing.webp"
+},
+{
+"label": "Raw Flesh",
+"kind": "recolour",
+"filter": "hue-rotate(-25deg) saturate(1.7)"
+},
+{
+"label": "Frozen Symbiote",
+"kind": "recolour",
+"filter": "hue-rotate(180deg) saturate(1.3)"
+},
+{
+"label": "Sna · Legendary",
+"kind": "skin",
+"src": "sprites/alt/skin_sna_legend.webp"
+}
+]
 },
 {
 "key": "bearer",
@@ -219,7 +263,34 @@
 "source": "Book"
 },
 "sprite": "sprites/bearer.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Classic",
+"kind": "skin",
+"src": "sprites/alt/skin_bearer_classic.webp"
+},
+{
+"label": "Horror Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_bearer_drawing.webp"
+},
+{
+"label": "Hellforged",
+"kind": "recolour",
+"filter": "hue-rotate(-60deg) saturate(1.5)"
+},
+{
+"label": "Frostbite Legion",
+"kind": "recolour",
+"filter": "sepia(.8) saturate(3) hue-rotate(150deg)"
+},
+{
+"label": "Bearer · Legendary",
+"kind": "skin",
+"src": "sprites/alt/skin_bearer_legend.webp"
+}
+]
 },
 {
 "key": "fuja",
@@ -276,7 +347,39 @@
 "source": "Book"
 },
 "sprite": "sprites/fuja.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Prologue look (temporary art)",
+"kind": "form",
+"src": "sprites/alt/pro_fuja_h.webp"
+},
+{
+"label": "Horror Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_fuja_drawing.webp"
+},
+{
+"label": "Event Horizon",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(1.3)"
+},
+{
+"label": "Nebula Maw",
+"kind": "recolour",
+"filter": "hue-rotate(250deg) saturate(1.5)"
+},
+{
+"label": "Fuja · Legendary",
+"kind": "skin",
+"src": "sprites/alt/skin_fuja_legend.webp"
+},
+{
+"label": "SCP-6001 (Oldest Self)",
+"kind": "skin",
+"src": "sprites/alt/skin_scp_6001_skin.webp"
+}
+]
 },
 {
 "key": "radiant",
@@ -330,7 +433,29 @@
 "source": "Book"
 },
 "sprite": "sprites/radiant.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Prologue look (temporary art)",
+"kind": "form",
+"src": "sprites/alt/pro_radiant_h.webp"
+},
+{
+"label": "Hazard Yellow",
+"kind": "recolour",
+"filter": "hue-rotate(-70deg) saturate(1.6)"
+},
+{
+"label": "Fallout Pink",
+"kind": "recolour",
+"filter": "hue-rotate(200deg) saturate(1.3)"
+},
+{
+"label": "SCP-6002 (Oldest Self)",
+"kind": "skin",
+"src": "sprites/alt/skin_scp_6002_skin.webp"
+}
+]
 },
 {
 "key": "eyianix",
@@ -384,7 +509,24 @@
 "source": "Book"
 },
 "sprite": "sprites/eyianix.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Horror Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_eyianix_drawing.webp"
+},
+{
+"label": "Bloodshot",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(1.6)"
+},
+{
+"label": "Night Watch",
+"kind": "recolour",
+"filter": "hue-rotate(210deg) brightness(.75)"
+}
+]
 },
 {
 "key": "tulu",
@@ -441,7 +583,29 @@
 "source": "Book"
 },
 "sprite": "sprites/tulu.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Classic",
+"kind": "skin",
+"src": "sprites/alt/skin_tulu_classic.webp"
+},
+{
+"label": "Horror Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_tulu_drawing.webp"
+},
+{
+"label": "Overvolt Blue",
+"kind": "recolour",
+"filter": "hue-rotate(110deg) saturate(1.4)"
+},
+{
+"label": "Orchid Bone",
+"kind": "recolour",
+"filter": "sepia(1) saturate(3.5) hue-rotate(230deg)"
+}
+]
 },
 {
 "key": "vor",
@@ -498,7 +662,24 @@
 "source": "Book"
 },
 "sprite": "sprites/vor.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Scribble Original",
+"kind": "drawing",
+"src": "sprites/alt/skin_vor_scribble.webp"
+},
+{
+"label": "Jade Veil",
+"kind": "recolour",
+"filter": "sepia(1) saturate(3) hue-rotate(75deg)"
+},
+{
+"label": "Hollow Ink",
+"kind": "recolour",
+"filter": "invert(.92)"
+}
+]
 },
 {
 "key": "renku",
@@ -555,7 +736,24 @@
 "source": "Book"
 },
 "sprite": "sprites/renku.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Scribble Original",
+"kind": "drawing",
+"src": "sprites/alt/skin_renku_scribble.webp"
+},
+{
+"label": "Void Edge",
+"kind": "recolour",
+"filter": "hue-rotate(130deg) saturate(1.3)"
+},
+{
+"label": "Amethyst Edge",
+"kind": "recolour",
+"filter": "hue-rotate(-70deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "lovesick",
@@ -612,7 +810,24 @@
 "source": "Book"
 },
 "sprite": "sprites/lovesick.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Horror Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_lovesick_drawing.webp"
+},
+{
+"label": "Fallen Halo",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(1.3)"
+},
+{
+"label": "Cold Heart",
+"kind": "recolour",
+"filter": "hue-rotate(250deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "void",
@@ -662,7 +877,24 @@
 "source": "Book"
 },
 "sprite": "sprites/void.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Ember Void",
+"kind": "recolour",
+"filter": "sepia(1) saturate(6) hue-rotate(-35deg)"
+},
+{
+"label": "Cold Star",
+"kind": "recolour",
+"filter": "sepia(1) saturate(5) hue-rotate(150deg)"
+},
+{
+"label": "Dusk Hollow",
+"kind": "recolour",
+"filter": "sepia(1) saturate(5) hue-rotate(230deg)"
+}
+]
 },
 {
 "key": "sevalio",
@@ -712,7 +944,29 @@
 "source": "Book"
 },
 "sprite": "sprites/sevalio.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Original Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_sevalio_drawing.webp"
+},
+{
+"label": "Crimson Stitch",
+"kind": "recolour",
+"filter": "hue-rotate(120deg) saturate(1.2)"
+},
+{
+"label": "Violet Suture",
+"kind": "recolour",
+"filter": "hue-rotate(60deg) saturate(1.3)"
+},
+{
+"label": "Weak Kingsley",
+"kind": "skin",
+"src": "sprites/alt/skin_sevalio_legend.webp"
+}
+]
 },
 {
 "key": "monstro",
@@ -762,7 +1016,29 @@
 "source": "Book"
 },
 "sprite": "sprites/monstro.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Original Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_monstro_drawing.webp"
+},
+{
+"label": "Ember Host",
+"kind": "recolour",
+"filter": "hue-rotate(120deg) saturate(1.2)"
+},
+{
+"label": "Abyss Host",
+"kind": "recolour",
+"filter": "hue-rotate(-60deg) saturate(1.4)"
+},
+{
+"label": "Springtrap",
+"kind": "skin",
+"src": "sprites/alt/skin_monstro_legend.webp"
+}
+]
 },
 {
 "key": "wugang",
@@ -812,7 +1088,24 @@
 "source": "Book"
 },
 "sprite": "sprites/wugang.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Original Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_wugang_drawing.webp"
+},
+{
+"label": "Ember Sin",
+"kind": "recolour",
+"filter": "hue-rotate(60deg) saturate(1.2)"
+},
+{
+"label": "Cold Penance",
+"kind": "recolour",
+"filter": "hue-rotate(-60deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "anigari",
@@ -862,7 +1155,24 @@
 "source": "Book"
 },
 "sprite": "sprites/anigari.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Original Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_anigari_drawing.webp"
+},
+{
+"label": "Violet Static",
+"kind": "recolour",
+"filter": "sepia(1) saturate(3) hue-rotate(230deg)"
+},
+{
+"label": "Deep Maw",
+"kind": "recolour",
+"filter": "sepia(1) saturate(4) hue-rotate(170deg) brightness(.95)"
+}
+]
 },
 {
 "key": "sadie",
@@ -912,7 +1222,34 @@
 "source": "Book"
 },
 "sprite": "sprites/sadie.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Classic",
+"kind": "skin",
+"src": "sprites/alt/skin_sadie_classic.webp"
+},
+{
+"label": "The Stray",
+"kind": "skin",
+"src": "sprites/alt/skin_sadie_stray.webp"
+},
+{
+"label": "Scrapyard Gold",
+"kind": "skin",
+"src": "sprites/alt/skin_sadie_s1.webp"
+},
+{
+"label": "Static Stray",
+"kind": "skin",
+"src": "sprites/alt/skin_sadie_s2.webp"
+},
+{
+"label": "Old Stray",
+"kind": "skin",
+"src": "sprites/alt/skin_sadie_oldstray.webp"
+}
+]
 },
 {
 "key": "flick",
@@ -962,7 +1299,19 @@
 "source": "Book"
 },
 "sprite": "sprites/flick.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Deep Flipside",
+"kind": "recolour",
+"filter": "hue-rotate(260deg) saturate(1.5) brightness(.85)"
+},
+{
+"label": "Sea Rot",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(1.4)"
+}
+]
 },
 {
 "key": "hounddog",
@@ -1012,7 +1361,19 @@
 "source": "Book"
 },
 "sprite": "sprites/hounddog.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Rust Protocol",
+"kind": "recolour",
+"filter": "sepia(1) saturate(3) hue-rotate(-15deg)"
+},
+{
+"label": "Night Hunt",
+"kind": "recolour",
+"filter": "hue-rotate(210deg) brightness(.7) saturate(1.3)"
+}
+]
 },
 {
 "key": "cloak",
@@ -1062,7 +1423,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/cloak.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Static Discharge",
+"kind": "recolour",
+"filter": "hue-rotate(140deg) saturate(1.4)"
+},
+{
+"label": "Overcharged",
+"kind": "recolour",
+"filter": "sepia(1) saturate(5) hue-rotate(-20deg)"
+}
+]
 },
 {
 "key": "serpentine",
@@ -1112,7 +1485,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/serpentine.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Plague Doctor",
+"kind": "recolour",
+"filter": "sepia(1) saturate(2.5) hue-rotate(70deg)"
+},
+{
+"label": "Rosewater",
+"kind": "recolour",
+"filter": "sepia(1) saturate(2.5) hue-rotate(290deg)"
+}
+]
 },
 {
 "key": "felodese",
@@ -1162,7 +1547,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/felodese.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Ashen Vow",
+"kind": "recolour",
+"filter": "hue-rotate(200deg) brightness(.8) saturate(1.2)"
+},
+{
+"label": "Gilded Martyr",
+"kind": "recolour",
+"filter": "sepia(1) saturate(3) hue-rotate(5deg)"
+}
+]
 },
 {
 "key": "dragonfire",
@@ -1212,7 +1609,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/dragonfire.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Classic",
+"kind": "skin",
+"src": "sprites/alt/skin_dragonfire_classic.webp"
+},
+{
+"label": "Cold Circuit",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(1.4)"
+},
+{
+"label": "Neon Overclock",
+"kind": "recolour",
+"filter": "hue-rotate(-60deg) saturate(1.4)"
+}
+]
 },
 {
 "key": "devic",
@@ -1262,7 +1676,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/devic.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Toxic Bloom",
+"kind": "recolour",
+"filter": "hue-rotate(-60deg) saturate(1.5)"
+},
+{
+"label": "Bleached Fusion",
+"kind": "recolour",
+"filter": "invert(.85) hue-rotate(20deg)"
+}
+]
 },
 {
 "key": "smiley",
@@ -1312,7 +1738,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/smiley.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Classic",
+"kind": "skin",
+"src": "sprites/alt/skin_smiley_classic.webp"
+},
+{
+"label": "Bloodshot Grin",
+"kind": "recolour",
+"filter": "sepia(1) saturate(4) hue-rotate(-40deg)"
+},
+{
+"label": "Acid Grin",
+"kind": "recolour",
+"filter": "hue-rotate(75deg) saturate(1.4)"
+}
+]
 },
 {
 "key": "iris",
@@ -1362,7 +1805,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/iris.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Frostbite",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(1.3)"
+},
+{
+"label": "Gilded Maw",
+"kind": "recolour",
+"filter": "sepia(1) saturate(3) hue-rotate(10deg)"
+}
+]
 },
 {
 "key": "nero",
@@ -1412,7 +1867,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/nero.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Classic",
+"kind": "skin",
+"src": "sprites/alt/skin_nero_classic.webp"
+},
+{
+"label": "Violet Reaper",
+"kind": "recolour",
+"filter": "hue-rotate(-75deg) saturate(1.4)"
+},
+{
+"label": "Cold Steel",
+"kind": "recolour",
+"filter": "hue-rotate(180deg) saturate(1.2) brightness(.9)"
+}
+]
 },
 {
 "key": "kitsuna",
@@ -1462,7 +1934,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/kitsuna.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Spirit Fire",
+"kind": "recolour",
+"filter": "hue-rotate(165deg) saturate(1.3)"
+},
+{
+"label": "Sakura Fox",
+"kind": "recolour",
+"filter": "hue-rotate(-60deg) saturate(1.3)"
+},
+{
+"label": "Kitsune",
+"kind": "skin",
+"src": "sprites/alt/skin_kitsuna_legend.webp"
+}
+]
 },
 {
 "key": "lifewire",
@@ -1512,7 +2001,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/lifewire.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Overvolt",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(1.5)"
+},
+{
+"label": "Overgrown Current",
+"kind": "recolour",
+"filter": "hue-rotate(110deg) saturate(1.8) brightness(1.1)"
+}
+]
 },
 {
 "key": "cy",
@@ -1569,7 +2070,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/cy.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Mossy Stripes",
+"kind": "recolour",
+"filter": "hue-rotate(70deg) saturate(1.1)"
+},
+{
+"label": "Dusk Stripes",
+"kind": "recolour",
+"filter": "hue-rotate(250deg) saturate(1.2)"
+}
+]
 },
 {
 "key": "dia",
@@ -1619,7 +2132,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/dia.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Classic",
+"kind": "skin",
+"src": "sprites/alt/skin_dia_classic.webp"
+},
+{
+"label": "Permafrost",
+"kind": "recolour",
+"filter": "hue-rotate(28deg) saturate(1.3) brightness(.95)"
+},
+{
+"label": "Amethyst Frost",
+"kind": "recolour",
+"filter": "hue-rotate(80deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "sunshine",
@@ -1669,7 +2199,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/sunshine.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Dusk Scale",
+"kind": "recolour",
+"filter": "hue-rotate(260deg) saturate(1.3)"
+},
+{
+"label": "Lagoon Horizon",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "akuna",
@@ -1719,7 +2261,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/akuna.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Hollow Maw",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(1.2)"
+},
+{
+"label": "Gilded Hunger",
+"kind": "recolour",
+"filter": "sepia(1) saturate(3) hue-rotate(10deg)"
+}
+]
 },
 {
 "key": "kano",
@@ -1769,7 +2323,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/kano.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Cursed Linen",
+"kind": "recolour",
+"filter": "hue-rotate(120deg) saturate(1.2)"
+},
+{
+"label": "Pharaoh Gold",
+"kind": "recolour",
+"filter": "sepia(1) saturate(3) hue-rotate(5deg)"
+}
+]
 },
 {
 "key": "sleepy",
@@ -1819,7 +2385,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/sleepy.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Moonlit Moth",
+"kind": "recolour",
+"filter": "hue-rotate(180deg) saturate(1.3)"
+},
+{
+"label": "Violet Dusk",
+"kind": "recolour",
+"filter": "sepia(1) saturate(3) hue-rotate(225deg) brightness(1.1)"
+}
+]
 },
 {
 "key": "whorl",
@@ -1869,7 +2447,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/whorl.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Bruised Spiral",
+"kind": "recolour",
+"filter": "hue-rotate(250deg) saturate(1.4) brightness(1.2)"
+},
+{
+"label": "Deep Drain",
+"kind": "recolour",
+"filter": "hue-rotate(170deg) saturate(1.5) brightness(1.3)"
+}
+]
 },
 {
 "key": "nukasaurus",
@@ -1926,7 +2516,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/nukasaurus.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Meltdown Green",
+"kind": "recolour",
+"filter": "hue-rotate(90deg) saturate(1.3)"
+},
+{
+"label": "Hazard Orange",
+"kind": "recolour",
+"filter": "hue-rotate(160deg) saturate(1.5)"
+}
+]
 },
 {
 "key": "moon",
@@ -1983,7 +2585,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/moon.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Who's 6.6 (Helper)",
+"kind": "skin",
+"src": "sprites/alt/skin_moon_helper.webp"
+},
+{
+"label": "Blood Moon",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(1.3)"
+},
+{
+"label": "Pale Crescent",
+"kind": "recolour",
+"filter": "hue-rotate(40deg) saturate(.7) brightness(1.15)"
+}
+]
 },
 {
 "key": "sinkhole",
@@ -2040,7 +2659,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/sinkhole.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Original Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_sinkhole_drawing.webp"
+},
+{
+"label": "Toxic Dose",
+"kind": "recolour",
+"filter": "hue-rotate(90deg) saturate(1.4)"
+},
+{
+"label": "Cold Turkey",
+"kind": "recolour",
+"filter": "hue-rotate(170deg) saturate(1.5) brightness(1.2)"
+}
+]
 },
 {
 "key": "intervein",
@@ -2097,7 +2733,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/intervein.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Original Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_intervein_drawing.webp"
+},
+{
+"label": "Fool's Gold",
+"kind": "recolour",
+"filter": "hue-rotate(160deg) saturate(1.3)"
+},
+{
+"label": "Rust Vein",
+"kind": "recolour",
+"filter": "hue-rotate(-30deg) saturate(1.6)"
+}
+]
 },
 {
 "key": "nose",
@@ -2147,7 +2800,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/nose.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Original Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_nose_drawing.webp"
+},
+{
+"label": "Blue Confetti",
+"kind": "recolour",
+"filter": "hue-rotate(200deg) saturate(1.3)"
+},
+{
+"label": "Golden Grin",
+"kind": "recolour",
+"filter": "sepia(1) saturate(3) hue-rotate(10deg)"
+}
+]
 },
 {
 "key": "watcher",
@@ -2197,7 +2867,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/watcher.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Original Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_watcher_drawing.webp"
+},
+{
+"label": "Cold Eye",
+"kind": "recolour",
+"filter": "hue-rotate(160deg) saturate(1.3)"
+},
+{
+"label": "Nightshade Eye",
+"kind": "recolour",
+"filter": "hue-rotate(-80deg) saturate(1.4)"
+}
+]
 },
 {
 "key": "maw",
@@ -2254,7 +2941,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/maw.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Horror Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_maw_drawing.webp"
+},
+{
+"label": "Ripe Banana",
+"kind": "recolour",
+"filter": "sepia(1) saturate(4) hue-rotate(10deg)"
+},
+{
+"label": "Cold Spiral",
+"kind": "recolour",
+"filter": "hue-rotate(160deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "shatter",
@@ -2311,7 +3015,29 @@
 "source": "Generated"
 },
 "sprite": "sprites/shatter.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Active form",
+"kind": "form",
+"src": "sprites/alt/shatter_active.webp"
+},
+{
+"label": "Horror Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_shatter_drawing.webp"
+},
+{
+"label": "Event Horizon",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(1.3)"
+},
+{
+"label": "Hawking Gold",
+"kind": "recolour",
+"filter": "sepia(1) saturate(3) hue-rotate(10deg)"
+}
+]
 },
 {
 "key": "weepingangel",
@@ -2361,7 +3087,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/weepingangel.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Moonstone Mourner",
+"kind": "recolour",
+"filter": "sepia(1) saturate(3) hue-rotate(170deg)"
+},
+{
+"label": "Rose Quartz Mourner",
+"kind": "recolour",
+"filter": "sepia(1) saturate(2.5) hue-rotate(290deg)"
+}
+]
 },
 {
 "key": "rue",
@@ -2411,7 +3149,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/rue.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Holy Hoodie",
+"kind": "recolour",
+"filter": "hue-rotate(170deg) saturate(1.2)"
+},
+{
+"label": "Amethyst Devil",
+"kind": "recolour",
+"filter": "hue-rotate(-80deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "marrow",
@@ -2468,7 +3218,29 @@
 "source": "Generated"
 },
 "sprite": "sprites/marrow.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Original Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_marrow_drawing.webp"
+},
+{
+"label": "Haloed",
+"kind": "recolour",
+"filter": "sepia(1) saturate(2.6) hue-rotate(5deg) brightness(1.15)"
+},
+{
+"label": "Frostfur",
+"kind": "recolour",
+"filter": "hue-rotate(170deg) saturate(1.2)"
+},
+{
+"label": "SCP-6003 (Oldest Self)",
+"kind": "skin",
+"src": "sprites/alt/skin_scp_6003_skin.webp"
+}
+]
 },
 {
 "key": "seam",
@@ -2518,7 +3290,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/seam.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Deprecated Build",
+"kind": "recolour",
+"filter": "hue-rotate(140deg) saturate(1.6)"
+},
+{
+"label": "Brass Thread",
+"kind": "recolour",
+"filter": "hue-rotate(60deg) saturate(1.4)"
+}
+]
 },
 {
 "key": "glitch",
@@ -2568,7 +3352,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/glitch.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Blue Screen",
+"kind": "recolour",
+"filter": "hue-rotate(190deg) saturate(1.4)"
+},
+{
+"label": "Terminal Green",
+"kind": "recolour",
+"filter": "hue-rotate(110deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "thorn",
@@ -2618,7 +3414,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/thorn.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Infrared Scope",
+"kind": "recolour",
+"filter": "sepia(1) saturate(4) hue-rotate(-30deg) brightness(.9)"
+},
+{
+"label": "Night Vision",
+"kind": "recolour",
+"filter": "hue-rotate(80deg) saturate(1.8) brightness(1.1)"
+}
+]
 },
 {
 "key": "goodbye",
@@ -2668,7 +3476,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/goodbye.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Cheshire Purple",
+"kind": "recolour",
+"filter": "hue-rotate(260deg) saturate(1.4)"
+},
+{
+"label": "Ember Grin",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "eyeofsin",
@@ -2725,7 +3545,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/eyeofsin.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Bloodshot",
+"kind": "recolour",
+"filter": "sepia(1) saturate(5) hue-rotate(-35deg)"
+},
+{
+"label": "Golden Gaze",
+"kind": "recolour",
+"filter": "sepia(1) saturate(3) hue-rotate(10deg)"
+},
+{
+"label": "SCP-6004 (Oldest Self)",
+"kind": "skin",
+"src": "sprites/alt/skin_scp_6004_skin.webp"
+}
+]
 },
 {
 "key": "envival",
@@ -2782,7 +3619,39 @@
 "source": "Generated"
 },
 "sprite": "sprites/envival.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Original Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_envival_drawing.webp"
+},
+{
+"label": "Green Envy",
+"kind": "recolour",
+"filter": "hue-rotate(80deg) saturate(1.4)"
+},
+{
+"label": "Frostwing",
+"kind": "recolour",
+"filter": "hue-rotate(170deg) saturate(1.5)"
+},
+{
+"label": "SCP-6005-A (Oldest Self)",
+"kind": "skin",
+"src": "sprites/alt/skin_scp_6005a_skin.webp"
+},
+{
+"label": "SCP-6005-B (Oldest Self)",
+"kind": "skin",
+"src": "sprites/alt/skin_scp_6005b_skin.webp"
+},
+{
+"label": "SCP-6005-C (Oldest Self)",
+"kind": "skin",
+"src": "sprites/alt/skin_scp_6005c_skin.webp"
+}
+]
 },
 {
 "key": "inkating",
@@ -2832,7 +3701,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/inkating.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Blood Ink",
+"kind": "recolour",
+"filter": "sepia(1) saturate(5) hue-rotate(-35deg)"
+},
+{
+"label": "Nebula Ink",
+"kind": "recolour",
+"filter": "sepia(1) saturate(4) hue-rotate(225deg)"
+},
+{
+"label": "SCP-6006 (Oldest Self)",
+"kind": "skin",
+"src": "sprites/alt/skin_scp_6006_skin.webp"
+}
+]
 },
 {
 "key": "ruckus",
@@ -2882,7 +3768,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/ruckus.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Neon Riot",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(1.5)"
+},
+{
+"label": "Sherbet Amp",
+"kind": "recolour",
+"filter": "hue-rotate(300deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "ox",
@@ -2916,12 +3814,7 @@
 }
 ],
 "archive": [
-"null",
-"Ability: Red Rooms. Details withheld.",
-"null",
-"null",
-"null",
-"null"
+"Ability: Red Rooms. Details withheld."
 ],
 "recruit": [
 "A red hood in the dark. Doors close behind you, one by one.",
@@ -2939,7 +3832,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/ox.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Cobalt Bull",
+"kind": "recolour",
+"filter": "hue-rotate(200deg) saturate(1.2)"
+},
+{
+"label": "Jade Bull",
+"kind": "recolour",
+"filter": "hue-rotate(110deg) saturate(1.2)"
+}
+]
 },
 {
 "key": "stalker",
@@ -2996,7 +3901,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/stalker.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Hallway Fog",
+"kind": "recolour",
+"filter": "hue-rotate(180deg) saturate(1.2) brightness(1.1)"
+},
+{
+"label": "Night Shift",
+"kind": "recolour",
+"filter": "hue-rotate(250deg) saturate(1.4) brightness(.85)"
+}
+]
 },
 {
 "key": "haz225",
@@ -3046,7 +3963,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/haz225.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Biohazard Orange",
+"kind": "recolour",
+"filter": "hue-rotate(-30deg) saturate(1.5)"
+},
+{
+"label": "Cold Storage",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "haz378",
@@ -3096,7 +4025,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/haz378.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Meltdown Green",
+"kind": "recolour",
+"filter": "hue-rotate(90deg) saturate(1.3)"
+},
+{
+"label": "Radiation Pink",
+"kind": "recolour",
+"filter": "hue-rotate(200deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "claire",
@@ -3146,7 +4087,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/claire.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Midnight Squeak",
+"kind": "recolour",
+"filter": "hue-rotate(200deg) saturate(1.3) brightness(.9)"
+},
+{
+"label": "Bubblegum Squeak",
+"kind": "recolour",
+"filter": "hue-rotate(-60deg) saturate(1.3)"
+},
+{
+"label": "Gilded Duck",
+"kind": "skin",
+"src": "sprites/alt/skin_claire_yellow.webp"
+}
+]
 },
 {
 "key": "stillborn",
@@ -3196,7 +4154,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/stillborn.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Bubblegum Hush",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(1.3)"
+},
+{
+"label": "Cold Stage",
+"kind": "recolour",
+"filter": "hue-rotate(60deg) saturate(1.3) brightness(.95)"
+}
+]
 },
 {
 "key": "creep",
@@ -3246,7 +4216,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/creep.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Rust Riot",
+"kind": "recolour",
+"filter": "hue-rotate(-50deg) saturate(1.6)"
+},
+{
+"label": "Cold Static",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(1.3)"
+},
+{
+"label": "Thatcher Davis",
+"kind": "skin",
+"src": "sprites/alt/skin_creep_legend.webp"
+}
+]
 },
 {
 "key": "sunburst",
@@ -3293,7 +4280,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/sunburst.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Original Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_sunburst_drawing.webp"
+},
+{
+"label": "Blue Flame",
+"kind": "recolour",
+"filter": "hue-rotate(190deg) saturate(1.3)"
+},
+{
+"label": "Witchfire",
+"kind": "recolour",
+"filter": "hue-rotate(80deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "proto_0065",
@@ -3340,7 +4344,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/proto_0065.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Original Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_proto_0065_drawing.webp"
+},
+{
+"label": "Void Violet",
+"kind": "recolour",
+"filter": "hue-rotate(35deg) saturate(1.2)"
+},
+{
+"label": "Blood Bands",
+"kind": "recolour",
+"filter": "hue-rotate(-70deg) saturate(1.5)"
+}
+]
 },
 {
 "key": "proto_0066",
@@ -3387,7 +4408,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/proto_0066.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Original Drawing",
+"kind": "drawing",
+"src": "sprites/alt/skin_proto_0066_drawing.webp"
+},
+{
+"label": "Death Cap",
+"kind": "recolour",
+"filter": "hue-rotate(80deg) saturate(1.2)"
+},
+{
+"label": "Glowcap",
+"kind": "recolour",
+"filter": "hue-rotate(160deg) saturate(1.5) brightness(1.1)"
+}
+]
 },
 {
 "key": "smileywires",
@@ -3434,7 +4472,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/smileywires.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Original Sketch",
+"kind": "drawing",
+"src": "sprites/alt/skin_smileywires_drawing.webp"
+},
+{
+"label": "Blue Screen",
+"kind": "recolour",
+"filter": "hue-rotate(170deg) saturate(1.2)"
+},
+{
+"label": "Green Terminal",
+"kind": "recolour",
+"filter": "hue-rotate(80deg) saturate(1.3) brightness(.95)"
+}
+]
 },
 {
 "key": "walker",
@@ -3470,10 +4525,7 @@
 "archive": [
 "Item FAL-0068 is held at Containment Level: Medium. The subject does not stay in the cell. Staff are advised not to wait up. Ability: ???.",
 "Description: a hooded figure in a stitched blue parka with black fur along every seam and a purple light under the coat. His face is split down the middle: one half white with a torn-open black mouth and one red eye, the other half dark red and sewn shut.",
-"null",
-"null",
-"The subject is the sworn enemy of Maw, and the feeling is returned.",
-"null"
+"The subject is the sworn enemy of Maw, and the feeling is returned."
 ],
 "recruit": [],
 "book": {
@@ -3488,7 +4540,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/walker.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Frostbitten",
+"kind": "recolour",
+"filter": "hue-rotate(-20deg) saturate(.8) brightness(1.15)"
+},
+{
+"label": "Bloodied Parka",
+"kind": "recolour",
+"filter": "hue-rotate(140deg) saturate(1.5)"
+}
+]
 },
 {
 "key": "xekna",
@@ -3523,11 +4587,7 @@
 ],
 "archive": [
 "Item FAL-0069 is held at Containment Level: High. The subject does not resist containment. The subject grins throughout. Ability: ???.",
-"Description: a hulking red demon with curved horns, swept-back spikes and a grin of needle teeth behind black visor eyes. Wears a stitched red jacket with yellow rivets and biohazard marks. Drawn August 16th 2026.",
-"null",
-"null",
-"null",
-"null"
+"Description: a hulking red demon with curved horns, swept-back spikes and a grin of needle teeth behind black visor eyes. Wears a stitched red jacket with yellow rivets and biohazard marks. Drawn August 16th 2026."
 ],
 "recruit": [],
 "book": {
@@ -3542,7 +4602,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/xekna.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Ash Demon",
+"kind": "recolour",
+"filter": "hue-rotate(-15deg) saturate(.4) brightness(1.2)"
+},
+{
+"label": "Violet Spikes",
+"kind": "recolour",
+"filter": "hue-rotate(260deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "ronin",
@@ -3577,11 +4649,7 @@
 ],
 "archive": [
 "Item FAL-0070 is held at Containment Level: Medium. The subject sits where he is put and does not ask why. Ability: ???.",
-"Description: a contracted Fal-125 merc, a Goblin Devil host, in a heavy black hood, brown hair in a bun, one blue eye and one orange eye. Half his face is scarred. Long white claws on both hands. The green growing through him is a goblin devil under contract. Drawn May 22nd 2026.",
-"null",
-"null",
-"null",
-"null"
+"Description: a contracted Fal-125 merc, a Goblin Devil host, in a heavy black hood, brown hair in a bun, one blue eye and one orange eye. Half his face is scarred. Long white claws on both hands. The green growing through him is a goblin devil under contract. Drawn May 22nd 2026."
 ],
 "recruit": [],
 "book": {
@@ -3596,7 +4664,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/ronin.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Dusk Hood",
+"kind": "recolour",
+"filter": "hue-rotate(220deg) saturate(1.2)"
+},
+{
+"label": "Moss Green",
+"kind": "recolour",
+"filter": "hue-rotate(90deg) saturate(1.5)"
+}
+]
 },
 {
 "key": "hollowpoint",
@@ -3632,10 +4712,8 @@
 "archive": [
 "Item FAL-0071 is held at Containment Level: High. The subject has no recorded name and answers to none; the Foundation files it as Hollowpoint. Ability: Leeching Void.",
 "Description: a hunched white entity with a black, tooth-lined face, one white-ringed eye and one red-ringed void eye, and a red compass sigil on its throat. Red-stained claws. A shotgun that appears to be part of the arm. Concept sheets dated Oct 27th 2023 and 2025.",
-"null",
 "Leech: it feeds on every kill it makes, and the feeding closes the Wound at its weak spot for a short while. The Wound opens a little more every five hours. If nothing is done for two days it kills the entity. If nothing is done for longer, the skull breaks away.",
-"Void Shot: the shells are not shells. Fired, each one becomes a small empty void that pulls in whatever it touches and erases it. Nothing has been recovered. The gun is the one the subject once turned on itself. Remainder of entry expunged by order of O5-██.",
-"null"
+"Void Shot: the shells are not shells. Fired, each one becomes a small empty void that pulls in whatever it touches and erases it. Nothing has been recovered. The gun is the one the subject once turned on itself. Remainder of entry expunged by order of O5-██."
 ],
 "recruit": [],
 "book": {
@@ -3650,7 +4728,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/hollowpoint.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Pale Wound",
+"kind": "recolour",
+"filter": "hue-rotate(-30deg) saturate(.6) brightness(1.2)"
+},
+{
+"label": "Void Blue",
+"kind": "recolour",
+"filter": "hue-rotate(180deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "ghost_0072",
@@ -3686,10 +4776,8 @@
 "archive": [
 "Item FAL-0072 is held at Containment Level: Medium. The subject is quiet, polite and never asks for anything. Ability: Save file. Dead media manipulation.",
 "Description: a chibi figure with lime-green hair bleeding through hot pink into violet, large black eyes with violet pupils, a pale skull-like face with a purple tear running from the nose, and a black fur-trimmed hoodie with a stitched purple X-eyed grin on the chest. Grey trousers with violet stitching. Drawn May 2026.",
-"null",
 "Save file: the subject can write a copy of a person. If that person is about to die, the copy is loaded and they stand back up exactly as they were when it was written. Nobody remembers falling. The subject keeps the tapes.",
-"Dead media manipulation: old tapes, discs and dead screens obey the subject. Played backwards they mend the wounded; played at a hostile, they show it a channel that is not there. Remainder of entry expunged by order of O5-██.",
-"null"
+"Dead media manipulation: old tapes, discs and dead screens obey the subject. Played backwards they mend the wounded; played at a hostile, they show it a channel that is not there. Remainder of entry expunged by order of O5-██."
 ],
 "recruit": [],
 "book": {
@@ -3704,7 +4792,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/ghost_0072.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Dead Channel",
+"kind": "recolour",
+"filter": "hue-rotate(60deg) saturate(1.2)"
+},
+{
+"label": "Glitch Pink",
+"kind": "recolour",
+"filter": "hue-rotate(-40deg) saturate(1.4) brightness(1.05)"
+}
+]
 },
 {
 "key": "voltage77",
@@ -3740,10 +4840,8 @@
 "archive": [
 "Item FAL-0073 is held at Containment Level: High. The subject cannot be kept quiet and does not try. Ability: Adrenaline Spike. Sound Spikes.",
 "Description: a punk humanoid with a tall teal mohawk, black shades, a white face split by a red lightning mark, a blue spiked jacket, red shorts, grey armoured legs and violet claws. Drawn Oct 22 2025.",
-"null",
 "Adrenaline Spike: anything that strikes the subject sets off an adrenaline surge. Speed and strength both rise sharply, and personnel who hit it twice are not asked to hit it a third time.",
-"Sound Spikes: shock waves can be launched from the body, and their power is raised by tearing off one of the spikes. The spikes grow back within hours. They are also used as close-range weapons. Remainder of entry expunged by order of O5-██.",
-"null"
+"Sound Spikes: shock waves can be launched from the body, and their power is raised by tearing off one of the spikes. The spikes grow back within hours. They are also used as close-range weapons. Remainder of entry expunged by order of O5-██."
 ],
 "recruit": [],
 "book": {
@@ -3758,7 +4856,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/voltage77.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Dead Battery",
+"kind": "recolour",
+"filter": "hue-rotate(30deg) saturate(.5) brightness(.9)"
+},
+{
+"label": "Hot Wire",
+"kind": "recolour",
+"filter": "hue-rotate(-50deg) saturate(1.5) brightness(1.1)"
+}
+]
 },
 {
 "key": "mindbender",
@@ -3794,12 +4904,10 @@
 "archive": [
 "Item FAL-0074 is held at Containment Level: High. The subject does not speak and is never asked to. Everyone who stands near it simply understands what it wants. The Foundation files it as Mindbender. Abilities: Hide. Psycho Shift. Tel Port. Wonder Room.",
 "Description: a long-limbed black quadruped covered in dense, bristling quills. One enormous magenta eye ringed by six small coloured eyes (red, green and purple). A long curled tail. Every limb and the tail are banded in red, green, purple and pink, and every limb ends in curved black claws. Drawn May 9th 2024.",
-"null",
 "Hide: the subject can fold a person out of sight. Observers describe the person as still being in the room and just no longer a thing that can be looked at on purpose. Large events still find them.",
 "Psycho Shift: a wound, a burn or a curse on one person can be taken off them and set down on someone else. The wound is the same size. It does not care whose it is.",
 "Tel Port: the subject sends things somewhere else and stands where they were. Nothing sent has been recovered in the same mood.",
-"Wonder Room: for a short time the room is wrong. What was strong in it becomes soft, and what was soft becomes strong. Remainder of entry expunged by order of O5-██.",
-"null"
+"Wonder Room: for a short time the room is wrong. What was strong in it becomes soft, and what was soft becomes strong. Remainder of entry expunged by order of O5-██."
 ],
 "recruit": [],
 "book": {
@@ -3814,7 +4922,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/mindbender.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Dream Violet",
+"kind": "recolour",
+"filter": "hue-rotate(40deg) saturate(1.3)"
+},
+{
+"label": "Pale Mind",
+"kind": "recolour",
+"filter": "saturate(.3) brightness(1.6)"
+}
+]
 },
 {
 "key": "bonesaw",
@@ -3850,11 +4970,9 @@
 "archive": [
 "Item FAL-0075 is held at Containment Level: High. The subject is escorted by a second entity, which the Foundation files separately as its Demon friend. The two are never to be held in different cells. Ability: unknown. Weapon: uzi.",
 "Description: a huge, grey-armoured figure, stitched shut across the face. One large red spiral eye. The other side of the head is torn open into a mass of red-streaked spines and teeth. A glowing red spine sigil on the chest, black tendrils moving without wind, and a spiked grey buzzsaw in place of one arm, with a red crosshair at its centre. Drawn Feb 16 2025.",
-"null",
 "The Demon friend: a white, crowned skull with two enormous black eyes, a mouth of needle teeth, and a second mouth in each hand. It rides inside the subject's coat. It does not speak. When it is let out it chooses its own targets, and the subject's crosshair is always already on them.",
 "The Weapon: a standard-issue uzi. Nobody knows where it was issued. The subject never reloads it.",
-"The saw: when the subject spins it up, the room slows down. The crosshair in the middle has always been pointed at someone in the room. Remainder of entry expunged by order of O5-██.",
-"null"
+"The saw: when the subject spins it up, the room slows down. The crosshair in the middle has always been pointed at someone in the room. Remainder of entry expunged by order of O5-██."
 ],
 "recruit": [],
 "book": {
@@ -3869,7 +4987,29 @@
 "source": "Generated"
 },
 "sprite": "sprites/bonesaw.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "His friend",
+"kind": "form",
+"src": "sprites/alt/bonesaw_friend.webp"
+},
+{
+"label": "With the uzi",
+"kind": "form",
+"src": "sprites/alt/bonesaw_uzi.webp"
+},
+{
+"label": "Rust Plate",
+"kind": "recolour",
+"filter": "hue-rotate(-20deg) saturate(.7) brightness(.9)"
+},
+{
+"label": "Cold Steel",
+"kind": "recolour",
+"filter": "hue-rotate(170deg) saturate(.9) brightness(1.1)"
+}
+]
 },
 {
 "key": "kaleido",
@@ -3905,11 +5045,9 @@
 "archive": [
 "Item FAL-0076 is held at Containment Level: High. The subject is cooperative as long as it is being looked at. The sheet has no name and the Foundation files it as Kaleido. Observers who look away report a strong feeling of having been rude.",
 "Description: a red, quill-ringed entity with a huge crescent grin of needle teeth. One red spiral eye, one prismatic eye with a pentagram in it. A black box of a chest holding two kaleidoscope eyes and a second mouth full of teeth, on long black legs. Drawn Dec 2024.",
-"null",
 "Spiral Gaze: an observer who meets the red eye reports the next few minutes as slow and slightly embarrassing. Their hands shake less afterwards.",
 "Kaleidoscope: the prism eye turns and whatever was wrong with the person near it is put back into a colour. The subject says this is not a heal. The subject is wrong.",
-"Chest Maw: the second mouth is fed by the first one's work. What it bites it does not keep. Remainder of entry expunged by order of O5-██.",
-"null"
+"Chest Maw: the second mouth is fed by the first one's work. What it bites it does not keep. Remainder of entry expunged by order of O5-██."
 ],
 "recruit": [],
 "book": {
@@ -3924,7 +5062,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/kaleido.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Violet Prism",
+"kind": "recolour",
+"filter": "hue-rotate(250deg) saturate(1)"
+},
+{
+"label": "Bone White",
+"kind": "recolour",
+"filter": "saturate(.2) brightness(1.5)"
+}
+]
 },
 {
 "key": "pyrelash",
@@ -3960,10 +5110,8 @@
 "archive": [
 "Item FAL-0077 is held at Containment Level: High. The subject is warm to the touch from several metres away. The sheet has no name and the Foundation files it as Pyrelash. The cell is rebuilt every few weeks, and nobody who has tried to leave it in a hurry has managed to.",
 "Description: a broad, brown, cracked body glowing orange through every crack. A smooth dome of a head with one slanted orange eye and a mouth of needle teeth. Six huge curved orange blades grow from its back and shoulders and move like tentacles. Drawn May 14th 2024.",
-"null",
 "The lashes: six, always six. They are not bone and not flame. Sixty seconds after being cut off they are back. They do not strike so much as hold: staff report being unable to finish a sentence once one has closed around them.",
-"The cracks: when the subject is calm they are closed. When it is not, the whole body opens at once and the room is no longer the same temperature. Remainder of entry expunged by order of O5-██.",
-"null"
+"The cracks: when the subject is calm they are closed. When it is not, the whole body opens at once and the room is no longer the same temperature. Remainder of entry expunged by order of O5-██."
 ],
 "recruit": [],
 "book": {
@@ -3978,7 +5126,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/pyrelash.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Blue Flame",
+"kind": "recolour",
+"filter": "hue-rotate(180deg) saturate(1.2)"
+},
+{
+"label": "Ash",
+"kind": "recolour",
+"filter": "saturate(.15) brightness(1.2)"
+}
+]
 },
 {
 "key": "outbreak",
@@ -4014,11 +5174,9 @@
 "archive": [
 "Item FAL-0078 is held at Containment Level: Extreme. The subject is not hostile. It is thorough. The sheet has no name and the Foundation files it as Outbreak. Staff are asked not to thank it.",
 "Description: a many-eyed mass of black quills and yellow hazard stripes. A wide mouth of needle teeth across the middle, small yellow eyes scattered over the body, a biohazard sign where a heart would be, six swollen yellow limbs covered in handwritten warnings, and long hazard-striped legs. Drawn December 21st 2024.",
-"null",
 "Quarantine: within a minute of the subject entering a room, every door in it is locked from the outside. Nobody has found the lock.",
 "Antidote: the subject can cure what it has just caused, and does, in that order. The cure is always slightly larger than the harm.",
-"Biohazard Burst: the biohazard sign opens. What comes out is counted, and the count is paid back to whoever was in the room with it. Remainder of entry expunged by order of O5-██.",
-"null"
+"Biohazard Burst: the biohazard sign opens. What comes out is counted, and the count is paid back to whoever was in the room with it. Remainder of entry expunged by order of O5-██."
 ],
 "recruit": [],
 "book": {
@@ -4033,7 +5191,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/outbreak.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Code Green",
+"kind": "recolour",
+"filter": "hue-rotate(60deg) saturate(1.1)"
+},
+{
+"label": "Code Red",
+"kind": "recolour",
+"filter": "hue-rotate(-60deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "cruin",
@@ -4069,11 +5239,9 @@
 "archive": [
 "Item FAL-0079 is held at Containment Level: High. The subject is filed as C-Ruin, the name on its sheet. The sheet is dated April 21st 2025. Items dropped in its cell do not fall straight down, and staff are told to stop dropping them.",
 "Description: a purple-and-grey horned Demon with one yellow barred eye and one huge red eye, a wide red grin of needle teeth, yellow-padded shoulders and white claws on every foot. A hand of red-tipped black fingers reaches out from behind its head. The right arm ends in a purple claw that is always wet. The Foundation has stopped cleaning it.",
-"null",
 "Gravitational Manipulation: the cell has a floor, a ceiling and two walls that count as the floor on different days. Staff are issued boots for all of them.",
 "Side Swap: do not stand next to the subject when it is bored. Two members of staff have been found on opposite sides of the room with no memory of crossing it.",
-"Slowing Time: the clock in the observation room runs late. It was replaced three times. It is still late.",
-"null"
+"Slowing Time: the clock in the observation room runs late. It was replaced three times. It is still late."
 ],
 "recruit": [],
 "book": {
@@ -4088,7 +5256,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/cruin.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Red Shift",
+"kind": "recolour",
+"filter": "hue-rotate(110deg) saturate(1.3)"
+},
+{
+"label": "Event Horizon",
+"kind": "recolour",
+"filter": "saturate(.3) brightness(.75)"
+}
+]
 },
 {
 "key": "shamoon",
@@ -4124,12 +5304,10 @@
 "archive": [
 "Item FAL-0080 is held at Containment Level: High. The subject is filed as Shamoon, the name on its sheet. The sheet is dated April 21st 2025 and is marked Sinister 7, 1/7. The Foundation has not been shown 2/7 and would like to keep it that way.",
 "Description: a hulking black-and-gold figure in a mane of white wisps, with one gold spiral eye and one red spiral eye. The grin is gold, wide and stitched at the corners. A gold heart sits on its chest above a set of bone ribs, and a gold sword on a chain hangs on its back. Every limb ends in gold claws.",
-"null",
 "Absorbing Light: lamps in the cell are replaced weekly. The replacements do not come on. The subject is never seen eating.",
 "Shadow Puppeteering: staff shadows in the observation room have been observed to wave. Staff have been asked not to wave back.",
 "Shadow Sword, Umbra Claw: both are the same shape as the subject's own shadow. The Foundation does not recommend standing in it.",
-"Shadow Armour: when the cell lights are switched back on it is already wearing it.",
-"null"
+"Shadow Armour: when the cell lights are switched back on it is already wearing it."
 ],
 "recruit": [],
 "book": {
@@ -4144,7 +5322,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/shamoon.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Blue Hour",
+"kind": "recolour",
+"filter": "hue-rotate(190deg) saturate(1.3)"
+},
+{
+"label": "Ash Light",
+"kind": "recolour",
+"filter": "saturate(.2) brightness(1.15)"
+}
+]
 },
 {
 "key": "triggerfinger",
@@ -4180,11 +5370,9 @@
 "archive": [
 "Item FAL-0081 is held at Containment Level: High. The subject does not run from the Foundation. It runs ahead of it. The sheet is dated April 2025 and the Foundation files it as Triggerfinger. Do not follow it onto a clean floor.",
 "Description: a hulking grey war-frame with a stitched, hollow face and green lamps on both shoulders. Ribbed chest plates, torn white trousers, long curved claws. A huge black soul in the shape of a crow clings to its back and watches with one red eye. The crow is not part of the frame. The frame is part of the crow.",
-"null",
 "Speed Dash: the subject is where you were. A small, round, heavy thing is left on the floor where it passed. Staff are asked not to pick it up.",
 "Beacon of the Lost Soul: the crow screams once. Everything that hears it is, for a while, very easy to find.",
-"Landmine Eruption: every small, round, heavy thing goes off at the same time. The count is always right.",
-"null"
+"Landmine Eruption: every small, round, heavy thing goes off at the same time. The count is always right."
 ],
 "recruit": [],
 "book": {
@@ -4199,7 +5387,19 @@
 "source": "Book"
 },
 "sprite": "sprites/triggerfinger.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Lost Soul Blue",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(1.6)"
+},
+{
+"label": "Rust Alarm",
+"kind": "recolour",
+"filter": "sepia(.9) hue-rotate(-20deg) saturate(2)"
+}
+]
 },
 {
 "key": "nanenane",
@@ -4235,11 +5435,9 @@
 "archive": [
 "Item FAL-0082 is held at Containment Level: Moderate. The subject is a child with very long hair and is polite. The sheet gave it a longer name once, dated April 6th 2025. It prefers to be called Nane.",
 "Description: a child in a black-and-white striped coat, hair so wild it hides the entire face, blue bandages wrapped around both feet, orange cuffs and a gold ring at the chest. An alternate costume in red and white stripes and a beta costume with purple sleeves are on file. The face is on file separately. The eyes are red.",
-"null",
 "Sound Blast: the shout is visible for about a second. Staff standing in it report that it was less loud than it looked.",
 "Sound Breathing: the subject breathes in time with the injured. The injured, in time, stop being injured.",
-"Seeing Sound: the subject can see sound. A quiet room is, to it, an empty room. Staff are asked to hum.",
-"null"
+"Seeing Sound: the subject can see sound. A quiet room is, to it, an empty room. Staff are asked to hum."
 ],
 "recruit": [],
 "book": {
@@ -4254,7 +5452,19 @@
 "source": "Book"
 },
 "sprite": "sprites/nanenane.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Alternate Crimson",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(1.4)"
+},
+{
+"label": "Beta Violet",
+"kind": "recolour",
+"filter": "hue-rotate(60deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "reflux",
@@ -4290,11 +5500,9 @@
 "archive": [
 "Item FAL-0083 is held at Containment Level: Extreme. The subject is courteous and considers the cell a guest room. The sheet is dated March 1st 2024 and the Foundation files it as Reflux. Staff are asked to stop clocks nearby.",
 "Description: a hunched vampire with a spiked red mane, wide red eyes and a grin of needle teeth. A ribbed green coat of claws and vines, orange-banded knees, long green claws. A second shape, the spirit The Lasher, is filed with it: a black-mouthed green husk on spider legs that is never more than a room away.",
-"null",
 "Blood Sucking: the bite is slow, deliberate and apologised for afterwards, by no one.",
 "Blood Freezing: what the subject takes it can also lock. The blood stops. The person does not notice for some time.",
-"Time Stop: ten seconds. Staff report the subject always finishes what it started in them, and that afterwards it looks as it did a minute ago. Vampire Regeneration: wounds on the subject close on their own, a little more each time it has fed.",
-"null"
+"Time Stop: ten seconds. Staff report the subject always finishes what it started in them, and that afterwards it looks as it did a minute ago. Vampire Regeneration: wounds on the subject close on their own, a little more each time it has fed."
 ],
 "recruit": [],
 "book": {
@@ -4309,7 +5517,19 @@
 "source": "Book"
 },
 "sprite": "sprites/reflux.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Blood Moon",
+"kind": "recolour",
+"filter": "hue-rotate(-100deg) saturate(1.3)"
+},
+{
+"label": "Pale Lord",
+"kind": "recolour",
+"filter": "hue-rotate(60deg) saturate(.5) brightness(1.2)"
+}
+]
 },
 {
 "key": "kasugu",
@@ -4345,11 +5565,9 @@
 "archive": [
 "Item FAL-0084 is held at Containment Level: High. The subject is 22, 5'2\" and Japanese-American on the sheet. It has two faces and is polite in one of them. The sheet is dated March 1st 2025 and the Foundation files it as Kasugu.",
 "Description: a huge spiked blue-and-purple mane, a black coat with a gold collar, orange-ruffled cuffs and yellow lightning along the sides. The usual face is calm with pink eyes. The chasing face is red-eyed and very angry. Do not make the usual face go away.",
-"null",
 "Digital Manipulation: screens in the cell change channel when the subject is bored. They have begun to change channel when it is not.",
 "Demon Speed Dash: the cell has been measured twice. The measurement is wrong the second time.",
-"Dark Thunder Breathing: the subject breathes in. Every light in the building goes out. Then it breathes out.",
-"null"
+"Dark Thunder Breathing: the subject breathes in. Every light in the building goes out. Then it breathes out."
 ],
 "recruit": [],
 "book": {
@@ -4364,7 +5582,19 @@
 "source": "Book"
 },
 "sprite": "sprites/kasugu.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Overload Red",
+"kind": "recolour",
+"filter": "hue-rotate(110deg) saturate(1.4)"
+},
+{
+"label": "Dark Thunder",
+"kind": "recolour",
+"filter": "hue-rotate(-50deg) saturate(.8) brightness(.8)"
+}
+]
 },
 {
 "key": "conquer",
@@ -4400,11 +5630,9 @@
 "archive": [
 "Item FAL-0085 is held at Containment Level: Extreme. The subject is slow, and has always been slow, and is never late. The sheet is dated March 12th 2023 and the Foundation files it as Conquer. It is vengeful. Staff are asked to keep a list of what they have done to it.",
 "Description: a hulking mass of dark-red bristled fur, one huge black eye with a purple pupil, a maw of needle teeth and purple plates on the shoulders. Stitched blue legs, chains hanging from the arms, long dangling claws. Strengths: extreme strength. Weaknesses: slow.",
-"null",
 "Claw Swipe: the claw is not fast. The distance is simply not there any more by the time you notice.",
 "Chain of Torment: the chains have been on it longer than the fur. They remember where you were.",
-"Touch of Paralysis: a single finger. Staff report being fully awake for the remainder.",
-"null"
+"Touch of Paralysis: a single finger. Staff report being fully awake for the remainder."
 ],
 "recruit": [],
 "book": {
@@ -4419,7 +5647,19 @@
 "source": "Book"
 },
 "sprite": "sprites/conquer.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Pale Conqueror",
+"kind": "recolour",
+"filter": "saturate(.3) brightness(1.4)"
+},
+{
+"label": "Iron Chain",
+"kind": "recolour",
+"filter": "hue-rotate(170deg) saturate(1.2)"
+}
+]
 },
 {
 "key": "tearwing",
@@ -4455,11 +5695,9 @@
 "archive": [
 "Item FAL-0086 is held at Containment Level: High. The subject cries, and the cell is, as a result, always a little wet. The sheet is dated March 12th 2023 and was filed under Weeping Angel; the Foundation re-files it as Tearwing to avoid confusion with an earlier, quieter, entirely unrelated Item.",
 "Description: a tall red-and-black bleeding angel, bandaged, with two black eyes under blue stripes, a long red beak like a plague mask and a purple X on the chest. Grey spiked wings fold around the head. Red feather-blades run down both arms. A Dutch note on the sheet says the colour was removed by accident and this is the saved version. Do not edit.",
-"null",
 "Bleeding Tear: where one lands, the nearest wound closes. The subject does not choose which.",
 "Bandage Wrap: the bandages are the subject's. It gives them away and grows more.",
-"Sorrow Flood: the room fills. Only the people who meant harm are out of their depth.",
-"null"
+"Sorrow Flood: the room fills. Only the people who meant harm are out of their depth."
 ],
 "recruit": [],
 "book": {
@@ -4474,7 +5712,19 @@
 "source": "Book"
 },
 "sprite": "sprites/tearwing.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Blue Weep",
+"kind": "recolour",
+"filter": "hue-rotate(200deg) saturate(1.1)"
+},
+{
+"label": "Golden Vigil",
+"kind": "recolour",
+"filter": "hue-rotate(50deg) saturate(1.2) brightness(1.1)"
+}
+]
 },
 {
 "key": "stitchheart",
@@ -4510,11 +5760,9 @@
 "archive": [
 "Item FAL-0087 is held at Containment Level: High. The subject is unnamed on its sheet and the Foundation files it as Stitchheart. It is gentle with staff. It is not gentle with anything that is gentle with staff.",
 "Description: a horned, purple-furred figure with long stitched hair, one huge pink eye with a red pupil and one dark eye marked with an X. A mouth of needle teeth, a torn, bandaged right arm ending in black blades. A long pink tail ends in a stitched heart that beats on its own.",
-"null",
 "Stitch Lash: the arm closes the wound it makes. The subject calls this manners.",
 "Heart Tether: the tail heart ties to a person. The person's pulse becomes, for a minute, the subject's.",
-"Cardiac Arrest: the subject's heart stops. Everything in earshot is briefly reminded that it has one.",
-"null"
+"Cardiac Arrest: the subject's heart stops. Everything in earshot is briefly reminded that it has one."
 ],
 "recruit": [],
 "book": {
@@ -4529,7 +5777,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/stitchheart.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Valentine",
+"kind": "recolour",
+"filter": "hue-rotate(-70deg) saturate(1.3)"
+},
+{
+"label": "Dead Rose",
+"kind": "recolour",
+"filter": "hue-rotate(130deg) saturate(.9)"
+}
+]
 },
 {
 "key": "bloodspike",
@@ -4565,11 +5825,9 @@
 "archive": [
 "Item FAL-0088 is held at Containment Level: Extreme. The subject is a brute and has never needed to be anything else. The sheet is dated March 26th 2025 and names it Bloodspike. No abilities are listed. The Foundation did not need them to be.",
 "Description: a hunched black mass of spikes. A blue-striped dome of a head, one pink eye and a wide black grin. A red eye in the chest, a toothy mouth in the belly, a thicket of black quills along the back and rainbow claws on every foot. The cell is repainted every month.",
-"null",
 "Spike Jab: the wound stays open. The subject finds this very funny.",
 "Rainbow Quills: the back stands up and every colour leaves at once. Staff report the afterimages are worse.",
-"Impale: a single point. The rest of the body follows it.",
-"null"
+"Impale: a single point. The rest of the body follows it."
 ],
 "recruit": [],
 "book": {
@@ -4584,7 +5842,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/bloodspike.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Blood Prism",
+"kind": "recolour",
+"filter": "hue-rotate(120deg) saturate(1.2)"
+},
+{
+"label": "Ash Spikes",
+"kind": "recolour",
+"filter": "saturate(.1) brightness(1.1)"
+}
+]
 },
 {
 "key": "naginata",
@@ -4620,11 +5890,9 @@
 "archive": [
 "Item FAL-0089 is held at Containment Level: Extreme. The subject kidnaps two people a day and throws them off buildings. It believes humans can fly because of the oil in their bodies. Known victims: 153. Assassination attempts: 7. Presumed victims: 2004. The Foundation files it as Naginata.",
 "Description: a hovering dark-red horror with a black dome of a head, one cyan spiral eye and a round, cyan-toothed maw. Two huge cyan-edged scythe arms. A braided tail trails below.",
-"null",
 "Paralyzing Spore: it exhales orange spores that paralyze anything within a metre. Anything that resists is thrown into the victim instead.",
 "Slicing Blade: the subject increases the sharpness of its blade hands tenfold. It does not say what it sharpened them on.",
-"Soul Eater: it eats the souls of its victims for its own lifespan. The lifespan is, by now, extensive.",
-"null"
+"Soul Eater: it eats the souls of its victims for its own lifespan. The lifespan is, by now, extensive."
 ],
 "recruit": [],
 "book": {
@@ -4639,7 +5907,19 @@
 "source": "Book"
 },
 "sprite": "sprites/naginata.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Frostbite",
+"kind": "recolour",
+"filter": "saturate(.4) hue-rotate(170deg)"
+},
+{
+"label": "Rust Orange",
+"kind": "recolour",
+"filter": "hue-rotate(30deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "uquna",
@@ -4675,11 +5955,9 @@
 "archive": [
 "Item 5506 is held at Containment Level: EXTREME, seventy metres underground. The subject can only be seen when someone willingly goes down the elevator. It needs feeding daily (three to five dead cows usually cover it) and, even fed, attacks the walls 24/7 hoping to get out. The Foundation files it as Uquna.",
 "Description: a tall white-furred creature with a hooded mane, one glowing blue eye, a wide red mouth of needle teeth, grey armoured forearms and long ice-blue claws. The cell is made of very thick metal, and is dented, with black liquid everywhere. The guts hanging from its stomach are real and used as a capture weapon. Most of its skin is fur.",
-"null",
 "Gut Whip: the guts are not trailing. They are aimed.",
 "Monochrome Hell: when it is angry every colour in the room is lost. Staff have stopped asking for the colours back.",
-"Feeding Time: daily. Nothing in the cell is allowed to be larger than the subject.",
-"null"
+"Feeding Time: daily. Nothing in the cell is allowed to be larger than the subject."
 ],
 "recruit": [],
 "book": {
@@ -4694,7 +5972,19 @@
 "source": "Book"
 },
 "sprite": "sprites/uquna.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Blood Hell",
+"kind": "recolour",
+"filter": "sepia(1) hue-rotate(-30deg) saturate(3)"
+},
+{
+"label": "Negative",
+"kind": "recolour",
+"filter": "invert(1) hue-rotate(180deg)"
+}
+]
 },
 {
 "key": "ripper",
@@ -4730,10 +6020,7 @@
 "archive": [
 "Item FAL-0091 is held at Containment Level: Extreme. The subject asks for tools every morning. The answer is always no. Ability: ???.",
 "Description: a small, pale, stitched-together figure with long black hair hanging over its face, one black eye and one red eye, a mouth sewn mostly shut, and a patched olive sweater. The patches do not match the sweater.",
-"null",
-"null",
-"The subject is the origin of every Clown on record. The Clowns know it. None of them will stay in the same room with him quietly.",
-"null"
+"The subject is the origin of every Clown on record. The Clowns know it. None of them will stay in the same room with him quietly."
 ],
 "recruit": [],
 "book": {
@@ -4748,7 +6035,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/ripper.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Morgue Pale",
+"kind": "recolour",
+"filter": "hue-rotate(-10deg) saturate(.3) brightness(1.25)"
+},
+{
+"label": "Clown Red",
+"kind": "recolour",
+"filter": "hue-rotate(-30deg) saturate(1.8)"
+}
+]
 },
 {
 "key": "clownx2",
@@ -4784,10 +6083,7 @@
 "archive": [
 "Item FAL-0092 is held at Containment Level: High. The subject is a Clown of an unusual design. It appears only on rare occasions. Ability: Temporary Duplication.",
 "Description: a white-faced jester in a striped red and charcoal hat and diamond patchwork, ringed red eyes and a red nose, crouched low like it is about to spring.",
-"null",
-"null",
-"The subject is thought to be an understudy: a spare copy of Clown.x2 kept in case the first one does not last. The first one never lasts.",
-"null"
+"The subject is thought to be an understudy: a spare copy of Clown.x2 kept in case the first one does not last. The first one never lasts."
 ],
 "recruit": [],
 "book": {
@@ -4802,7 +6098,39 @@
 "source": "Generated"
 },
 "sprite": "sprites/clownx2.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Enemy form (Clown's Massacre)",
+"kind": "form",
+"src": "sprites/alt/clown_x2.webp"
+},
+{
+"label": "Midnight Act",
+"kind": "recolour",
+"filter": "hue-rotate(225deg) saturate(1.1)"
+},
+{
+"label": "Toxic Jester",
+"kind": "recolour",
+"filter": "hue-rotate(95deg) saturate(1.4)"
+},
+{
+"label": "Royal Court",
+"kind": "recolour",
+"filter": "hue-rotate(265deg) saturate(1.3) brightness(1.05)"
+},
+{
+"label": "Grey Matinee",
+"kind": "recolour",
+"filter": "grayscale(1) contrast(1.15)"
+},
+{
+"label": "Candy Cane",
+"kind": "skin",
+"src": "sprites/alt/skin_clownx2_candy.webp"
+}
+]
 },
 {
 "key": "clownx33",
@@ -4838,11 +6166,9 @@
 "archive": [
 "Item FAL-0093 is held at Containment Level: Medium. The subject is bandaged from the neck down and does not say why. Staff who have been treated by it report that the wound closed faster than it should have and that they are not sure whose blood did it.",
 "Description: a clown with a round white face, red tufts of hair, a wide blood-streaked grin full of teeth, a body wrapped in stained bandages, clawed hands and a wooden peg for one leg. Taken from Clown's Massacre.",
-"null",
 "Rend: the claws are not for attacking, the subject says. They are for finding where it hurts. The wound it opens always bleeds toward someone who needs it more.",
 "Blood Patch: a strip of bandage is pressed on and the pain moves out of it. The subject does not wash the bandages. The subject says that would waste them.",
-"Wrapped Up: after enough patches the subject wraps everyone in the room. Anyone still bleeding at the end of it is Remainder of entry expunged by order of O5-██.",
-"null"
+"Wrapped Up: after enough patches the subject wraps everyone in the room. Anyone still bleeding at the end of it is Remainder of entry expunged by order of O5-██."
 ],
 "recruit": [],
 "book": {
@@ -4857,7 +6183,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/clownx33.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Enemy form (Clown's Massacre)",
+"kind": "form",
+"src": "sprites/alt/clown_x33.webp"
+},
+{
+"label": "Fresh Gauze",
+"kind": "recolour",
+"filter": "saturate(.3) brightness(1.2)"
+},
+{
+"label": "Greasepaint",
+"kind": "recolour",
+"filter": "hue-rotate(40deg) saturate(1.2)"
+}
+]
 },
 {
 "key": "devourer",
@@ -4893,11 +6236,9 @@
 "archive": [
 "Item FAL-0094 is held at Containment Level: High. The subject is cooperative as long as it is fed, and generous with what it makes from the food. Staff are asked not to ask what is in the soup.",
 "Description: a pink-haired child in a red coat, claws, and spiral eyes that weep. The face has three settings: calm, a horned grin (Mask 1), and a mouth the width of the head. Prototype entry from the Foundation's earliest Codex pages.",
-"null",
 "Gorge: the mouth opens, the subject takes a piece of whatever is nearest and eats it, then shares the warmth afterwards. A wound that is already open is eaten from first. The warmth is real. It is the only part that is.",
 "Share the Meal: the subject puts the mask on, tears off a little of what she ate and puts it in a person's mouth. Everyone who has been fed describes it as the safest they have ever felt, and the taste as unforgivable.",
-"Devour: what the subject swallows does not stay swallowed. It comes back out as a warm light and a very good mood. Remainder of entry expunged by order of O5-██.",
-"null"
+"Devour: what the subject swallows does not stay swallowed. It comes back out as a warm light and a very good mood. Remainder of entry expunged by order of O5-██."
 ],
 "recruit": [],
 "book": {
@@ -4912,7 +6253,19 @@
 "source": "Book"
 },
 "sprite": "sprites/devourer.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Marrow White",
+"kind": "recolour",
+"filter": "saturate(.25) brightness(1.3)"
+},
+{
+"label": "Bruise",
+"kind": "recolour",
+"filter": "hue-rotate(260deg) saturate(1.1)"
+}
+]
 },
 {
 "key": "hush",
@@ -4948,11 +6301,9 @@
 "archive": [
 "Item FAL-0095 is held at Containment Level: Extreme. The subject is blind, gentle and extremely friendly. It must never be startled, and it must never be wounded where it can hear.",
 "Description: a tall pale angel with no eyes, large listening ears and a mouth that rarely opens. It clicks softly to find people and thanks them for being there.",
-"null",
 "Click: a sound goes out, a sound comes back, and whoever it touched is a little better. The subject says it is only checking you are still there.",
 "Hold Still: the subject asks the room to stop moving. The room does. Observers note that they could not have disobeyed if they had wanted to.",
-"Shriek: kept sealed on request of the subject. If it is hurt badly enough the sound is no longer kind. Afterwards it apologises to everyone present. Remainder of entry expunged by order of O5-██.",
-"null"
+"Shriek: kept sealed on request of the subject. If it is hurt badly enough the sound is no longer kind. Afterwards it apologises to everyone present. Remainder of entry expunged by order of O5-██."
 ],
 "recruit": [],
 "book": {
@@ -4967,7 +6318,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/hush.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Candle Wax",
+"kind": "recolour",
+"filter": "sepia(.5) brightness(1.15)"
+},
+{
+"label": "Static",
+"kind": "recolour",
+"filter": "saturate(.1) brightness(.9) contrast(1.2)"
+}
+]
 },
 {
 "key": "clownx25",
@@ -5003,11 +6366,9 @@
 "archive": [
 "Item FAL-0096 is held at Containment Level: High. The subject is two subjects and must never be filed as one. Staff who have tried were corrected, politely, by both. Ability: Two to One.",
 "Description: a pale, scarred clown head with a stitched seam, red tufts of hair, one red-ringed eye and one empty black socket, and a wide grin of needle teeth. A patched red jacket with grey shoulder plates, black hooked claws held open as if to hug. Taken from Clown's Massacre. Two smaller forms are also on file: the armored half, and the doll.",
-"null",
 "Iron Fist: the armored half does the swinging. The subject says the other half has never once needed to.",
 "Hold Hands: something small reaches out of the chest and takes the nearest person by the hand. The armor then steps in front of that person. Neither has been asked to.",
-"Two Become One: the arms open. Observers who were inside the room report that it was very quiet, and that someone was holding their hand. Remainder of entry expunged by order of O5-██.",
-"null"
+"Two Become One: the arms open. Observers who were inside the room report that it was very quiet, and that someone was holding their hand. Remainder of entry expunged by order of O5-██."
 ],
 "recruit": [],
 "book": {
@@ -5022,7 +6383,44 @@
 "source": "Generated"
 },
 "sprite": "sprites/clownx25.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Fused, enemy form",
+"kind": "form",
+"src": "sprites/alt/clown_x25.webp"
+},
+{
+"label": "Armored half (mini form)",
+"kind": "mini",
+"src": "sprites/alt/clown_x25a.webp"
+},
+{
+"label": "The doll (mini form)",
+"kind": "mini",
+"src": "sprites/alt/clown_x25doll.webp"
+},
+{
+"label": "Unfused (both minis side by side)",
+"kind": "mini",
+"src": "sprites/alt/clown_x25_unfused.webp"
+},
+{
+"label": "Rust Plate",
+"kind": "recolour",
+"filter": "hue-rotate(-15deg) saturate(.7) brightness(.9)"
+},
+{
+"label": "Porcelain",
+"kind": "recolour",
+"filter": "saturate(.2) brightness(1.4)"
+},
+{
+"label": "Mini: Armored Half",
+"kind": "skin",
+"src": "sprites/alt/skin_clownx25_half.webp"
+}
+]
 },
 {
 "key": "vendor",
@@ -5076,7 +6474,59 @@
 "source": "Generated"
 },
 "sprite": "sprites/vendor.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Shop pose: show",
+"kind": "pose",
+"src": "sprites/alt/kp_vendor_show.webp"
+},
+{
+"label": "Shop pose: greet",
+"kind": "pose",
+"src": "sprites/alt/kp_vendor_greet.webp"
+},
+{
+"label": "Shop pose: offer",
+"kind": "pose",
+"src": "sprites/alt/kp_vendor_offer.webp"
+},
+{
+"label": "Shop pose: thanks",
+"kind": "pose",
+"src": "sprites/alt/kp_vendor_thanks.webp"
+},
+{
+"label": "Shop pose: poor",
+"kind": "pose",
+"src": "sprites/alt/kp_vendor_poor.webp"
+},
+{
+"label": "Shop pose: shock",
+"kind": "pose",
+"src": "sprites/alt/kp_vendor_shock.webp"
+},
+{
+"label": "Shop pose: sly",
+"kind": "pose",
+"src": "sprites/alt/kp_vendor_sly.webp"
+},
+{
+"label": "Shop pose: full",
+"kind": "pose",
+"src": "sprites/alt/kp_vendor_full.webp"
+},
+{
+"label": "Night Shift",
+"kind": "recolour",
+"filter": "hue-rotate(200deg) saturate(1.2) brightness(.9)"
+},
+{
+"label": "Gold Plated",
+"kind": "recolour",
+"filter": "sepia(1) saturate(3) hue-rotate(5deg) brightness(1.1)"
+}
+]
 },
 {
 "key": "velara",
@@ -5123,7 +6573,34 @@
 "source": "Generated"
 },
 "sprite": "sprites/velara.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Sinner form",
+"kind": "form",
+"src": "sprites/alt/velara_sinner.webp"
+},
+{
+"label": "Sapphire Halo",
+"kind": "recolour",
+"filter": "hue-rotate(205deg) saturate(1.3)"
+},
+{
+"label": "Venom Saint",
+"kind": "recolour",
+"filter": "hue-rotate(110deg) saturate(1.3)"
+},
+{
+"label": "Gilded Angel",
+"kind": "recolour",
+"filter": "sepia(.75) saturate(2.4) hue-rotate(-8deg) brightness(1.08)"
+},
+{
+"label": "Fallen Angel",
+"kind": "recolour",
+"filter": "grayscale(1) brightness(.6) contrast(1.4)"
+}
+]
 },
 {
 "key": "whiplash",
@@ -5159,7 +6636,6 @@
 "archive": [
 "Item FAL-0099 is held at Containment Level: High. The subject is gentle until a child is in the room, and then it is something else. Staff are asked to keep children out of sight of the subject's arms. Ability: Whiplash.",
 "Description: a brown, stitched bunny plush with long floppy ears, one torn open to the grey wiring, a huge needle-toothed grin and mismatched green and yellow eyes. A bloody patch on the chest. One arm is striped blue and white, the other is grey metal, and wires and claws spill out of both hands. Recorded April 25th 2025.",
-"null",
 "Incident Report: the subject was stabbed ten times through the heart while shielding a group of children, and it did not stop. Witnesses describe a state they will not name. The wires went out, everything that had attacked the children was dealt with, and only then did the subject drop. The children were not harmed.",
 "Personnel Note: staff who have been pulled behind the subject by the wires report no fear, and a strong reluctance to be put down. Once per interview the subject asks whether the children got home. The correct answer is yes. It does not always believe it.",
 "Death Rage: if the subject falls in a room, it does not fall. Remainder of entry expunged by order of O5-██."
@@ -5177,7 +6653,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/whiplash.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Cold Stuffing",
+"kind": "recolour",
+"filter": "hue-rotate(160deg) saturate(1.2)"
+},
+{
+"label": "Rust Wire",
+"kind": "recolour",
+"filter": "hue-rotate(-25deg) saturate(1.3) brightness(.95)"
+}
+]
 },
 {
 "key": "crushdeath",
@@ -5213,7 +6701,6 @@
 "archive": [
 "Item FAL-0100 is held at Containment Level: High. The subject collects what is thrown away and does not give it back. Staff are asked not to leave bins unattended within sight of the subject. Ability: Thrasher.",
 "Description: a round dark head scribbled with thread, spiked red-brown hair, one pentagram eye and one blank white eye, and a wide grin of needle teeth. The body is wrapped in black thread and scrap. One arm is a clawed gauntlet covered in purple eyes, the other ends in a spiked horn drill with one more eye. Recorded June 8th 2025.",
-"null",
 "Incident Report: during a routine waste clearance the subject was observed pulling the entire skip onto itself. Collection staff report it was in no hurry. The skip was returned later, in the shape of a wall.",
 "Personnel Note: the eyes in the arm are not the subject's. Staff who have counted them get a different number every time, and all of them are watching the door.",
 "Thrasher: the subject throws the heap. Remainder of entry expunged by order of O5-██."
@@ -5231,7 +6718,19 @@
 "source": "Generated"
 },
 "sprite": "sprites/crushdeath.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Rust Heap",
+"kind": "recolour",
+"filter": "hue-rotate(-30deg) saturate(1.8) brightness(1.1)"
+},
+{
+"label": "Toxic Scrap",
+"kind": "recolour",
+"filter": "hue-rotate(80deg) saturate(1.5) brightness(1.1)"
+}
+]
 },
 {
 "key": "flokelore",
@@ -5267,7 +6766,6 @@
 "archive": [
 "Item FAL-0101 is held at Containment Level: High. The subject is known in the old stories as the one who walks beside the gift-giver, and it prefers not to be asked which of them is in charge. Staff are asked to behave. Ability: Naughty or Nice.",
 "Description: a pale, ice-blue figure in a red Santa hat with a single antler, pointed ears, a skull-like face with burning red eyes and a mouth of red needle teeth. A white fur coat edged in frost, a belt with two red eyes, and wings made of long icicles. A second appearance exists in red and white, and the records call it Candy Cane.",
-"null",
 "Incident Report: during a midwinter exercise the subject was left alone with the roster. Every name on it was found marked, in the subject's hand, nice or naughty. Nobody has said which side of the list they ended up on.",
 "Personnel Note: the subject heals the people it likes with small gifts, and the people it does not like with the same gifts. The difference is what is inside. Staff are asked not to open them early.",
 "Silent Night: the subject folds in its wings and the room goes quiet. Remainder of entry expunged by order of O5-██."
@@ -5285,7 +6783,24 @@
 "source": "Generated"
 },
 "sprite": "sprites/flokelore.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Midnight Frost",
+"kind": "recolour",
+"filter": "hue-rotate(40deg) saturate(1.3) brightness(.9)"
+},
+{
+"label": "Aurora",
+"kind": "recolour",
+"filter": "hue-rotate(110deg) saturate(1.4)"
+},
+{
+"label": "Candy Cane",
+"kind": "skin",
+"src": "sprites/alt/skin_flokelore_candy.webp"
+}
+]
 },
 {
 "key": "gutter",
@@ -5321,7 +6836,6 @@
 "archive": [
 "Item FAL-0102 is held at Containment Level: Contractor. He is not a subject. He was hired. Fal-125 paid him to hunt down entities and targets, and he is very good at it. Ability: Human Storage.",
 "Description: a pale nineteen-year-old with messy black hair. His left eye is narrow and bleeds without reason. His right eye is pink and swollen with a tumour. He opens a pocket dimension with his hands: one portal puts things in, the other takes them out. Kills on record: humans 142, entities 17.",
-"null",
 "Incident Report: a recovery team reached a containment breach after the contractor had already been through it. They found no entities and no remains. Three weeks later he arrived at a briefing carrying a weapon that slowed whatever it touched. The breach had been a room full of things that slowed whatever they touched.",
 "Personnel Note: he collects masks from the people he kills and keeps them in storage. Staff who have seen inside report a wall of faces, very neatly arranged. He has asked twice whether staff photographs are kept on file. Both times he said he was joking.",
 "Human Storage: the dimension has no limit that anyone has found. Remainder of entry expunged by order of O5-██."
@@ -5342,7 +6856,19 @@
 "source": "Book"
 },
 "sprite": "sprites/gutter.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Cold Storage",
+"kind": "recolour",
+"filter": "hue-rotate(190deg) saturate(1.2)"
+},
+{
+"label": "Rust Stain",
+"kind": "recolour",
+"filter": "sepia(.6) hue-rotate(-30deg) saturate(1.6)"
+}
+]
 },
 {
 "key": "marrowline",
@@ -5378,7 +6904,6 @@
 "archive": [
 "Item FAL-0103 is held at Containment Level: High Difficulty. He is aggressive, and the walls of his cell are replaced every month. Ability: Cannoneer's Pawn.",
 "Description: six foot six, German, and he smells faintly burnt at all times. His head is a cannon barrel with slits along the side and eyes under them, and a jaw of teeth beneath it. A fuse hangs from the back of it. His right arm is a second cannon. A red X is set into the plate on his chest. Staff are told not to stand in front of him.",
-"null",
 "Incident Report: during transfer the subject was struck eleven times by the escort team. Each blow made the fuse on his head burn faster. Nobody had lit it. The transfer vehicle and the street it was parked on are listed as total losses. The subject walked back to his cell afterwards on his own.",
 "Personnel Note: besides his ability and that he is aggressive, we know very little about him. He has never said where in Germany he is from. When asked, he points at the fuse.",
 "Cannoneer's Pawn: the cannon fuses with a different part of every user. A full blast from this subject has been estimated at several city blocks. Remainder of entry expunged by order of O5-██."
@@ -5399,7 +6924,19 @@
 "source": "Book"
 },
 "sprite": "sprites/marrowline.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Gunmetal",
+"kind": "recolour",
+"filter": "saturate(.35) brightness(1.15)"
+},
+{
+"label": "Field Grey",
+"kind": "recolour",
+"filter": "sepia(.45) hue-rotate(45deg) saturate(.8)"
+}
+]
 },
 {
 "key": "demure",
@@ -5435,7 +6972,6 @@
 "archive": [
 "Item FAL-0104 is held at Containment Level: Moderate. He is quiet and does what he is told until the season turns. Ability: Nature's Call.",
 "Description: five foot eight. He smells of grass and forest even after months underground. Moss grows over half his face and returns within a day of removal. His nose bleeds constantly. He keeps a knife; nobody can say where he gets them.",
-"null",
 "Incident Report: the climate control in his wing failed for one hour. In that hour it was Spring, Summer, Autumn and Winter in the corridor outside his cell, in that order. Two guards were treated for frostbite, one for sunstroke. The cell itself was full of fresh grass.",
 "Personnel Note: he asks the date every morning and does not believe the answer. Staff are told not to argue. He is usually right about the season, whatever the calendar says.",
 "Nature's Call: what answers him is not weather. Weather does not follow anybody. Remainder of entry expunged by order of O5-██."
@@ -5456,7 +6992,19 @@
 "source": "Book"
 },
 "sprite": "sprites/demure.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Dead of Winter",
+"kind": "recolour",
+"filter": "hue-rotate(150deg) saturate(.7) brightness(1.1)"
+},
+{
+"label": "Late Autumn",
+"kind": "recolour",
+"filter": "hue-rotate(-50deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "caspic",
@@ -5492,7 +7040,6 @@
 "archive": [
 "Item FAL-0105 is held at Containment Level: High. He is seventeen, and every containment measure used on him so far has been switched off by his ability. The current measure is a locked door. Ability: Ability Canceller.",
 "Description: messy black hair, a torn blue cloth over one side of his face, one large eye with a blue pupil, and blood on his cheeks that is not always his. Six purple disks are fixed to his shoulders. His arms do not match: one is pale with long white claws, the other dark red and shaggy.",
-"null",
 "Incident Report: after the numbered trials, the subject was found with both arms replaced, from subject #2 and, in part, subject #24. The purple disks on his shoulders were taken from subject #4. Several ability disks were missing from the other bodies. He has not said where they are.",
 "Personnel Note: any ability used against him stops working, and so does any ability used against someone he is holding. The infirmary has asked for him twice. Staff are reminded that this includes sedation: he has to agree to his injections. So far he has agreed to none.",
 "Ability Canceller: the disks seem to keep something of every ability he has switched off. Remainder of entry expunged by order of O5-██."
@@ -5513,7 +7060,29 @@
 "source": "Book"
 },
 "sprite": "sprites/caspic.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/caspic_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/caspic_ko.webp"
+},
+{
+"label": "Null Grey",
+"kind": "recolour",
+"filter": "saturate(.2) brightness(1.1)"
+},
+{
+"label": "Overclock",
+"kind": "recolour",
+"filter": "hue-rotate(60deg) saturate(1.3)"
+}
+]
 },
 {
 "key": "soundemon",
@@ -5549,7 +7118,6 @@
 "archive": [
 "Item FAL-0106 is held at Containment Level: High. The walls of his cell are padded. It does not help. Ability: Sound Demon.",
 "Description: long black hair, a black band across one eye and a red eye on the other, and blood dried in long runs down his face, hoodie and arms. A red tag on his chest reads 9. A blue armband on his arm reads 2.",
-"null",
 "Incident Report: the subject won a numbered elimination game called Hide and Bleed as Player 9. After the game had ended, he killed Player 2, his partner in the final. He kept the armband and has refused every request to give it back.",
 "Personnel Note: he can make anything out of sound: bursts, blades, things that walk, and anything that makes a sound answers to him. All interviews are now conducted in writing.",
 "Sound Demon: the things he makes last exactly as long as the noise does. Remainder of entry expunged by order of O5-██."
@@ -5570,7 +7138,29 @@
 "source": "Book"
 },
 "sprite": "sprites/soundemon.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/soundemon_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/soundemon_ko.webp"
+},
+{
+"label": "Feedback",
+"kind": "recolour",
+"filter": "hue-rotate(200deg) saturate(1.2)"
+},
+{
+"label": "Static",
+"kind": "recolour",
+"filter": "grayscale(.8) contrast(1.3)"
+}
+]
 },
 {
 "key": "slinder",
@@ -5606,7 +7196,6 @@
 "archive": [
 "Item FAL-0107 is held at Containment Level: High. He is nineteen. Nothing sharp is allowed in his cell, which has never once stopped him being armed. Ability: Bloodmaker.",
 "Description: a round white mask-like face, two empty black eyes and a stitched zigzag mouth, wild red hair, a red zip-up hoodie with a purple hood, dark trousers and red blood claws.",
-"null",
 "Incident Report: the subject is the only survivor of a game called Mimic Ball. Seventeen other players died. The report on how is still being written.",
 "Personnel Note: blood drawn from him for testing does not stay in the vial. It has to be logged as a weapon. Staff are told not to bleed near him.",
 "Bloodmaker: his own blood makes the strongest weapons. He knows this, and spends it anyway. Remainder of entry expunged by order of O5-██."
@@ -5627,7 +7216,19 @@
 "source": "Book"
 },
 "sprite": "sprites/slinder.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Dried Blood",
+"kind": "recolour",
+"filter": "sepia(.5) saturate(.8) brightness(.9)"
+},
+{
+"label": "Fresh Cut",
+"kind": "recolour",
+"filter": "saturate(1.6) hue-rotate(-10deg)"
+}
+]
 },
 {
 "key": "luckster",
@@ -5663,7 +7264,6 @@
 "archive": [
 "Item FAL-0108 is held at Containment Level: Low, for now. Every attempt to raise it has been delayed by a series of unrelated accidents. Ability: Rabbit's Luck.",
 "Description: six foot three, a shaggy black head under a white fur hood with long rabbit ears, one large eye and one small red one, a wide grin full of teeth and part of the chin missing. A blue scarf, a bulky purple jacket, brown trousers, pale clawed hands and feet.",
-"null",
 "Incident Report: the subject won a game called Fade Bite. He lost part of his chin doing it. He describes this as lucky.",
 "Personnel Note: the subject's locks fail, his paperwork is approved, and the vending machine on his floor gives out two of everything. None of it can be proven to be him.",
 "Rabbit's Luck: it does not give him what he asks for. It gives him what he needs, in the strangest way available. Remainder of entry expunged by order of O5-██."
@@ -5684,7 +7284,19 @@
 "source": "Book"
 },
 "sprite": "sprites/luckster.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Four-Leaf",
+"kind": "recolour",
+"filter": "hue-rotate(140deg) saturate(1.1)"
+},
+{
+"label": "Gold Coin",
+"kind": "recolour",
+"filter": "sepia(.6) saturate(1.6) hue-rotate(10deg)"
+}
+]
 },
 {
 "key": "punchline",
@@ -5720,7 +7332,6 @@
 "archive": [
 "Item FAL-0109 is held at Containment Level: Low. He is cheerful, cooperative, and has no idea why he is here. Ability: Absolute Joke.",
 "Description: twenty-six, wild teal hair, enormous bloodshot eyes (one blue pupil, one red), a stitched grin with too many teeth, a white straitjacket with brown straps he has never noticed, clawed fingers, jeans and boots.",
-"null",
 "Incident Report: during the subject's yearly evaluation, three staff slipped, one was hit by a falling ceiling tile and one sat on a stapler. The subject laughed at all of it. All of it was ruled an accident.",
 "Personnel Note: DO NOT TELL HIM. The subject is unaware of his ability. Every attempt to explain it has been interrupted by something funny happening to the person explaining.",
 "Absolute Joke: if he ever finds out, he will stop finding it funny. Nobody wants to learn what happens then. Remainder of entry expunged by order of O5-██."
@@ -5741,7 +7352,19 @@
 "source": "Book"
 },
 "sprite": "sprites/punchline.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Rubber Nose",
+"kind": "recolour",
+"filter": "hue-rotate(160deg) saturate(1.3)"
+},
+{
+"label": "Laugh Track",
+"kind": "recolour",
+"filter": "grayscale(.6) contrast(1.2)"
+}
+]
 },
 {
 "key": "ixis",
@@ -5777,7 +7400,6 @@
 "archive": [
 "Item FAL-0110 is held at Containment Level: Extreme. Eight foot two, 202 kilograms, age unknown. Ability: Absorb.",
 "Description: a hulking two-legged body in dark grey spiked armour with red chevrons, a huge round white head veined in red with a grin full of teeth, and two long curved scythes banded red and white sweeping down from the sides of the head.",
-"null",
 "Incident Report: weapons fire against the subject did not hit it so much as go into it. Some of it came back out later, aimed.",
 "Personnel Note: it is listed in older files as Fal-025, from a project that has since been closed. It answers to Ixis now.",
 "Absorb: nobody knows how much it can hold. Remainder of entry expunged by order of O5-██."
@@ -5798,7 +7420,29 @@
 "source": "Book"
 },
 "sprite": "sprites/ixis.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/ixis_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/ixis_ko.webp"
+},
+{
+"label": "Bone White",
+"kind": "recolour",
+"filter": "grayscale(.9) brightness(1.15)"
+},
+{
+"label": "Deep Maw",
+"kind": "recolour",
+"filter": "hue-rotate(200deg) saturate(1.2)"
+}
+]
 },
 {
 "key": "tangler",
@@ -5834,7 +7478,6 @@
 "archive": [
 "Item FAL-0111 is held at Containment Level: High. It must be stored loose. Every attempt to tie it up has ended with it tying up the staff. Ability: Stringy Body.",
 "Description: a heavy red-and-white body sewn together from string, a round head split down a seam with dark slit eyes and a wide grey mouth of square teeth, striped rope legs and long claws of loose thread. Older files show a smiling stickman (2021).",
-"null",
 "Incident Report: during a breach, three staff members were found tied to the subject by red string. All three were unhurt. The subject had taken every hit meant for them.",
 "Personnel Note: if a string ends up around your wrist, do not cut it. It does not like that, and it will just tie another.",
 "Stringy Body: the subject can turn its whole body into string and back. Nobody has found the end of it. Remainder of entry expunged by order of O5-██."
@@ -5855,7 +7498,34 @@
 "source": "Book"
 },
 "sprite": "sprites/tangler.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/tangler_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/tangler_ko.webp"
+},
+{
+"label": "Heal pose (not used in the game yet)",
+"kind": "pose",
+"src": "sprites/alt/tangler_heal.webp"
+},
+{
+"label": "Blue Thread",
+"kind": "recolour",
+"filter": "hue-rotate(210deg) saturate(1.1)"
+},
+{
+"label": "Old Rope",
+"kind": "recolour",
+"filter": "sepia(.8) saturate(.7) brightness(.95)"
+}
+]
 },
 {
 "key": "bearable",
@@ -5891,7 +7561,6 @@
 "archive": [
 "Item FAL-0112 is held at Containment Level: Medium. Five foot nine, 50.3 kilograms. Its cell holds no clocks; it brought its own. Ability: Ticking Clock.",
 "Description: a scruffy plush with shaggy brown hair, one blue-ringed eye and one yellow, a stitched frown, orange, yellow and red fur hanging like flames, orange dungarees with an X patch, huge dark feet and a golden wind-up key in its back. It carries a long red-and-white striped blade. Older files show a black, red-eyed face (2021).",
-"null",
 "Incident Report: the subject was left alone for nine hours. When the door opened, the stored ticks came out all at once. The door did not survive.",
 "Personnel Note: the subject can be heard ticking from two rooms away. If the ticking stops, leave the area.",
 "Ticking Clock: each tick is more storage for an attack. The more it uses, the more gets taken off. Nobody knows what happens past midnight. Remainder of entry expunged by order of O5-██."
@@ -5912,7 +7581,19 @@
 "source": "Book"
 },
 "sprite": "sprites/bearable.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Cold Clock",
+"kind": "recolour",
+"filter": "hue-rotate(180deg) saturate(1.1)"
+},
+{
+"label": "Rusted Key",
+"kind": "recolour",
+"filter": "sepia(.7) saturate(.6) brightness(.85)"
+}
+]
 },
 {
 "key": "blackbird",
@@ -5948,7 +7629,6 @@
 "archive": [
 "Item FAL-0113 is held at Containment Level: Low. Five foot five, 15 years old. It asked for a cell with a window. Ability: Moss.",
 "Description: a tall black bird with a huge beak full of white teeth, one bloodshot eye, moss sprouting from its back, and a body stitched together from its dead alternate versions: Players 1, 2, 4, 5, 7, 8 and 10.",
-"null",
 "Incident Report: not much is known about Blackbird. What is known is that it grieves the lives of its alternate versions after seeing them. They were the closest thing it ever had to a friend.",
 "Personnel Note: the subject is depressed. Its favourite artist is beabadoobee. Staff who sit with it report that the moss in the cell grows faster while they are there.",
 "Moss: it can control moss at will and create it out of thin air. It is a friendly creature. It wants friends like it. Remainder of entry expunged by order of O5-██."
@@ -5969,7 +7649,34 @@
 "source": "Book"
 },
 "sprite": "sprites/blackbird.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/blackbird_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/blackbird_ko.webp"
+},
+{
+"label": "Heal pose (not used in the game yet)",
+"kind": "pose",
+"src": "sprites/alt/blackbird_heal.webp"
+},
+{
+"label": "Albino",
+"kind": "recolour",
+"filter": "invert(.85) hue-rotate(180deg) saturate(.5)"
+},
+{
+"label": "Autumn Moss",
+"kind": "recolour",
+"filter": "hue-rotate(-70deg) saturate(1.2)"
+}
+]
 },
 {
 "key": "rainbowripper",
@@ -6005,7 +7712,6 @@
 "archive": [
 "Item FAL-0114 is held at Containment Level: High. Staff assigned to it are rotated every week, before the grey sets in. Ability: Rainbow Machine (original ability on file: The Flaming Core).",
 "Description: a huge round stitched head, bone white with torn red patches, one dark hollow eye and one spiral eye in every colour, a stitched mouth, and a shaggy coat of jagged rainbow rags over brown claws and patchwork feet.",
-"null",
 "Incident Report: two guards were found in the subject's cell, grey from head to foot. Neither has smiled since. It gets worse every day, and nothing has cured it.",
 "Personnel Note: the subject uses a machine to fuel its own lifespan. It makes monsters while it does it: people given too much colour, crazy and vibrant.",
 "Rainbow Machine: it steals the colour out of people, or gives them more. Ask it which it is going to do before you get close. Remainder of entry expunged by order of O5-██."
@@ -6026,7 +7732,29 @@
 "source": "Book"
 },
 "sprite": "sprites/rainbowripper.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/rainbowripper_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/rainbowripper_ko.webp"
+},
+{
+"label": "Drained",
+"kind": "recolour",
+"filter": "grayscale(1) brightness(1.1)"
+},
+{
+"label": "Negative",
+"kind": "recolour",
+"filter": "invert(1) hue-rotate(180deg)"
+}
+]
 },
 {
 "key": "hole",
@@ -6062,7 +7790,6 @@
 "archive": [
 "Item FAL-0115 is held at Containment Level: Low. The subject lives outside containment under an agreement: a normal life, in return for fighting off threats when asked. Ability: Trypophobia.",
 "Description: sixteen, messy brown hair with a green streak, tired eyes with dark rings, a bleeding scar across the face, a blue ribbed hoodie, black trousers, clawed feet, and one black-and-red plated arm ending in long red claws. Second form on file: a squat shape with a huge round head full of tiny holes, a halo of thorns, white eyes and a torn, bloody mouth, one pale holed hand and one of red claws.",
-"null",
 "Incident Report: the subject was pushed into a hole by another student. He was terrified of holes. Something snapped. He climbed out as the Trypophobia Fiend.",
 "Personnel Note: the scar on his face is from stretching his mouth too far open in his second form, more than once. Do not mention the holes in his cheek.",
 "Trypophobia: he makes holes, digs through bodies and surfaces, and people who fight him become afraid of holes. A few times every ten years he has come back from death: the holes reconnect his body to his brain. Remainder of entry expunged by order of O5-██."
@@ -6083,7 +7810,24 @@
 "source": "Book"
 },
 "sprite": "sprites/hole.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Devil Form",
+"kind": "form",
+"src": "sprites/alt/hole_devil.webp"
+},
+{
+"label": "Red Scarf",
+"kind": "recolour",
+"filter": "hue-rotate(160deg) saturate(1.2)"
+},
+{
+"label": "Old Photo",
+"kind": "recolour",
+"filter": "sepia(.8) saturate(.6)"
+}
+]
 },
 {
 "key": "tomb",
@@ -6119,7 +7863,6 @@
 "archive": [
 "Item FAL-0116 is held at Containment Level: High. His cell contains nothing that can burn. Seventeen, British, six foot one (185 cm). Ability: Black Gasoline.",
 "Description: a shaggy grey-white mane, a face soaked red with one red eye and a stitched grin, a red cloth knotted at the throat, a body covered in massive scars, dripping claws and long dark legs.",
-"null",
 "Incident Report: abused for years, he gained massive scars on his body. When he was 12 he gained an obsession with gasoline, which led to him developing black gasoline. He burned his family alive until it was just bone.",
 "Personnel Note: the floor of his cell is always slick. Staff are to wear boots with grip and carry nothing that can make a spark.",
 "Black Gasoline: it makes the area slippery and puts everyone in it on edge. A fire burns all of it. He is immune. If it is left long enough, it lights itself. Remainder of entry expunged by order of O5-██."
@@ -6140,7 +7883,29 @@
 "source": "Book"
 },
 "sprite": "sprites/tomb.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/tomb_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/tomb_ko.webp"
+},
+{
+"label": "White Spirit",
+"kind": "recolour",
+"filter": "hue-rotate(180deg) saturate(.6) brightness(1.15)"
+},
+{
+"label": "Burnt Out",
+"kind": "recolour",
+"filter": "sepia(.6) saturate(.5) brightness(.75)"
+}
+]
 },
 {
 "key": "gloom",
@@ -6176,7 +7941,6 @@
 "archive": [
 "Item FAL-0117 is held at Containment Level 3 (High). He is to share a cell with Lycion at all times. Ability: Nevidian Psycho.",
 "Description: a large round pale grey head, red stitched scars down over both eyes, huge white eyes with tiny pink pupils, a bleeding gash where the nose should be, a collar of bone spikes and a body of shaggy dark grey fur with claws. Older files call him 1 Punch.",
-"null",
 "Incident Report: an experimental soldier. His body is extremely enhanced: he can kill a person with a single blow to the head, he is super fast, and he jumps far higher than he should.",
 "Personnel Note: he is extremely aggressive, actively tries to escape and needs watching 24/7. In the presence of Lycion and Ano he is calm. Keep it that way.",
 "Nevidian Psycho: the name of the program that made him is the only part of his file that was not redacted. Remainder of entry expunged by order of O5-██."
@@ -6197,7 +7961,29 @@
 "source": "Book"
 },
 "sprite": "sprites/gloom.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/gloom_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/gloom_ko.webp"
+},
+{
+"label": "Pale Eyes",
+"kind": "recolour",
+"filter": "hue-rotate(160deg) saturate(1.1)"
+},
+{
+"label": "Dark Fur",
+"kind": "recolour",
+"filter": "brightness(.7) saturate(.8)"
+}
+]
 },
 {
 "key": "ano",
@@ -6233,7 +8019,6 @@
 "archive": [
 "Item FAL-0118 is held at Containment Level -1 (easy). He is allowed to walk freely through the facility. Ability: Metal Bending.",
 "Description: a large spiky mop of brown hair, a grey face marked in purple like a mask, two small glinting eyes, a wide grin of square teeth, a dark hoodie with a purple collar, and dark metal gauntlets with long silver claws.",
-"null",
 "Incident Report: Ano is an enigma in his world. He is peaceful, extremely so. He has never once been the cause of an incident. He has ended several.",
 "Personnel Note: he is good friends with Gloom and Lycion, who are far higher danger levels. They calm down when he is in the room. Nobody knows why.",
 "Metal Bending: he can bend metal any way he wants, but if he uses it too much his brain short-circuits for a little while. Remainder of entry expunged by order of O5-██."
@@ -6254,7 +8039,29 @@
 "source": "Book"
 },
 "sprite": "sprites/ano.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/ano_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/ano_ko.webp"
+},
+{
+"label": "Green Mask",
+"kind": "recolour",
+"filter": "hue-rotate(-120deg) saturate(1.1)"
+},
+{
+"label": "Rust",
+"kind": "recolour",
+"filter": "sepia(.8) saturate(.8) hue-rotate(-10deg)"
+}
+]
 },
 {
 "key": "lycion",
@@ -6290,7 +8097,6 @@
 "archive": [
 "Item FAL-0119 is held at Containment Level: High. The mask is never to be removed by staff. Info: RAGE.",
 "Description: a white masked head with a pink X, pink goggles with red X eyes, long teeth painted on the mask, red sleeves like a cape, a black body crossed with pink X straps, bandaged legs and pink claws.",
-"null",
 "Incident Report: once it takes off its mask, it goes into its rage form. The face under it is a mouth of jagged teeth in a mane of fur. Nobody who has seen it describes it the same way twice.",
 "Personnel Note: it shares a cell with Gloom, and they keep each other calm. Ano is allowed in. Ano can put the mask back on.",
 "Rage Form: the mask does not hide the rage. It holds it in. Remainder of entry expunged by order of O5-██."
@@ -6311,7 +8117,34 @@
 "source": "Book"
 },
 "sprite": "sprites/lycion.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/lycion_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/lycion_ko.webp"
+},
+{
+"label": "Rage Form",
+"kind": "form",
+"src": "sprites/alt/lycion_rage.webp"
+},
+{
+"label": "Blue X",
+"kind": "recolour",
+"filter": "hue-rotate(200deg) saturate(1.2)"
+},
+{
+"label": "Bone Mask",
+"kind": "recolour",
+"filter": "saturate(.15) brightness(1.15)"
+}
+]
 },
 {
 "key": "parda",
@@ -6347,7 +8180,6 @@
 "archive": [
 "Item FAL-0120 is held at Containment Level: High. Restraints have been tried. Every one of them was parried. Ability: Parry.",
 "Description: a spiky grey furry body with pointed ears, a red shaggy face with two huge dark green eyes and a bloody stitched mouth, one scaled green-and-blue shoulder, one torn bloody arm, long claws.",
-"null",
 "Incident Report: during transfer, a security team opened fire. Every round came back. So did the tranquilliser darts, a thrown chair and, later, a truck.",
 "Personnel Note: nothing else is known. It does not speak. It does not need to.",
 "Parry: it can parry literally anything. Bullets, trucks, everything. Remainder of entry expunged by order of O5-██."
@@ -6368,7 +8200,29 @@
 "source": "Book"
 },
 "sprite": "sprites/parda.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/parda_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/parda_ko.webp"
+},
+{
+"label": "Snow Fur",
+"kind": "recolour",
+"filter": "saturate(.3) brightness(1.3)"
+},
+{
+"label": "Blue Eyes",
+"kind": "recolour",
+"filter": "hue-rotate(180deg) saturate(1.1)"
+}
+]
 },
 {
 "key": "xainbow",
@@ -6404,7 +8258,6 @@
 "archive": [
 "Item FAL-0121 is held at Containment Level: Medium. It is a puppet made by Rainbow Ripper. Ability: Colour Puppet.",
 "Description: a large patchwork body stitched from every colour, feathers and zigzags, angry orange slit eyes, a small purple nose, strings of coloured beads round its arms, long claws, and confetti that never stops falling off it.",
-"null",
 "Incident Report: the subject was found in Rainbow Ripper's workshop, sitting among the grey people its maker had drained. Every colour they lost is stitched into it.",
 "Personnel Note: when struck, it sheds colour. When it is full, it bursts. Staff report that the confetti stays on their clothes for weeks.",
 "Colour Puppet: it is not alive. It is stuffed with someone else's life. Remainder of entry expunged by order of O5-██."
@@ -6425,7 +8278,29 @@
 "source": "Book"
 },
 "sprite": "sprites/xainbow.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/xainbow_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/xainbow_ko.webp"
+},
+{
+"label": "Faded",
+"kind": "recolour",
+"filter": "saturate(.35) brightness(1.1)"
+},
+{
+"label": "Inverted",
+"kind": "recolour",
+"filter": "invert(1) hue-rotate(180deg)"
+}
+]
 },
 {
 "key": "dollion",
@@ -6461,7 +8336,6 @@
 "archive": [
 "Item FAL-0122 is held at Containment Level: High. A shelf in its cell holds every doll it has made. Do not touch the shelf. Ability: Doll.",
 "Description: a hunched pale grey-blue body, a wild mop of purple hair, two pink spiral eyes, a huge mouth of red needle teeth, blue trousers, and arms long enough to drag on the floor, ending in bloody claws.",
-"null",
 "Incident Report: it can make a doll of anyone it sees, turning it into a voodoo doll. If the person dies before the doll, the doll keeps existing. It keeps all the dolls.",
 "Personnel Note: it has a rivalry with another subject, for killing its brother. Do not house them on the same floor.",
 "Doll: staff are reminded that it only has to SEE you. Remainder of entry expunged by order of O5-██."
@@ -6482,7 +8356,29 @@
 "source": "Book"
 },
 "sprite": "sprites/dollion.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/dollion_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/dollion_ko.webp"
+},
+{
+"label": "Green Hair",
+"kind": "recolour",
+"filter": "hue-rotate(-120deg) saturate(1.1)"
+},
+{
+"label": "Old Porcelain",
+"kind": "recolour",
+"filter": "sepia(.5) saturate(.5) brightness(1.15)"
+}
+]
 },
 {
 "key": "veinripper",
@@ -6518,7 +8414,6 @@
 "archive": [
 "Item FAL-0123 is held at Containment Level: High. Origin unknown. Weaknesses: fire and cold. Abilities: Vein Infusion, Vein Web, Vein Control.",
 "Description: a skull-white head crowned with purple spikes, small yellow eyes in black sockets, a bloody jaw, a triangle chest plate full of veins of every colour around a red heart and a blue orb, long claws. Its fingers constantly twitch. Older files call it Claw.",
-"null",
 "Incident Report: it is obsessed with veins. Animal, human, it does not matter. It is insane in the head, but extremely smart (173 IQ).",
 "Personnel Note: with one touch of someone else's veins it can rip them out completely. If it is missing veins, it simply snatches them from others for its own body.",
 "Vein Web: a web of veins with the properties of a spider's. Vein Control: the veins in its body, or in yours. Remainder of entry expunged by order of O5-██."
@@ -6539,7 +8434,29 @@
 "source": "Book"
 },
 "sprite": "sprites/veinripper.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/veinripper_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/veinripper_ko.webp"
+},
+{
+"label": "Green Claw",
+"kind": "recolour",
+"filter": "hue-rotate(-110deg) saturate(1.2)"
+},
+{
+"label": "Bloodless",
+"kind": "recolour",
+"filter": "saturate(.1) brightness(1.2)"
+}
+]
 },
 {
 "key": "redwalker",
@@ -6575,7 +8492,6 @@
 "archive": [
 "Item FAL-0124 is held at Containment Level: High. The Shield of Doom is stored separately and returned to him only on assignment. Ability: Doom's Curse.",
 "Description: messy dark hair, round glasses, a stitched scar and a red patch across half the face, a thick beard, red-and-black striped sleeves, green straps over a red chest with a row of teeth, long black clawed legs.",
-"null",
 "Incident Report: after the game ended, he killed Players 3 and 8. One was shot to death. The other was sliced by the shield.",
 "Personnel Note: the subject leaves strips of skin behind him wherever he has used his ability. Cleaning staff are to wear gloves.",
 "Doom's Curse: it enhances his strength and speed, but every time it is used it takes a piece of his skin. Remainder of entry expunged by order of O5-██."
@@ -6596,7 +8512,29 @@
 "source": "Book"
 },
 "sprite": "sprites/redwalker.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/redwalker_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/redwalker_ko.webp"
+},
+{
+"label": "Green Walker",
+"kind": "recolour",
+"filter": "hue-rotate(110deg) saturate(1.1)"
+},
+{
+"label": "Grey Walker",
+"kind": "recolour",
+"filter": "saturate(.15) brightness(1.1)"
+}
+]
 },
 {
 "key": "hemo",
@@ -6632,7 +8570,6 @@
 "archive": [
 "Item FAL-0125 is held at Containment Level: High. Staff are asked to stay out of arm's reach and to keep their blood to themselves. Ability: Blood Flow.",
 "Description: a huge round mop of brown hair, two red eyes, red stitch marks across the face and red thorns all over the head and body. A blue skirt with red stripes, bandaged white arms and legs with grey metal and chains, black armoured legs.",
-"null",
 "Incident Report: the subject is afraid of blood. The subject is also the most reliable producer of blood in the facility. Both statements were made by the subject, in the same breath.",
 "Personnel Note: the subject counts under its breath whenever it touches anything. Nobody has asked what it is counting. The number is never above twenty.",
 "Blood Flow: a beam of deadly blood leaves the body, stronger for every touch counted. Twenty touches is full power. Remainder of entry expunged by order of O5-██."
@@ -6653,7 +8590,29 @@
 "source": "Book"
 },
 "sprite": "sprites/hemo.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/hemo_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/hemo_ko.webp"
+},
+{
+"label": "Bruise Blue",
+"kind": "recolour",
+"filter": "hue-rotate(160deg) saturate(1.2)"
+},
+{
+"label": "Bleached",
+"kind": "recolour",
+"filter": "saturate(.2) brightness(1.15)"
+}
+]
 },
 {
 "key": "toon",
@@ -6689,7 +8648,6 @@
 "archive": [
 "Item FAL-0126 is held at Containment Level: Medium. Staff are asked not to stand under anything, not to walk through any door they did not see being built, and to ignore the sound of a very small bell. Ability: Cartoonish.",
 "Description: a tall figure with a flat black fringe, round glasses-like eyes and a wide toothy grin, inside a long dark coat that drips to the floor. Seen with Sna in almost every record. Neither will say why.",
-"null",
 "Incident Report: a doorway appeared on a solid wall in Corridor B. Two guards walked through it. It was not a door. They were found, flat and in good humour, on the other side of the wall of the next building.",
 "Personnel Note: the subject has never been seen to be hurt, only flattened. Everyone who has met it agrees that it is much worse to be the person it is smiling at.",
 "Cartoonish: the subject can do any cartoon move, basically giving the toon force. Remainder of entry expunged by order of O5-██."
@@ -6710,7 +8668,29 @@
 "source": "Book"
 },
 "sprite": "sprites/toon.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/toon_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/toon_ko.webp"
+},
+{
+"label": "Noir Reel",
+"kind": "recolour",
+"filter": "grayscale(.9) contrast(1.15)"
+},
+{
+"label": "Technicolor",
+"kind": "recolour",
+"filter": "hue-rotate(140deg) saturate(1.5)"
+}
+]
 },
 {
 "key": "limit",
@@ -6746,7 +8726,6 @@
 "archive": [
 "Item FAL-0127 is held at Containment Level: High. The subject's skin is invisible, so it only shows its meat. Do not mistake this for an injury. Ability: Genetic Limit.",
 "Description: a huge body of raw red muscle with no visible skin, crossed with dark straps, one dark round socket, one pale veined eye with an orange pupil, and strands of muscle hanging from both arms. Seen with Sna in almost every record.",
-"null",
 "Incident Report: three guards were each pushed to the limit of what their genes could do. All three were found afterwards unharmed, extremely strong and in tears. The subject apologised to each of them.",
 "Personnel Note: the subject can also mix genetics to create hybrids. Staff are asked not to stand next to the subject and a different member of staff at the same time.",
 "Genetic Limit: it can push genetics to their limits, charging them, and mix genetics to create hybrids. Remainder of entry expunged by order of O5-██."
@@ -6767,7 +8746,29 @@
 "source": "Book"
 },
 "sprite": "sprites/limit.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/limit_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/limit_ko.webp"
+},
+{
+"label": "Cooked",
+"kind": "recolour",
+"filter": "hue-rotate(20deg) saturate(.8) brightness(.9)"
+},
+{
+"label": "Bleached Bone",
+"kind": "recolour",
+"filter": "saturate(.15) brightness(1.2)"
+}
+]
 },
 {
 "key": "painter",
@@ -6803,7 +8804,6 @@
 "archive": [
 "Item FAL-0128 is held at Containment Level: High. The subject is one of a thousand painters, and the only one that has ever been seen to leave the studio. Ability: Painter's Dream.",
 "Description: a tall shaggy figure with a heavy dark fringe and a long coat, soaked from head to foot in red, blue, green and black paint. Staff have been unable to confirm that all of it is paint.",
-"null",
 "Incident Report: the subject painted a door onto the wall of a sealed cell. The door was reported to open. The subject describes this as normal.",
 "Personnel Note: the subject's painting supplies are never delivered and never run out. Several members of staff have tried to find where they come from. The subject has never been asked twice.",
 "Painter's Dream: if the subject paints something, it comes true. Remainder of entry expunged by order of O5-██."
@@ -6824,7 +8824,29 @@
 "source": "Book"
 },
 "sprite": "sprites/painter.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/painter_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/painter_ko.webp"
+},
+{
+"label": "Wet Paint",
+"kind": "recolour",
+"filter": "hue-rotate(120deg) saturate(1.4)"
+},
+{
+"label": "Dry Canvas",
+"kind": "recolour",
+"filter": "saturate(.2) brightness(1.15)"
+}
+]
 },
 {
 "key": "glacier",
@@ -6860,7 +8882,6 @@
 "archive": [
 "Item FAL-0129 is held at Containment Level: Medium. The air within ten metres of the subject is minus fifty degrees. Staff entering the area must wear thermal gear and must not touch the subject's hands. Ability: Chill.",
 "Description: a blue fur-lined parka hood around a dark face with two green eyes, a wide thin grin and a red patch on one cheek. Grey jacket, blue sleeves, long dark shaggy legs. An earlier design on file shows a smaller blue creature with large round eyes.",
-"null",
 "Incident Report: Corridor 9 froze for 40 minutes. Eleven staff were stuck to the walls and thirteen to the floor. All were alive, and all gave the same statement: the subject apologised the whole time.",
 "Personnel Note: the subject's fingers frost over by themselves. It has asked three times to be given a heater and been refused three times. Staff are asked to stop leaving heaters outside the cell.",
 "Chill: a cold aura, a frozen touch, and an ice beam through the fingers. Remainder of entry expunged by order of O5-██."
@@ -6881,7 +8902,29 @@
 "source": "Book"
 },
 "sprite": "sprites/glacier.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/glacier_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/glacier_ko.webp"
+},
+{
+"label": "Northern Lights",
+"kind": "recolour",
+"filter": "hue-rotate(80deg) saturate(1.4)"
+},
+{
+"label": "Thaw",
+"kind": "recolour",
+"filter": "hue-rotate(-30deg) saturate(.8) brightness(1.1)"
+}
+]
 },
 {
 "key": "unbreakable",
@@ -6917,7 +8960,6 @@
 "archive": [
 "Fal-125 Logs 1. Item FAL-0130 is held at Containment Level: Extreme. Status: confined. Age 41. The subject can tank bullets, rifles and rockets and can only be killed by a nuke. Ability: Near Immortality.",
 "Description: a wild mop of spiky pale hair, round glasses over red star-shaped eyes, a toothy grin, a body stained red, and a long black arm ending in a spiked ball. The stains are not the subject's.",
-"null",
 "Incident Report: sixty rounds, two rockets and a falling door were used on the subject during the third drill. The subject asked whether the drill was over, and if there was lunch.",
 "Fal-125 comment: if he turned evil and started killing, we would mostly have no chance against him. This comment has been moved to the last page of every file, in smaller type.",
 "Near Immortality: the subject can only be killed by a nuke. No nuke has been requested. Remainder of entry expunged by order of O5-██."
@@ -6938,7 +8980,29 @@
 "source": "Book"
 },
 "sprite": "sprites/unbreakable.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/unbreakable_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/unbreakable_ko.webp"
+},
+{
+"label": "Steel Skin",
+"kind": "recolour",
+"filter": "grayscale(.9) contrast(1.1)"
+},
+{
+"label": "Gold Star",
+"kind": "recolour",
+"filter": "hue-rotate(40deg) saturate(1.5)"
+}
+]
 },
 {
 "key": "chaser",
@@ -6974,7 +9038,6 @@
 "archive": [
 "Item FAL-0131 is held at Containment Level: High. Age 27. The subject was born with its ability and cannot stop moving once it reaches 50 km/h. The subject can reach 150 km/h. Ability: Speedrun.",
 "Description: a bald round head: one half pale with an empty black socket, the other half black with a single yellow spiral eye, a huge toothy grin, a yellow smiley badge on its chest, and long dark spiked legs. Signature item: Chaser's Slash, a small red-bladed knife.",
-"null",
 "Incident Report: as a child the subject ran so fast it permanently burned part of its own face and lost all of its hair. The subject has not been asked to race since. The subject has been asking to race since.",
 "Personnel Note: the subject becomes very angry when challenged to a race. Guards are asked to not use the phrase 'bet you can't'. Several guards have used the phrase. Several guards were run through.",
 "Speedrun: it can run through humans easily, but it cannot stop once it is running. Remainder of entry expunged by order of O5-██."
@@ -6995,7 +9058,29 @@
 "source": "Book"
 },
 "sprite": "sprites/chaser.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/chaser_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/chaser_ko.webp"
+},
+{
+"label": "Finish Line",
+"kind": "recolour",
+"filter": "hue-rotate(160deg) saturate(1.3)"
+},
+{
+"label": "Burnt Out",
+"kind": "recolour",
+"filter": "saturate(.2) brightness(.9)"
+}
+]
 },
 {
 "key": "furnace",
@@ -7031,7 +9116,6 @@
 "archive": [
 "Item FAL-0132 is held at Containment Level: Extreme. The subject can create a burst of fire from its chest that blasts through everything for five kilometres in front of it. Ability: Blast Furnace.",
 "Description: a bare, dark red body with no skin, a messy tuft of brown hair and a plain, tired face. An earlier design on file shows a smaller pink body with round eyes.",
-"null",
 "Incident Report: following a break-up, the subject developed its ability and could not control it. In the first week of having it, the subject killed 1,273 people. The fire tore off all of its skin.",
 "Personnel Note: the subject has since learned to control the fire. Staff are asked not to tell the subject that this is good news. The subject is very gentle. It is also on fire.",
 "Blast Furnace: it does rip off flesh and skin. Remainder of entry expunged by order of O5-██."
@@ -7052,7 +9136,29 @@
 "source": "Book"
 },
 "sprite": "sprites/furnace.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/furnace_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/furnace_ko.webp"
+},
+{
+"label": "White Hot",
+"kind": "recolour",
+"filter": "hue-rotate(30deg) saturate(.6) brightness(1.25)"
+},
+{
+"label": "Cold Ash",
+"kind": "recolour",
+"filter": "grayscale(.85) brightness(.95)"
+}
+]
 },
 {
 "key": "doommaster",
@@ -7088,7 +9194,6 @@
 "archive": [
 "Item FAL-0133 is held at Containment Level: Extreme. The subject's punches can destroy city blocks. Staff are asked not to stand within ten metres of its hands, and not to make it laugh. Ability: Doom Punch.",
 "Description: a huge dark body with red claw-marks, spiky hair over a wide toothy red grin, grey straps and buckles across the chest, blue claws, and a row of green spikes down the back. An earlier design on file shows a small scribbled face and blue spikes.",
-"null",
 "Incident Report: three buildings. One punch. The subject asked afterwards whether there would be tea, and whether the buildings had been important. They had.",
 "Personnel Note: the subject keeps its hands in its pockets whenever it can. It has asked, twice, to have its pockets sewn shut. The request was granted. It has been sewn shut four times.",
 "Doom Punch: it can destroy a city block. The subject says it has never wanted to. Remainder of entry expunged by order of O5-██."
@@ -7109,7 +9214,29 @@
 "source": "Book"
 },
 "sprite": "sprites/doommaster.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/doommaster_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/doommaster_ko.webp"
+},
+{
+"label": "Rubble Grey",
+"kind": "recolour",
+"filter": "grayscale(.85) contrast(1.1)"
+},
+{
+"label": "Hot Fist",
+"kind": "recolour",
+"filter": "hue-rotate(-20deg) saturate(1.5)"
+}
+]
 },
 {
 "key": "copyright",
@@ -7145,7 +9272,6 @@
 "archive": [
 "Item FAL-0134 is held at Containment Level: Medium. The subject cannot be photographed, because the photograph will contain a copy of the subject, and the copy will contain the photograph. Ability: Copyright.",
 "Description: a large grey figure with huge round staring eyes, a wide grin made of grid-shaped teeth and tall shaggy legs. Two smaller sketches beside it on file (a panda-like head and a girl's face) are copies. Which is the original is disputed.",
-"null",
 "Incident Report: twelve identical copies of Corridor C were found at the end of Corridor C. Each corridor contained a copy of the subject. Each copy also asked to be credited.",
 "Personnel Note: the subject files a formal notice whenever someone makes a copy of anything without permission. Staff have learned to ask before photocopying. The subject has learned to ask before being photocopied.",
 "All Rights Reserved: every buff the enemy gains, the subject gains a copy of, and every blow the enemy lands, the subject takes a cut of. Remainder of entry expunged by order of O5-██."
@@ -7166,7 +9292,29 @@
 "source": "Book"
 },
 "sprite": "sprites/copyright.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/copyright_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/copyright_ko.webp"
+},
+{
+"label": "Photocopy",
+"kind": "recolour",
+"filter": "grayscale(1) contrast(1.2)"
+},
+{
+"label": "Blueprint",
+"kind": "recolour",
+"filter": "hue-rotate(190deg) saturate(1.5)"
+}
+]
 },
 {
 "key": "doghunter",
@@ -7202,7 +9350,6 @@
 "archive": [
 "Item FAL-0135 is held at Containment Level: High. The subject hunts hounds, and has been seen doing so alongside Item 0020, Hound Dog. Neither will say who was following whom. Ability: not recorded.",
 "Description: a round spiked creature with huge orange eyes, a mouth full of needle teeth, a frill of feathers on each shoulder and two bandaged wings with red bands and long feathery tips.",
-"null",
 "Incident Report: eleven hounds were found sitting perfectly still in Kennel B, unharmed, with their ears flat. The subject was found on the ceiling. It said it had asked them to wait.",
 "Personnel Note: the subject has never been seen to bite anything that was not running. Staff are advised to walk.",
 "Hound Hunt: no ability on file. Observers agree it knows where every hound is, and will not be asked how. Remainder of entry expunged by order of O5-██."
@@ -7223,7 +9370,29 @@
 "source": "Book"
 },
 "sprite": "sprites/doghunter.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/doghunter_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/doghunter_ko.webp"
+},
+{
+"label": "Moonlit",
+"kind": "recolour",
+"filter": "hue-rotate(200deg) saturate(.9) brightness(.9)"
+},
+{
+"label": "Autumn",
+"kind": "recolour",
+"filter": "hue-rotate(-25deg) saturate(1.4)"
+}
+]
 },
 {
 "key": "kuikya",
@@ -7259,7 +9428,6 @@
 "archive": [
 "Item FAL-0136 is held at Containment Level: High. Every time the subject's head hits anything, a shock wave leaves it in all directions. Staff are asked to keep the subject's cell soft. It is not soft enough. Ability: Head Slam.",
 "Description: a big round grey head with two huge blood-red, ring-patterned eyes and a vast toothy grin, on a small red body with two grey, red-streaked arms. An earlier design on file shows a smaller face with two round red eyes.",
-"null",
 "Incident Report: the subject tapped its forehead against a wall to think. Every window on three floors broke. The subject was found afterwards apologising to the glass.",
 "Personnel Note: the subject has asked many times to be given a helmet. It has been given a helmet. The helmet is, in several senses, no longer a helmet.",
 "Head Slam: it sends shock waves when its head hits anything. Remainder of entry expunged by order of O5-██."
@@ -7280,7 +9448,29 @@
 "source": "Book"
 },
 "sprite": "sprites/kuikya.webp",
-"origin": "game"
+"origin": "game",
+"gallery": [
+{
+"label": "Attack pose",
+"kind": "pose",
+"src": "sprites/alt/kuikya_atk.webp"
+},
+{
+"label": "Knocked out",
+"kind": "pose",
+"src": "sprites/alt/kuikya_ko.webp"
+},
+{
+"label": "Bruised",
+"kind": "recolour",
+"filter": "hue-rotate(270deg) saturate(1.2)"
+},
+{
+"label": "Bone",
+"kind": "recolour",
+"filter": "saturate(.15) brightness(1.2)"
+}
+]
 }
 ],
 "worlds": [
