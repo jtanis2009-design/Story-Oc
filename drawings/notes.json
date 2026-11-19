@@ -331,5 +331,25 @@
   "drawn": "2022",
   "file": "devourer-2022.webp",
   "caption": "Devourer, first version with the first mask and Mask 2"
+ },
+ "_more": {
+  "stitchheart": [
+   "stitchheart-sheet.webp (main, ID 0087, undated)",
+   "stitchheart-2025.webp (March 18, 2025)",
+   "stitchheart-sketch.webp (undated sketch)"
+  ],
+  "naginata": [
+   "naginata-sheet.webp (main, ID 0089: Paralyzing Spore, Slicing Blade, Soul Eater)",
+   "naginata-old.webp (March 14, 2024?: Battle Ready, Paralyzing Spore, Skin Leaver)"
+  ],
+  "bloodspike": [
+   "bloodspike-sheet.webp (main, ID 0088, March 26, 2025)",
+   "bloodspike-sketch.webp (undated sketch)"
+  ],
+  "uquna": [
+   "uquna-sheet.webp (main, ID 0090, Nov 24, 2025: Monochrome Hell, Containment Extreme)",
+   "uquna-ugoonu-2023.webp (\"Ugoonu\", 19/7 2023?, Guts and Glory)",
+   "uquna-ugomo-2023.webp (\"Ugomo\", 7 July 2023?, Guts and Glory)"
+  ]
  }
 }
