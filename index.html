@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>FAL-125 Story Archive</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Character files, lore timeline, AI character reviews, ability generator and story critic for the FAL-125 universe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Saira+Stencil+One&display=swap">
+<style>
+/* Layout: a facility records terminal. Sticky stencil header with file tabs, one working column below.
+   Color: archive paper + ink, a red "stamp" accent used only for verdicts, IDs and the primary action. */
+:root {
+  --paper: #eef0eb;
+  --panel: #fbfbf8;
+  --ink: #1a1f24;
+  --muted: #5b6570;
+  --line: #cdd2ca;
+  --stamp: #b3261e;
+  --link: #24578a;
+  --good: #2f7a45;
+  --warn: #9a6a00;
+  --tint: #e3e7df;
+  --f-display: "Saira Stencil One", "Impact", "Arial Narrow", sans-serif;
+  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --r: 3px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #12161a; --panel: #192026; --ink: #e4e7e1; --muted: #95a1ab; --line: #2c353d;
+    --stamp: #ef6a5b; --link: #8bbbe8; --good: #6cc488; --warn: #e0b54a; --tint: #1f272e; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #12161a; --panel: #192026; --ink: #e4e7e1; --muted: #95a1ab; --line: #2c353d;
+  --stamp: #ef6a5b; --link: #8bbbe8; --good: #6cc488; --warn: #e0b54a; --tint: #1f272e; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+img { max-width: 100%; }
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+html, body { background: var(--paper); color: var(--ink); }
+body { font-family: var(--f-body); font-size: 15px; line-height: 1.55; margin: 0; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--panel); }
+a { color: var(--link); }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* header */
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--panel); border-bottom: 1px solid var(--line); }
+.bar { display: flex; align-items: center; gap: 16px; padding-block: 10px; flex-wrap: wrap; }
+.logo { font-family: var(--f-display); font-size: 26px; letter-spacing: .02em; line-height: 1; text-decoration: none; color: var(--ink); display: flex; align-items: baseline; gap: 8px; }
+.logo small { font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+nav.tabs { display: flex; gap: 2px; overflow-x: auto; flex: 1 1 auto; min-width: 0; scrollbar-width: none; }
+nav.tabs a { font-family: var(--f-mono); font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; color: var(--muted); padding: 8px 12px; border-radius: var(--r); white-space: nowrap; }
+nav.tabs a:hover { color: var(--ink); background: var(--tint); }
+nav.tabs a[aria-current="page"] { color: var(--ink); background: var(--tint); box-shadow: inset 0 -2px 0 var(--stamp); }
+.status { font-family: var(--f-mono); font-size: 11.5px; color: var(--muted); display: flex; gap: 12px; flex-wrap: wrap; }
+.status b { font-weight: 600; color: var(--ink); }
+.dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--muted); margin-right: 5px; vertical-align: 1px; }
+.dot.on { background: var(--good); } .dot.off { background: var(--warn); }
+
+main { padding-block: 22px 60px; }
+section.view[hidden] { display: none; }
+h1, h2, h3 { text-wrap: balance; line-height: 1.2; margin: 0; }
+h1 { font-family: var(--f-display); font-weight: 400; font-size: clamp(28px, 4vw, 38px); letter-spacing: .01em; }
+h2 { font-family: var(--f-display); font-weight: 400; font-size: 22px; letter-spacing: .01em; }
+h3 { font-size: 15px; font-weight: 600; }
+.lede { color: var(--muted); max-width: 68ch; margin: 6px 0 0; }
+.eyebrow { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.mono { font-family: var(--f-mono); }
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }
+
+/* controls */
+.btn { border: 1px solid var(--line); background: var(--panel); padding: 8px 14px; border-radius: var(--r); cursor: pointer; font-weight: 500; font-size: 14px; display: inline-flex; align-items: center; gap: 6px; text-decoration: none; color: var(--ink); }
+.btn:hover { border-color: var(--muted); }
+.btn.primary { background: var(--stamp); color: #fff; border-color: var(--stamp); }
+.btn.primary:hover { filter: brightness(1.08); }
+.btn.small { padding: 5px 10px; font-size: 13px; }
+.btn.danger { color: var(--stamp); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.field { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.field > span { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+input[type=text], input[type=search], input[type=password], select, textarea { width: 100%; padding: 9px 11px; border: 1px solid var(--line); border-radius: var(--r); background: var(--panel); }
+textarea { resize: vertical; min-height: 110px; line-height: 1.5; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.check { display: inline-flex; gap: 8px; align-items: center; font-size: 14px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 18px; }
+.note { font-size: 13.5px; color: var(--muted); }
+.notice { border: 1px dashed var(--line); padding: 12px 14px; border-radius: var(--r); font-size: 14px; background: var(--tint); }
+
+/* files */
+.filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 16px; }
+.filters input[type=search] { flex: 1 1 240px; width: auto; }
+.filters select { width: auto; }
+.chips { display: inline-flex; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.chips button { border: 0; background: var(--panel); padding: 8px 12px; cursor: pointer; font-size: 13.5px; border-right: 1px solid var(--line); }
+.chips button:last-child { border-right: 0; }
+.chips button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.count { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); text-decoration: none; color: inherit; display: flex; flex-direction: column; overflow: hidden; transition: border-color .15s, transform .15s; }
+.card:hover { border-color: var(--muted); transform: translateY(-1px); }
+.card .pic { aspect-ratio: 1 / 1; display: grid; place-items: center; background-color: var(--tint); background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 16px 16px; background-position: -1px -1px; position: relative; }
+.card .pic img { max-height: 88%; max-width: 88%; object-fit: contain; }
+.initials { font-family: var(--f-display); font-size: 40px; color: var(--muted); }
+.card .meta { padding: 8px 10px 10px; display: flex; flex-direction: column; gap: 2px; border-top: 1px solid var(--line); }
+.card .id { font-family: var(--f-mono); font-size: 11px; color: var(--stamp); letter-spacing: .06em; }
+.card .nm { font-weight: 600; font-size: 14px; line-height: 1.25; }
+.card .tg { font-family: var(--f-mono); font-size: 11px; color: var(--muted); }
+.swatch { position: absolute; left: 8px; top: 8px; width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--line); }
+.mine-tag { position: absolute; right: 6px; top: 6px; font-family: var(--f-mono); font-size: 10px; letter-spacing: .1em; padding: 2px 5px; border: 1px solid var(--stamp); color: var(--stamp); border-radius: 2px; background: var(--panel); }
+
+/* dossier */
+.dossier { display: grid; grid-template-columns: minmax(220px, 300px) 1fr; gap: 22px; align-items: start; }
+@media (max-width: 760px) { .dossier { grid-template-columns: 1fr; } }
+.dossier .portrait { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); }
+.dossier .portrait .pic { aspect-ratio: 1/1; display: grid; place-items: center; background-color: var(--tint); background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 20px 20px; }
+.dossier .portrait img { max-height: 90%; max-width: 90%; object-fit: contain; }
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; padding: 14px; font-size: 14px; }
+.kv dt { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-top: 2px; }
+.kv dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.stats { display: grid; gap: 6px; padding: 0 14px 14px; }
+.stat { display: grid; grid-template-columns: 36px 1fr 34px; align-items: center; gap: 8px; font-family: var(--f-mono); font-size: 12px; font-variant-numeric: tabular-nums; }
+.stat .track { height: 6px; background: var(--tint); border-radius: 3px; overflow: hidden; }
+.stat .fill { height: 100%; background: var(--ink); }
+.docs { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.docs .panel h2 { margin-bottom: 10px; }
+.file-no { font-family: var(--f-mono); color: var(--stamp); letter-spacing: .08em; font-size: 13px; }
+.entry { border-left: 2px solid var(--line); padding: 2px 0 2px 14px; margin: 0 0 12px; white-space: pre-wrap; }
+.entry:last-child { margin-bottom: 0; }
+.guess { display: inline-block; font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; border: 1px solid var(--warn); color: var(--warn); padding: 1px 6px; border-radius: 2px; margin-left: 6px; vertical-align: 2px; }
+.skill { padding: 10px 0; border-top: 1px solid var(--line); }
+.skill:first-of-type { border-top: 0; padding-top: 0; }
+.skill b { display: block; }
+
+/* lore */
+.timeline { position: relative; display: flex; flex-direction: column; gap: 14px; }
+.tl-item { display: grid; grid-template-columns: 74px 1fr; gap: 14px; }
+@media (max-width: 560px) { .tl-item { grid-template-columns: 1fr; gap: 4px; } }
+.tl-mark { font-family: var(--f-display); font-size: 20px; color: var(--muted); padding-top: 14px; line-height: 1.1; }
+.tl-mark small { display: block; font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; }
+.tl-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 14px 16px; min-width: 0; }
+.tl-card.user { border-style: dashed; border-color: var(--muted); }
+.tl-card.preview { background: var(--tint); }
+.tl-card h3 { font-size: 17px; }
+.floors { display: flex; flex-wrap: wrap; gap: 4px 6px; margin: 8px 0; font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.floors span:not(:last-child)::after { content: " ›"; }
+details.scenes { margin-top: 8px; }
+details.scenes summary { cursor: pointer; font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--link); }
+.scene { margin-top: 10px; }
+.scene .where { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.scene p { margin: 4px 0; }
+.saga { font-family: var(--f-display); font-size: 18px; margin: 18px 0 2px; color: var(--stamp); }
+
+/* AI tools */
+.tool { display: grid; grid-template-columns: minmax(280px, 380px) 1fr; gap: 22px; align-items: start; }
+@media (max-width: 860px) { .tool { grid-template-columns: 1fr; } }
+.tool form { display: flex; flex-direction: column; gap: 14px; }
+.drop { border: 1.5px dashed var(--line); border-radius: var(--r); padding: 16px; text-align: center; cursor: pointer; background: var(--panel); }
+.drop.over { border-color: var(--link); }
+.thumbs { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; justify-content: center; }
+.thumbs figure { margin: 0; position: relative; }
+.thumbs img { width: 72px; height: 72px; object-fit: cover; border-radius: var(--r); border: 1px solid var(--line); }
+.thumbs button { position: absolute; top: -6px; right: -6px; width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--line); background: var(--panel); cursor: pointer; line-height: 1; padding: 0; }
+.result { min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+.working { display: flex; gap: 12px; align-items: center; color: var(--muted); font-family: var(--f-mono); font-size: 13px; }
+.spin { width: 16px; height: 16px; border: 2px solid var(--line); border-top-color: var(--stamp); border-radius: 50%; animation: spin .9s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .spin { animation: none; } .card { transition: none; } }
+.report h2 { margin-bottom: 4px; }
+.report ul { margin: 6px 0 0; padding-left: 20px; }
+.report li { margin: 4px 0; }
+.scores { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
+.score { border: 1px solid var(--line); border-radius: var(--r); padding: 10px; }
+.score .n { font-family: var(--f-display); font-size: 30px; line-height: 1; font-variant-numeric: tabular-nums; }
+.score .n small { font-size: 14px; color: var(--muted); }
+.score .l { font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.stampbox { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.stampmark { font-family: var(--f-display); font-size: 26px; letter-spacing: .06em; padding: 4px 14px; border: 3px solid currentColor; border-radius: 4px; transform: rotate(-4deg); display: inline-block; }
+.stampmark.works { color: var(--good); } .stampmark.needs_work { color: var(--warn); } .stampmark.wont_work { color: var(--stamp); }
+.links { display: flex; flex-direction: column; gap: 8px; }
+.links li { list-style: none; }
+.links .why { color: var(--muted); font-size: 13.5px; }
+.src-tag { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); padding: 0 5px; border-radius: 2px; margin-left: 6px; }
+.ability { border: 1px solid var(--line); border-radius: var(--r); padding: 16px; background: var(--panel); display: flex; flex-direction: column; gap: 8px; }
+.ability h3 { font-family: var(--f-display); font-weight: 400; font-size: 21px; }
+.ability .lab { font-family: var(--f-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.history { display: flex; flex-direction: column; gap: 8px; }
+.hist { display: flex; gap: 10px; align-items: center; justify-content: space-between; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--r); background: var(--panel); }
+.hist .t { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pill { font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; border: 1px solid currentColor; white-space: nowrap; }
+.pill.works { color: var(--good); } .pill.needs_work { color: var(--warn); } .pill.wont_work { color: var(--stamp); }
+.toast { position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: var(--paper); padding: 10px 16px; border-radius: var(--r); font-size: 14px; z-index: 20; max-width: calc(100% - 32px); }
+.empty { padding: 28px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: var(--r); }
+hr.sep { border: 0; border-top: 1px solid var(--line); margin: 6px 0; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="#files">FAL-125 <small>Story Archive</small></a>
+    <nav class="tabs" aria-label="Sections">
+      <a href="#files" data-tab="files">Files</a>
+      <a href="#lore" data-tab="lore">Lore</a>
+      <a href="#review" data-tab="review">Review</a>
+      <a href="#abilities" data-tab="abilities">Abilities</a>
+      <a href="#critic" data-tab="critic">Critic</a>
+      <a href="#setup" data-tab="setup">Setup</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- FILES -->
+  <section class="view" id="v-files">
+    <div class="head">
+      <div>
+        <div class="eyebrow">Containment records</div>
+        <h1>Character Files</h1>
+        <p class="lede">Every subject in the universe: the ones in the game, the ones only in the Character Book, and your new ones.</p>
+      </div>
+      <a class="btn primary" href="#new">+ New character file</a>
+    </div>
+    <div class="filters">
+      <input type="search" id="q" placeholder="Search name, ability, scent, anything…" aria-label="Search character files">
+      <div class="chips" id="roleChips" role="group" aria-label="Role">
+        <button type="button" data-role="" aria-pressed="true">All</button>
+        <button type="button" data-role="Tank" aria-pressed="false">Tank</button>
+        <button type="button" data-role="Damage" aria-pressed="false">Damage</button>
+        <button type="button" data-role="Healer" aria-pressed="false">Healer</button>
+      </div>
+      <select id="typeSel" aria-label="Type"><option value="">Any type</option><option>Angel</option><option>Demon</option><option>Human</option><option>Hybrid</option><option>Other</option></select>
+      <select id="originSel" aria-label="Source"><option value="">All files</option><option value="game">In the game</option><option value="book">Book only</option><option value="mine">My new ones</option></select>
+      <select id="sortSel" aria-label="Sort"><option value="id">Sort by ID</option><option value="name">Sort by name</option><option value="new">Newest first</option></select>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="cards" id="cards"><div class="empty">Opening the archive…</div></div>
+  </section>
+
+  <!-- ONE FILE -->
+  <section class="view" id="v-file" hidden></section>
+
+  <!-- NEW / EDIT -->
+  <section class="view" id="v-new" hidden>
+    <div class="head"><div><div class="eyebrow" id="editEyebrow">New file</div><h1 id="editTitle">New Character File</h1></div></div>
+    <form id="charForm" class="panel" autocomplete="off">
+      <div class="grid2">
+        <label class="field"><span>Name</span><input type="text" id="cf-name" required></label>
+        <label class="field"><span>File number</span><input type="text" id="cf-cid" class="mono"></label>
+        <label class="field"><span>Title</span><input type="text" id="cf-title" placeholder="e.g. Black Hole"></label>
+        <label class="field"><span>Role</span><select id="cf-role"><option value="">Not decided</option><option>Tank</option><option>Damage</option><option>Healer</option></select></label>
+        <label class="field"><span>Type</span><select id="cf-type"><option value="">Not decided</option><option>Angel</option><option>Demon</option><option>Human</option><option>Hybrid</option><option>Other</option></select></label>
+        <label class="field"><span>Containment level</span><input type="text" id="cf-containment"></label>
+        <label class="field"><span>Threat level</span><input type="text" id="cf-threat"></label>
+        <label class="field"><span>Scent</span><input type="text" id="cf-scent"></label>
+        <label class="field"><span>Colour</span><input type="text" id="cf-color" placeholder="#8a1a1a"></label>
+      </div>
+      <label class="field"><span>Ability</span><input type="text" id="cf-ability"></label>
+      <label class="field"><span>Ability+</span><input type="text" id="cf-abilityPlus"></label>
+      <label class="field"><span>Description and lore</span><textarea id="cf-desc" rows="6"></textarea></label>
+      <label class="field"><span>Notes</span><textarea id="cf-notes" rows="3"></textarea></label>
+      <div class="field"><span>Picture</span>
+        <div class="drop" id="cf-drop" tabindex="0">Drop a drawing here, or click to choose one<input type="file" id="cf-file" accept="image/*" hidden></div>
+        <div class="thumbs" id="cf-thumbs"></div>
+      </div>
+      <div class="row"><button class="btn primary" type="submit">Save file</button><a class="btn" href="#files" id="cf-cancel">Cancel</a></div>
+    </form>
+  </section>
+
+  <!-- LORE -->
+  <section class="view" id="v-lore" hidden>
+    <div class="head">
+      <div>
+        <div class="eyebrow">In story order</div>
+        <h1>Lore Timeline</h1>
+        <p class="lede">The whole story from the founding of Fal-125 to the Climax, with every world's scenes. Your own entries sit in the place you choose.</p>
+      </div>
+      <button class="btn primary" type="button" id="loreAddBtn">+ Add lore entry</button>
+    </div>
+    <form id="loreForm" class="panel" hidden autocomplete="off" style="margin-bottom:18px">
+      <div class="grid2">
+        <label class="field"><span>Title</span><input type="text" id="lf-title" required></label>
+        <label class="field"><span>Where it goes</span><select id="lf-after"></select></label>
+      </div>
+      <label class="field" style="margin-top:12px"><span>What happens</span><textarea id="lf-text" rows="5" required></textarea></label>
+      <label class="field" style="margin-top:12px"><span>Characters in it (comma separated)</span><input type="text" id="lf-chars"></label>
+      <div class="row" style="margin-top:14px"><button class="btn primary" type="submit">Save entry</button><button class="btn" type="button" id="lf-cancel">Cancel</button><button class="btn" type="button" id="lf-critic">Check it with the Critic</button></div>
+    </form>
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <!-- REVIEW -->
+  <section class="view" id="v-review" hidden>
+    <div class="head"><div>
+      <div class="eyebrow">Intake review</div>
+      <h1>Character Review</h1>
+      <p class="lede">Show Claude a drawing or describe a character. You get an honest review, the existing characters it is close to, and where it could fit in your universe.</p>
+    </div></div>
+    <div class="tool">
+      <form id="revForm" class="panel" autocomplete="off">
+        <div class="field"><span>Pictures (up to 4)</span>
+          <div class="drop" id="rv-drop" tabindex="0">Drop sketch pages or sprites here, or click to choose<input type="file" id="rv-file" accept="image/*" multiple hidden></div>
+          <div class="thumbs" id="rv-thumbs"></div>
+        </div>
+        <label class="field"><span>Name</span><input type="text" id="rv-name" placeholder="Leave empty if it has none yet"></label>
+        <label class="field"><span>What you have so far</span><textarea id="rv-notes" rows="6" placeholder="Ability, personality, where they come from, which game they won, anything."></textarea></label>
+        <label class="field"><span>Role you want</span><select id="rv-role"><option value="">Let Claude suggest</option><option>Tank</option><option>Damage</option><option>Healer</option></select></label>
+        <label class="field"><span>Or review an existing file</span><select id="rv-existing"><option value="">None</option></select></label>
+        <label class="check"><input type="checkbox" id="rv-search" checked> Search the web for inspirations</label>
+        <button class="btn primary" type="submit" id="rv-go">Review this character</button>
+        <p class="note ai-note"></p>
+      </form>
+      <div class="result" id="rv-out"><div class="empty">Your review will appear here.</div></div>
+    </div>
+    <h2 style="margin:30px 0 10px">Past reviews</h2>
+    <div class="history" id="rv-hist"></div>
+  </section>
+
+  <!-- ABILITIES -->
+  <section class="view" id="v-abilities" hidden>
+    <div class="head"><div>
+      <div class="eyebrow">Ability lab</div>
+      <h1>Ability Generator</h1>
+      <p class="lede">New abilities that do not repeat any you already have, each with a cost, a version for the battle game, and where the idea comes from.</p>
+    </div></div>
+    <div class="tool">
+      <form id="abForm" class="panel" autocomplete="off">
+        <label class="field"><span>Idea, theme or feeling</span><textarea id="ab-theme" rows="4" placeholder="e.g. a phobia of mirrors, something about rust, a healer who steals time"></textarea></label>
+        <div class="grid2">
+          <label class="field"><span>Role</span><select id="ab-role"><option value="">Any</option><option>Tank</option><option>Damage</option><option>Healer</option></select></label>
+          <label class="field"><span>Type</span><select id="ab-type"><option value="">Any</option><option>Angel</option><option>Demon</option><option>Human</option><option>Hybrid</option><option>Other</option></select></label>
+          <label class="field"><span>Power level</span><select id="ab-power"><option value="grounded">Grounded</option><option value="strong" selected>Strong</option><option value="world-breaking">World-breaking</option></select></label>
+          <label class="field"><span>How many</span><select id="ab-n"><option>3</option><option>5</option><option>1</option></select></label>
+        </div>
+        <label class="field"><span>For a character (optional)</span><select id="ab-char"><option value="">Nobody yet</option></select></label>
+        <label class="check"><input type="checkbox" id="ab-search" checked> Search the web for inspirations</label>
+        <button class="btn primary" type="submit" id="ab-go">Generate abilities</button>
+        <p class="note ai-note"></p>
+      </form>
+      <div class="result" id="ab-out"><div class="empty">New abilities will appear here.</div></div>
+    </div>
+    <h2 style="margin:30px 0 10px">Saved abilities</h2>
+    <div class="history" id="ab-saved"></div>
+  </section>
+
+  <!-- CRITIC -->
+  <section class="view" id="v-critic" hidden>
+    <div class="head"><div>
+      <div class="eyebrow">Story review board</div>
+      <h1>Story Critic</h1>
+      <p class="lede">Pitch a plot, scene, world or twist. Claude checks it against everything in the archive and tells you straight if it works, what breaks, and if you already have something like it.</p>
+    </div></div>
+    <div class="tool">
+      <form id="crForm" class="panel" autocomplete="off">
+        <label class="field"><span>Your idea</span><textarea id="cr-idea" rows="9" placeholder="Write it however you like. Short is fine."></textarea></label>
+        <div class="grid2">
+          <label class="field"><span>Kind of idea</span><select id="cr-kind"><option value="plot">Plot</option><option value="character">Character</option><option value="world">World</option><option value="scene">Scene</option><option value="twist">Twist</option><option value="ending">Ending</option><option value="other">Other</option></select></label>
+          <label class="field"><span>Where it would go</span><select id="cr-where"></select></label>
+        </div>
+        <label class="check"><input type="checkbox" id="cr-search" checked> Search the web for inspirations</label>
+        <button class="btn primary" type="submit" id="cr-go">Judge this idea</button>
+        <p class="note ai-note"></p>
+      </form>
+      <div class="result" id="cr-out"><div class="empty">The verdict will appear here.</div></div>
+    </div>
+    <h2 style="margin:30px 0 10px">Past ideas</h2>
+    <div class="history" id="cr-hist"></div>
+  </section>
+
+  <!-- SETUP -->
+  <section class="view" id="v-setup" hidden>
+    <div class="head"><div><div class="eyebrow">Setup</div><h1>Setup and Backups</h1></div></div>
+    <div class="docs" style="max-width:760px">
+      <div class="panel"><h2>Claude</h2><div id="aiSetup"></div></div>
+      <div class="panel"><h2>Where your work is saved</h2><div id="storeSetup"></div>
+        <div class="row" style="margin-top:12px"><button class="btn" type="button" id="exportBtn">Export a backup</button><button class="btn" type="button" id="importBtn">Import a backup</button><input type="file" id="importFile" accept="application/json,.json" hidden></div>
+      </div>
+      <div class="panel"><h2>About the data</h2><p class="note" id="aboutData"></p></div>
+    </div>
+  </section>
+</main>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+'use strict';
+/* ---------- helpers ---------- */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const trim = (s, n) => { s = String(s || '').replace(/\s+/g, ' ').trim(); return s.length > n ? s.slice(0, n - 1) + '…' : s; };
+const uid = p => p + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+const clean = o => JSON.parse(JSON.stringify(o));
+const lsGet = (k, d) => { try { const v = localStorage.getItem('fal125:' + k); return v == null ? d : v; } catch (e) { return d; } };
+const lsSet = (k, v) => { try { if (v == null) localStorage.removeItem('fal125:' + k); else localStorage.setItem('fal125:' + k, v); } catch (e) {} };
+let toastT;
+function toast(msg) { const t = $('#toast'); t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => { t.hidden = true; }, 3200); }
+function confirmBtn(btn, fn) { /* two-step confirm: the viewer frame blocks confirm() */
+  if (btn.dataset.armed) { fn(); return; }
+  const old = btn.textContent; btn.dataset.armed = '1'; btn.textContent = 'Click again to confirm';
+  setTimeout(() => { if (btn.isConnected) { delete btn.dataset.armed; btn.textContent = old; } }, 3500);
+}
+const searchUrl = q => 'https://www.google.com/search?q=' + encodeURIComponent(q);
+
+/* ---------- state ---------- */
+const COLS = ['chars', 'lore', 'reviews', 'ideas', 'abilities', 'notes'];
+const S = { canon: { characters: [], worlds: [] }, user: Object.fromEntries(COLS.map(c => [c, []])), ready: false };
+const BUILDS = { Damage: ['Burst', 'Charger', 'Controller', 'Bomber', 'Duelist', 'Execute', 'Hunter', 'Leech', 'Plague', 'Sweeper'], Healer: ['Medic', 'Warden', 'Amplifier', 'Debuffer', 'Leech'], Tank: ['Guardian', 'Protector', 'Disruptor', 'Bruiser', 'Regenerator', 'Retaliator'] };
+
+/* Backstory and connections the author confirmed (from the game's project notes). */
+const CANON_NOTES = [
+  { anchor: 'origins', title: 'Fal-125 is founded', text: 'Fuja and Radiant are the two founders of Fal-125. Radiant designed the building and signed the drainage plans; Fuja "signed for cells". Both ended up contained inside the place they built, and someone kept building after they were put away.' },
+  { anchor: 'origins', title: 'The elimination games', text: 'Before Fal-125, several subjects came out of elimination games: Hide and Bleed (won by Player 9, Soundemon, who killed Player 2 afterwards), Hot Touch (Gutter, Marrowline and Demure come from it), Mimic Ball (won by Slinder) and Fade Bite (won by Luckster). Caspic comes from a different numbered game. These games may be rewritten later.' },
+  { anchor: 'origins', title: 'Known bonds', text: 'Xainbow is a puppet made by Rainbow Ripper. Toon and Limit are Sna\'s good friends and are usually found together. Dog Hunter is connected to Hound Dog. Dollion has a rivalry with another subject who killed his brother (which one is not decided yet). Sunshine and Nukasaurus are allies.' }
+];
+const ANCHORS = () => {
+  const w = S.canon.worlds;
+  const list = [{ id: 'origins', label: 'Before the story (origins)' }];
+  const add = i => w[i] && list.push({ id: 'w' + i, label: (w[i].side ? 'Side quest: ' : w[i].preview ? 'Planned: ' : 'World ' + (i + 1) + ': ') + w[i].name });
+  add(0); const ri = w.findIndex(x => x.preview); if (ri >= 0) add(ri);
+  for (let i = 1; i < w.length; i++) if (!w[i].side && !w[i].preview) add(i);
+  w.forEach((x, i) => { if (x.side) add(i); });
+  list.push({ id: 'after', label: 'After the Climax (new story)' });
+  return list;
+};
+
+/* ---------- storage: Claude artifact database, or IndexedDB in a normal browser ---------- */
+const Store = {
+  mode: 'loading', db: null, idb: null,
+  async init() {
+    let db = null;
+    if (window.claude && window.claude.use) { try { db = await window.claude.use('db'); } catch (e) { db = null; } }
+    if (db) {
+      this.mode = 'cloud'; this.db = db;
+      await new Promise(resolve => {
+        let left = COLS.length; const done = () => { if (--left === 0) { clearTimeout(t); resolve(); } };
+        const t = setTimeout(resolve, 10000);
+        COLS.forEach(c => {
+          let first = true;
+          db.collection(c).onSnapshot(snap => {
+            S.user[c] = snap.docs.filter(d => d.exists).map(d => Object.assign({}, d.data(), { id: d.id }));
+            if (first) { first = false; done(); } else if (S.ready) rerender();
+          }, () => { if (first) { first = false; done(); } });
+        });
+      });
+      return;
+    }
+    try {
+      this.idb = await new Promise((res, rej) => {
+        const r = indexedDB.open('fal125-archive', 1);
+        r.onupgradeneeded = () => COLS.forEach(c => r.result.createObjectStore(c, { keyPath: 'id' }));
+        r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+      });
+      this.mode = 'local';
+      for (const c of COLS) S.user[c] = await new Promise(res => { const q = this.idb.transaction(c).objectStore(c).getAll(); q.onsuccess = () => res(q.result || []); q.onerror = () => res([]); });
+    } catch (e) { this.mode = 'memory'; }
+  },
+  async put(col, doc) {
+    doc = clean(Object.assign({}, doc, { updated: Date.now() }));
+    const arr = S.user[col]; const i = arr.findIndex(d => d.id === doc.id);
+    if (i >= 0) arr[i] = doc; else arr.push(doc);
+    if (this.mode === 'cloud') { const body = Object.assign({}, doc); delete body.id; await this.db.collection(col).doc(doc.id).set(body); }
+    else if (this.mode === 'local') await new Promise((res, rej) => { const tx = this.idb.transaction(col, 'readwrite'); tx.objectStore(col).put(doc); tx.oncomplete = res; tx.onerror = () => rej(tx.error); });
+    return doc;
+  },
+  async del(col, id) {
+    S.user[col] = S.user[col].filter(d => d.id !== id);
+    if (this.mode === 'cloud') await this.db.collection(col).doc(id).delete();
+    else if (this.mode === 'local') await new Promise(res => { const tx = this.idb.transaction(col, 'readwrite'); tx.objectStore(col).delete(id); tx.oncomplete = res; tx.onerror = res; });
+  }
+};
+async function save(col, doc, okMsg) {
+  try { const d = await Store.put(col, doc); if (okMsg) toast(okMsg); return d; }
+  catch (e) { toast('Could not save. ' + (e && e.code === 'not_granted' ? 'You only have view access to this archive.' : 'Try again in a moment.')); throw e; }
+}
+
+/* ---------- Claude: your Claude account inside the Claude app, or an API key with real web search ---------- */
+const AI = {
+  mode: 'none', sample: null, imagesOk: false, Anthropic: null,
+  async init() {
+    if (window.claude && window.claude.use) {
+      try { this.sample = await window.claude.use('sample'); } catch (e) { this.sample = null; }
+      if (this.sample) {
+        this.mode = 'claude';
+        try { const l = await this.sample.limits(); this.imagesOk = !!(l && l.images); } catch (e) { this.imagesOk = false; }
+        return;
+      }
+    }
+    this.mode = lsGet('apikey', '') ? 'api' : 'none';
+    this.imagesOk = true;
+  },
+  canSearch() { return this.mode === 'api'; },
+  async run({ prompt, images = [], search = false, effort = 'high', onStatus = () => {}, signal }) {
+    if (this.mode === 'claude') return this.runSample({ prompt, images, onStatus, signal });
+    if (this.mode === 'api') return this.runApi({ prompt, images, search, effort, onStatus, signal });
+    throw new Error('Claude is not connected. Open Setup to connect it.');
+  },
+  async runSample({ prompt, images, onStatus, signal }) {
+    const full = SYSTEM + '\n\n' + prompt + '\n\n' + NO_SEARCH;
+    const opts = { cache: false, signal, onText: ({ text }) => onStatus('Writing… ' + text.length + ' characters') };
+    if (images.length && this.imagesOk) opts.images = images.slice(0, 4);
+    onStatus('Thinking… (the first answer can take up to a minute)');
+    try { return { data: await this.sample.json(full, opts), sources: [], searched: false }; }
+    catch (e) {
+      const why = {
+        not_granted: 'The archive is not allowed to use Claude in this view. Allow it when Claude asks, or reload and try again.',
+        sampling_disabled: 'Claude is not available on this account here.',
+        rate_limited: 'You have used Claude a lot in a short time. Wait a little and try again.',
+        refused: 'Claude declined this request. Try wording it differently.',
+        invalid_json: 'Claude answered in the wrong format. Press the button again.',
+        image_rejected: 'One of the pictures could not be read. Try a JPG or PNG.',
+        images_unavailable: 'Pictures cannot be sent from this view. Describe the character in words instead.',
+        cancelled: 'Stopped.'
+      }[e && e.code] || 'Something went wrong talking to Claude. Try again.';
+      throw new Error(why);
+    }
+  },
+  async runApi({ prompt, images, search, effort, onStatus, signal }) {
+    if (!this.Anthropic) this.Anthropic = (await import('./vendor/anthropic-sdk-1.4.0.mjs')).default;
+    const A = this.Anthropic;
+    const client = new A({ apiKey: lsGet('apikey', ''), dangerouslyAllowBrowser: true });
+    const content = [];
+    for (const b of images.slice(0, 4)) content.push({ type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data: await toJpegB64(b) } });
+    content.push({ type: 'text', text: prompt + '\n\n' + (search ? WITH_SEARCH : NO_SEARCH) });
+    let messages = [{ role: 'user', content }], final = null; const blocks = [];
+    onStatus('Thinking…');
+    try {
+      for (let round = 0; round < 5; round++) {
+        const req = {
+          model: 'claude-opus-5-5', max_tokens: 32000, system: SYSTEM, messages,
+          thinking: { type: 'adaptive' }, output_config: { effort },
+          betas: ['server-side-fallback-2026-07-01'], fallbacks: 'default'
+        };
+        if (search) req.tools = [{ type: 'web_search_20260209', name: 'web_search', max_uses: 6 }];
+        const stream = client.beta.messages.stream(req, { signal });
+        stream.on('streamEvent', ev => {
+          if (ev.type !== 'content_block_start') return;
+          const t = ev.content_block && ev.content_block.type;
+          if (t === 'server_tool_use') onStatus('Searching the web…');
+          else if (t === 'web_search_tool_result') onStatus('Reading what it found…');
+          else if (t === 'text') onStatus('Writing the answer…');
+          else if (t === 'thinking') onStatus('Thinking…');
+        });
+        final = await stream.finalMessage();
+        blocks.push(...final.content);
+        if (final.stop_reason === 'pause_turn') { messages = messages.concat([{ role: 'assistant', content: final.content }]); continue; }
+        break;
+      }
+    } catch (e) {
+      if (A && e instanceof A.AuthenticationError) throw new Error('Your API key was not accepted. Check it in Setup.');
+      if (A && e instanceof A.PermissionDeniedError) throw new Error('This API key is not allowed to do that.');
+      if (A && e instanceof A.RateLimitError) throw new Error('Too many requests or no credit left on the API account. Wait or add credit.');
+      if (A && e instanceof A.APIConnectionError) throw new Error('Could not reach Claude. Check your internet connection.');
+      if (e && e.name === 'AbortError') throw new Error('Stopped.');
+      throw new Error('Claude returned an error: ' + trim(e && e.message, 200));
+    }
+    if (final.stop_reason === 'refusal') throw new Error('Claude declined this request. Try wording it differently.');
+    const text = blocks.filter(b => b.type === 'text').map(b => b.text).join('\n');
+    const sources = new Map();
+    for (const b of blocks) {
+      if (b.type === 'web_search_tool_result' && Array.isArray(b.content)) b.content.forEach(r => { if (r.url) sources.set(r.url, { url: r.url, title: r.title || r.url }); });
+      if (b.type === 'text' && Array.isArray(b.citations)) b.citations.forEach(c => { if (c.url && !sources.has(c.url)) sources.set(c.url, { url: c.url, title: c.title || c.url }); });
+    }
+    let data;
+    try { data = parseJSON(text); } catch (e) { throw new Error('Claude answered in the wrong format. Press the button again.'); }
+    return { data, sources: [...sources.values()], searched: blocks.some(b => b.type === 'server_tool_use') };
+  }
+};
+function parseJSON(text) {
+  const fences = [...text.matchAll(/```(?:json)?\s*([\s\S]*?)```/g)];
+  for (let i = fences.length - 1; i >= 0; i--) { try { return JSON.parse(fences[i][1]); } catch (e) {} }
+  const a = text.indexOf('{'), b = text.lastIndexOf('}');
+  if (a >= 0 && b > a) return JSON.parse(text.slice(a, b + 1));
+  throw new Error('no json');
+}
+async function toJpegB64(blob, max = 1568) {
+  const bmp = await createImageBitmap(blob);
+  const s = Math.min(1, max / Math.max(bmp.width, bmp.height));
+  const c = document.createElement('canvas'); c.width = Math.round(bmp.width * s); c.height = Math.round(bmp.height * s);
+  const x = c.getContext('2d'); x.fillStyle = '#fff'; x.fillRect(0, 0, c.width, c.height); x.drawImage(bmp, 0, 0, c.width, c.height);
+  return c.toDataURL('image/jpeg', 0.88).split(',')[1];
+}
+async function shrinkToDataUrl(blob, max = 560) {
+  const bmp = await createImageBitmap(blob);
+  const s = Math.min(1, max / Math.max(bmp.width, bmp.height));
+  const c = document.createElement('canvas'); c.width = Math.round(bmp.width * s); c.height = Math.round(bmp.height * s);
+  c.getContext('2d').drawImage(bmp, 0, 0, c.width, c.height);
+  let url = c.toDataURL('image/webp', 0.82);
+  if (!url.startsWith('data:image/webp') || url.length > 180000) {
+    const x = c.getContext('2d'); x.globalCompositeOperation = 'destination-over'; x.fillStyle = '#fff'; x.fillRect(0, 0, c.width, c.height);
+    url = c.toDataURL('image/jpeg', 0.8);
+  }
+  return url;
+}
+function dataUrlToBlob(u) { const [h, b] = u.split(','); const m = h.match(/data:([^;]+)/); const bin = atob(b); const a = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) a[i] = bin.charCodeAt(i); return new Blob([a], { type: m ? m[1] : 'image/png' }); }
+
+/* ---------- what Claude is told ---------- */
+const SYSTEM = `You are the story editor and lore keeper for FAL-125, an original universe made by one author. Fal-125 is a containment facility (founded by Fuja and Radiant, who ended up contained in it) full of numbered subjects. Each subject has a file: ID, ability, containment level, scent, threat level, type (Angel, Demon, Human, Hybrid or Other) and a battle role (Tank, Damage or Healer). The story is told across worlds in the author's turn-based battle game.
+Rules:
+- The author's canon always wins. Never change established facts. When you suggest something new, say it is a suggestion.
+- Give real, honest criticism. Do not flatter. If something does not work, say so plainly, explain why, and say how to fix it.
+- Always compare against the existing characters and story you are given, and name the ones that are similar.
+- Write in plain, simple English with short sentences. The author's first language is not English.
+- Inspirations are real works, myths, science, history or tropes the author can learn from. Never suggest copying another work.
+- Reply with ONE JSON object in a \`\`\`json code block, in exactly the shape asked for, and nothing after it.`;
+const NO_SEARCH = 'You cannot browse the web for this answer. In every "inspirations" item leave "url" as an empty string and put good search words in "search".';
+const WITH_SEARCH = 'Use web search (at most 5 searches) to find real inspirations, references or facts that help: real animals, science, myths, folklore, or similar characters and stories. Put a link in "url" ONLY if it appeared in your search results; otherwise leave "url" empty. Always fill "search" with search words too.';
+
+function allChars() {
+  const notes = Object.fromEntries(S.user.notes.map(n => [n.id, n]));
+  const canon = S.canon.characters.map(c => Object.assign({}, c, { note: notes['n-' + c.key] ? notes['n-' + c.key].text : '' }));
+  const mine = S.user.chars.map(u => ({
+    key: u.id, id: u.cid || '', name: u.name || 'Unnamed', role: u.role || '', type: u.type || '', title: u.title || '', color: u.color || '#888888',
+    build: '', stats: null, passive: '', ident: u.desc || '', skills: [], archive: [], recruit: [], sprite: u.image || '', origin: 'mine', mine: true,
+    book: { ability: u.ability || '', abilityPlus: u.abilityPlus || '', containment: u.containment || '', scent: u.scent || '', threat: u.threat || '', notes: u.notes || '', source: 'Mine' },
+    created: u.created || u.updated || 0, raw: u
+  }));
+  return canon.concat(mine);
+}
+function nextFreeId() { let m = 0; for (const c of allChars()) { const n = parseInt(c.id, 10); if (n > m) m = n; } return String(m + 1).padStart(4, '0'); }
+function charLine(c) {
+  const b = c.book || {};
+  const desc = c.mine ? c.ident : (c.ident || c.passive);
+  return `${c.id || '----'} ${c.name} | ${c.role || '?'}/${c.type || '?'}${c.title ? ' | ' + c.title : ''}${b.ability ? ' | Ability: ' + trim(b.ability, 90) : ''} | ${trim(desc, 170)}${c.mine ? ' | NEW (author is still working on this one)' : ''}${c.origin === 'book' ? ' | only in the Character Book' : ''}`;
+}
+function digest() {
+  const L = ['=== EXISTING CHARACTERS (ID | name | role/type | title | ability | short description) ==='];
+  allChars().forEach(c => L.push(charLine(c)));
+  L.push('', '=== BACKSTORY ===');
+  CANON_NOTES.forEach(n => L.push(`${n.title}: ${n.text}`));
+  L.push('', '=== WORLDS AND STORY, IN ORDER ===');
+  S.canon.worlds.forEach((w, i) => {
+    const tag = w.side ? 'Side quest' : w.preview ? 'Planned world (preview, between World 1 and World 2, not in the story yet)' : 'World ' + (i + 1);
+    L.push(`${tag}: ${w.name}. Floors: ${w.floors.join(', ')}. Bosses: ${w.bosses.join(', ')}. ${trim(w.note, 300)}`);
+    if (w.story) ['start', 'mid', 'end'].forEach(k => (w.story[k] || []).forEach(sc => L.push(`  [${k} - ${sc.place}] ${sc.lines.join(' ')}`)));
+  });
+  if (S.user.lore.length) {
+    L.push('', "=== THE AUTHOR'S OWN LORE ENTRIES ===");
+    const lab = Object.fromEntries(ANCHORS().map(a => [a.id, a.label]));
+    loreSorted().forEach(e => L.push(`(${lab[e.after] || e.after}) ${e.title}: ${trim(e.text, 600)}${e.chars ? ' [characters: ' + e.chars + ']' : ''}`));
+  }
+  return L.join('\n');
+}
+
+/* ---------- routing ---------- */
+const VIEWS = ['files', 'file', 'new', 'lore', 'review', 'abilities', 'critic', 'setup'];
+let editing = null;
+function route() {
+  const h = (location.hash || '#files').slice(1);
+  let v = h.split('-')[0];
+  if (h.startsWith('file-')) v = 'file';
+  if (h.startsWith('edit-')) v = 'new';
+  if (!VIEWS.includes(v)) v = 'files';
+  VIEWS.forEach(x => { const el = $('#v-' + x); if (el) el.hidden = x !== v; });
+  const tab = v === 'file' || v === 'new' ? 'files' : v;
+  $$('nav.tabs a').forEach(a => { if (a.dataset.tab === tab) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+  if (v === 'file') renderFile(h.slice(5));
+  if (v === 'new') openEditor(h.startsWith('edit-') ? h.slice(5) : null);
+  if (v === 'files') renderFiles();
+  if (v === 'lore') renderLore();
+  if (v === 'setup') renderSetup();
+  window.scrollTo(0, 0);
+}
+function rerender() {
+  const h = (location.hash || '#files').slice(1);
+  if (h === 'files' || !h) renderFiles();
+  else if (h.startsWith('file-')) renderFile(h.slice(5));
+  else if (h === 'lore') renderLore();
+  renderHistories(); fillSelects();
+}
+
+/* ---------- files ---------- */
+const F = { role: '', type: '', origin: '', sort: 'id', q: '' };
+function picHtml(c, cls = '') {
+  if (c.sprite) return `<img src="${esc(c.sprite)}" alt="${esc(c.name)}" loading="lazy" class="${cls}">`;
+  const ini = (c.name || '?').replace(/\(.*?\)/g, '').split(/[^A-Za-z0-9]+/).filter(Boolean).map(w => w[0]).join('').slice(0, 2).toUpperCase() || '?';
+  return `<span class="initials">${esc(ini)}</span>`;
+}
+function matches(c, q) {
+  if (!q) return true;
+  const b = c.book || {};
+  const hay = [c.id, c.name, c.title, c.role, c.type, c.passive, c.ident, b.ability, b.abilityPlus, b.scent, b.containment, b.notes, c.note, (c.skills || []).map(s => s.name).join(' ')].join(' ').toLowerCase();
+  return q.toLowerCase().split(/\s+/).every(w => hay.includes(w));
+}
+function renderFiles() {
+  let list = allChars().filter(c => (!F.role || c.role === F.role) && (!F.type || (c.type || '').startsWith(F.type)) && (!F.origin || c.origin === F.origin) && matches(c, F.q));
+  if (F.sort === 'name') list.sort((a, b) => a.name.localeCompare(b.name));
+  else if (F.sort === 'new') list.sort((a, b) => (b.created || 0) - (a.created || 0) || parseInt(b.id || 0) - parseInt(a.id || 0));
+  else list.sort((a, b) => (parseInt(a.id, 10) || 9999) - (parseInt(b.id, 10) || 9999));
+  $('#count').textContent = list.length + ' of ' + allChars().length + ' files';
+  $('#cards').innerHTML = list.length ? list.map(c => `
+    <a class="card" href="#file-${esc(c.key)}">
+      <div class="pic"><span class="swatch" style="background:${esc(c.color)}"></span>${c.mine ? '<span class="mine-tag">NEW</span>' : ''}${picHtml(c)}</div>
+      <div class="meta"><span class="id">FAL-${esc(c.id || '????')}</span><span class="nm">${esc(c.name)}</span><span class="tg">${esc([c.role, c.type].filter(Boolean).join(' · ') || 'Not decided')}</span></div>
+    </a>`).join('') : '<div class="empty">No files match. Try fewer words.</div>';
+}
+function statRow(k, v, max) { return `<div class="stat"><span>${k}</span><span class="track"><span class="fill" style="width:${Math.min(100, v / max * 100)}%"></span></span><span>${v}</span></div>`; }
+function renderFile(key) {
+  const c = allChars().find(x => x.key === key);
+  const el = $('#v-file');
+  if (!c) { el.innerHTML = '<div class="empty">This file does not exist. <a href="#files">Back to all files</a></div>'; return; }
+  const b = c.book || {};
+  const guess = b.source === 'Generated' ? '<span class="guess" title="These sheet values were guessed when the Character Book was filled in, not written by you">Guess</span>' : '';
+  const kv = [['Role', c.role], ['Type', c.type || b.bookType], ['Build', c.build], ['Containment', b.containment], ['Threat', b.threat], ['Scent', b.scent], ['Awakened', b.awakened]].filter(x => x[1]);
+  el.innerHTML = `
+    <div class="head"><div><a href="#files" class="note">← All files</a><div class="file-no" style="margin-top:8px">ITEM FAL-${esc(c.id || '????')}${c.origin === 'book' ? ' · CHARACTER BOOK ONLY' : c.mine ? ' · NEW FILE' : ''}</div><h1>${esc(c.name)}</h1>${c.title ? `<p class="lede">${esc(c.title)}</p>` : ''}</div>
+      <div class="row">${c.mine ? `<a class="btn" href="#edit-${esc(c.key)}">Edit</a><button class="btn danger" type="button" id="delChar">Delete</button>` : ''}<button class="btn" type="button" id="toReview">Review with Claude</button><button class="btn" type="button" id="toAbil">Ability ideas</button></div></div>
+    <div class="dossier">
+      <aside class="portrait">
+        <div class="pic">${picHtml(c)}</div>
+        <dl class="kv">${kv.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
+        ${c.stats ? `<div class="stats">${statRow('HP', c.stats.hp, 220)}${statRow('ATK', c.stats.atk, 30)}${statRow('DEF', c.stats.def, 25)}${statRow('SPD', c.stats.spd, 20)}</div>` : ''}
+      </aside>
+      <div class="docs">
+        ${b.ability || b.abilityPlus || b.notes ? `<div class="panel"><h2>Sheet ${guess}</h2><dl class="kv" style="padding:0">${b.ability ? `<dt>Ability</dt><dd>${esc(b.ability)}</dd>` : ''}${b.abilityPlus ? `<dt>Ability+</dt><dd>${esc(b.abilityPlus)}</dd>` : ''}${b.notes ? `<dt>Notes</dt><dd>${esc(b.notes)}</dd>` : ''}</dl></div>` : ''}
+        ${c.mine && c.ident ? `<div class="panel"><h2>Description and lore</h2><div class="entry">${esc(c.ident)}</div></div>` : ''}
+        ${c.passive || (c.skills || []).length ? `<div class="panel"><h2>In the game</h2>${c.ident ? `<p>${esc(c.ident)}</p>` : ''}${c.passive ? `<div class="skill"><b>Passive</b>${esc(c.passive)}</div>` : ''}${c.skills.map(s => `<div class="skill"><b>${esc(s.name)}</b>${esc(s.desc)}</div>`).join('')}</div>` : ''}
+        ${(c.archive || []).length ? `<div class="panel"><h2>Archive entries</h2>${c.archive.map(a => `<p class="entry">${esc(a)}</p>`).join('')}</div>` : ''}
+        ${(c.recruit || []).length ? `<div class="panel"><h2>First seen</h2>${c.recruit.map(a => `<p class="entry">${esc(a)}</p>`).join('')}</div>` : ''}
+        ${c.mine && c.raw.review ? `<div class="panel"><h2>Last review</h2><div id="fileReview"></div></div>` : ''}
+        <div class="panel"><h2>Your notes</h2>
+          <textarea id="noteBox" rows="4" placeholder="Anything to remember about ${esc(c.name)}…">${esc(c.mine ? (c.raw.notes || '') : c.note)}</textarea>
+          <div class="row" style="margin-top:8px"><button class="btn small" type="button" id="noteSave">Save note</button></div>
+        </div>
+      </div>
+    </div>`;
+  if (c.mine && c.raw.review) $('#fileReview').innerHTML = reviewHtml(c.raw.review, [], { compact: true });
+  $('#noteSave').onclick = async () => {
+    const text = $('#noteBox').value;
+    if (c.mine) await save('chars', Object.assign({}, c.raw, { notes: text }), 'Note saved');
+    else await save('notes', { id: 'n-' + c.key, text }, 'Note saved');
+  };
+  $('#toReview').onclick = () => { $('#rv-existing').value = c.key; location.hash = '#review'; };
+  $('#toAbil').onclick = () => { $('#ab-char').value = c.key; location.hash = '#abilities'; };
+  if (c.mine) $('#delChar').onclick = e => confirmBtn(e.currentTarget, async () => { await Store.del('chars', c.key); toast('File deleted'); location.hash = '#files'; });
+}
+
+/* ---------- new / edit character ---------- */
+let editImage = '';
+function openEditor(key) {
+  const u = key ? S.user.chars.find(x => x.id === key) : null;
+  editing = u ? u.id : null;
+  $('#editEyebrow').textContent = u ? 'Edit file' : 'New file';
+  $('#editTitle').textContent = u ? 'Edit ' + (u.name || 'file') : 'New Character File';
+  const pre = (!u && window.__prefill) || {};
+  const src = u || pre;
+  ['name', 'title', 'role', 'type', 'containment', 'threat', 'scent', 'color', 'ability', 'abilityPlus', 'desc', 'notes'].forEach(f => { $('#cf-' + f).value = src[f] || ''; });
+  $('#cf-cid').value = (u && u.cid) || pre.cid || nextFreeId();
+  editImage = src.image || '';
+  window.__prefillReview = !u && pre.review ? pre.review : null;
+  window.__prefill = null;
+  drawEditThumb();
+}
+function drawEditThumb() { $('#cf-thumbs').innerHTML = editImage ? `<figure><img src="${esc(editImage)}" alt="Picture"><button type="button" aria-label="Remove picture" id="cf-rm">×</button></figure>` : ''; const r = $('#cf-rm'); if (r) r.onclick = () => { editImage = ''; drawEditThumb(); }; }
+function wireDrop(dropEl, fileEl, onFiles) {
+  dropEl.onclick = () => fileEl.click();
+  dropEl.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileEl.click(); } };
+  fileEl.onchange = () => { onFiles([...fileEl.files]); fileEl.value = ''; };
+  dropEl.ondragover = e => { e.preventDefault(); dropEl.classList.add('over'); };
+  dropEl.ondragleave = () => dropEl.classList.remove('over');
+  dropEl.ondrop = e => { e.preventDefault(); dropEl.classList.remove('over'); onFiles([...e.dataTransfer.files].filter(f => f.type.startsWith('image/'))); };
+}
+
+/* ---------- lore ---------- */
+function loreSorted() {
+  const order = Object.fromEntries(ANCHORS().map((a, i) => [a.id, i]));
+  return S.user.lore.slice().sort((a, b) => (order[a.after] ?? 99) - (order[b.after] ?? 99) || (a.order || 0) - (b.order || 0));
+}
+let loreEditing = null;
+function renderLore() {
+  const w = S.canon.worlds; const anchors = ANCHORS();
+  const user = loreSorted();
+  const userAt = id => user.filter(e => e.after === id);
+  const groupOf = id => {
+    if (id === 'origins') return 'Origins';
+    if (id === 'after') return 'After the Climax';
+    const x = w[+id.slice(1)], i = +id.slice(1);
+    if (x.side) return 'Side quests (no fixed place)';
+    if (x.preview || i <= 4) return 'The Fal-125 Saga';
+    if (i <= 6) return 'The Cult Saga';
+    return 'The Climax';
+  };
+  let html = '', lastGroup = '';
+  for (const a of anchors) {
+    const g = groupOf(a.id); if (g !== lastGroup) { html += `<div class="saga">${esc(g)}</div>`; lastGroup = g; }
+    if (a.id === 'origins') {
+      html += CANON_NOTES.map(n => `<div class="tl-item"><div class="tl-mark">0<small>Origins</small></div><div class="tl-card"><h3>${esc(n.title)}</h3><p style="margin:6px 0 0">${esc(n.text)}</p></div></div>`).join('');
+    } else if (a.id.startsWith('w')) {
+      const i = +a.id.slice(1), x = w[i];
+      const mark = x.side ? 'SQ' : x.preview ? '1½' : String(i + 1);
+      const sub = x.side ? 'Side quest' : x.preview ? 'Planned' : 'World';
+      const scenes = x.story ? ['start', 'mid', 'end'].flatMap(k => (x.story[k] || []).map(sc => `<div class="scene"><div class="where">${{ start: 'Opening', mid: 'Midpoint', end: 'Ending' }[k]} · ${esc(sc.place)}</div>${sc.lines.map(l => `<p>${esc(l)}</p>`).join('')}</div>`)).join('') : '';
+      html += `<div class="tl-item"><div class="tl-mark">${mark}<small>${sub}</small></div><div class="tl-card${x.preview ? ' preview' : ''}">
+        <h3>${esc(x.name)}${x.preview ? ' <span class="guess">Not in the story yet</span>' : ''}</h3>
+        <div class="floors">${x.floors.map(f => `<span>${esc(f)}</span>`).join('')}</div>
+        <p class="note" style="margin:0">${esc(x.note)}</p>
+        ${x.bosses.length ? `<p class="note" style="margin:6px 0 0"><b>Bosses:</b> ${esc(x.bosses.join(', '))}</p>` : ''}
+        ${scenes ? `<details class="scenes"><summary>Read the story scenes</summary>${scenes}</details>` : ''}
+      </div></div>`;
+    }
+    html += userAt(a.id).map((e, idx, arr) => `<div class="tl-item"><div class="tl-mark">+<small>Your entry</small></div><div class="tl-card user">
+      <h3>${esc(e.title)}</h3><p style="margin:6px 0 0;white-space:pre-wrap">${esc(e.text)}</p>
+      ${e.chars ? `<p class="note" style="margin:6px 0 0"><b>Characters:</b> ${esc(e.chars)}</p>` : ''}
+      <div class="row" style="margin-top:10px"><button class="btn small" data-le="${esc(e.id)}">Edit</button>${idx > 0 ? `<button class="btn small" data-lu="${esc(e.id)}">Move up</button>` : ''}${idx < arr.length - 1 ? `<button class="btn small" data-ld="${esc(e.id)}">Move down</button>` : ''}<button class="btn small danger" data-lx="${esc(e.id)}">Delete</button></div>
+    </div></div>`).join('');
+  }
+  $('#timeline').innerHTML = html;
+  $$('[data-le]').forEach(b => b.onclick = () => openLoreForm(S.user.lore.find(e => e.id === b.dataset.le)));
+  $$('[data-lx]').forEach(b => b.onclick = () => confirmBtn(b, async () => { await Store.del('lore', b.dataset.lx); toast('Entry deleted'); renderLore(); }));
+  const move = async (id, dir) => {
+    const e = S.user.lore.find(x => x.id === id); const sib = loreSorted().filter(x => x.after === e.after); const i = sib.indexOf(e); const o = sib[i + dir]; if (!o) return;
+    sib.forEach((x, k) => { x.order = k; }); [e.order, o.order] = [o.order, e.order];
+    await save('lore', e); await save('lore', o); renderLore();
+  };
+  $$('[data-lu]').forEach(b => b.onclick = () => move(b.dataset.lu, -1));
+  $$('[data-ld]').forEach(b => b.onclick = () => move(b.dataset.ld, 1));
+}
+function openLoreForm(e) {
+  loreEditing = e ? e.id : null;
+  $('#loreForm').hidden = false;
+  $('#lf-title').value = e ? e.title : ''; $('#lf-text').value = e ? e.text : ''; $('#lf-chars').value = e ? (e.chars || '') : '';
+  $('#lf-after').value = e ? e.after : 'after';
+  $('#lf-title').focus();
+}
+
+/* ---------- AI tools: shared rendering ---------- */
+const list = (arr, f = x => esc(x)) => Array.isArray(arr) && arr.length ? `<ul>${arr.map(x => `<li>${f(x)}</li>`).join('')}</ul>` : '<p class="note">Nothing here.</p>';
+function inspirationsHtml(items, sources) {
+  if (!Array.isArray(items) || !items.length) return '';
+  const real = new Set((sources || []).map(s => s.url));
+  return `<div class="panel"><h2>Inspirations</h2><ul class="links" style="padding:0;margin:0">${items.map(it => {
+    const ok = it.url && real.has(it.url);
+    const href = ok ? it.url : searchUrl(it.search || it.title || '');
+    return `<li><a href="${esc(href)}" target="_blank" rel="noopener">${esc(it.title || it.search)}</a><span class="src-tag">${ok ? 'Found online' : 'Search'}</span>${it.why ? `<div class="why">${esc(it.why)}</div>` : ''}</li>`;
+  }).join('')}</ul></div>`;
+}
+function sourcesHtml(sources) {
+  if (!sources || !sources.length) return '';
+  return `<div class="panel"><h2>Pages Claude looked at</h2><ul class="links" style="padding:0;margin:0">${sources.slice(0, 15).map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(trim(s.title, 110))}</a><div class="why">${esc(trim(s.url.replace(/^https?:\/\//, ''), 80))}</div></li>`).join('')}</ul></div>`;
+}
+function aiNote() {
+  const t = AI.mode === 'claude' ? (AI.imagesOk ? 'Uses your Claude account. Web search does not work inside the Claude app, so inspiration links open a search.' : 'Uses your Claude account (pictures cannot be sent from this view). Inspiration links open a search.')
+    : AI.mode === 'api' ? 'Uses your Claude API key, with real web search when the box is ticked.'
+    : 'Claude is not connected yet. Open Setup to connect it.';
+  $$('.ai-note').forEach(n => { n.textContent = t; });
+  ['#rv-search', '#ab-search', '#cr-search'].forEach(s => { const b = $(s); const was = b.disabled; b.disabled = !AI.canSearch(); if (b.disabled) b.checked = false; else if (was) b.checked = true; });
+}
+function working(out, ctl) {
+  out.innerHTML = `<div class="panel working"><span class="spin" aria-hidden="true"></span><span class="msg">Starting…</span><button class="btn small" type="button" style="margin-left:auto">Stop</button></div>`;
+  $('button', out).onclick = () => ctl.abort();
+  return t => { const m = $('.msg', out); if (m) m.textContent = t; };
+}
+function failed(out, e) { out.innerHTML = `<div class="notice">${esc(e.message || 'Something went wrong. Try again.')}</div>`; }
+
+/* ---------- review ---------- */
+let rvImages = [];
+function drawRvThumbs() {
+  $('#rv-thumbs').innerHTML = rvImages.map((f, i) => `<figure><img src="${esc(f.url)}" alt="Picture ${i + 1}"><button type="button" data-rm="${i}" aria-label="Remove picture">×</button></figure>`).join('');
+  $$('#rv-thumbs [data-rm]').forEach(b => b.onclick = () => { URL.revokeObjectURL(rvImages[+b.dataset.rm].url); rvImages.splice(+b.dataset.rm, 1); drawRvThumbs(); });
+}
+function reviewHtml(r, sources, o = {}) {
+  const sc = r.scores || {};
+  const scoreBox = (k, l) => sc[k] != null ? `<div class="score"><div class="n">${esc(sc[k])}<small>/10</small></div><div class="l">${l}</div></div>` : '';
+  const f = r.file || {}; const p = r.place || {};
+  const core = `
+    <div class="panel report"><div class="eyebrow">Review</div><h2>${esc(r.name || 'Unnamed character')}</h2><p>${esc(r.first_impression)}</p>
+      <div class="scores">${scoreBox('design', 'Design')}${scoreBox('originality', 'Originality')}${scoreBox('fits_universe', 'Fits the universe')}${scoreBox('story_potential', 'Story potential')}</div></div>
+    <div class="grid2"><div class="panel report"><h3>Strong points</h3>${list(r.strengths)}</div><div class="panel report"><h3>Problems</h3>${list(r.problems)}</div></div>
+    <div class="panel report"><h3>Already in your universe</h3>${list(r.similar_existing, s => `<b>${esc(s.name)}</b>: ${esc(s.why)}${s.keep_different ? `<br><span class="note">Keep it different: ${esc(s.keep_different)}</span>` : ''}`)}</div>
+    <div class="panel report"><h3>Where it fits</h3><p><b>${esc(p.where)}</b>${p.why ? ' ' + esc(p.why) : ''}</p>${p.story_role ? `<p>${esc(p.story_role)}</p>` : ''}${p.first_scene ? `<p class="entry">${esc(p.first_scene)}</p>` : ''}${Array.isArray(p.connections) && p.connections.length ? `<h3 style="margin-top:8px">Connections</h3>${list(p.connections, c => `<b>${esc(c.name)}</b>: ${esc(c.relation)}`)}` : ''}</div>`;
+  if (o.compact) return core;
+  return core + `
+    <div class="panel report"><h3>Suggested file <span class="guess">Suggestion</span></h3><dl class="kv" style="padding:0">${[['Role', f.role], ['Type', f.type], ['Title', f.title], ['Ability', f.ability], ['Ability+', f.ability_plus], ['Containment', f.containment], ['Threat', f.threat], ['Scent', f.scent]].filter(x => x[1]).map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join('')}</dl></div>
+    <div class="grid2"><div class="panel report"><h3>Ideas to make it stronger</h3>${list(r.ideas)}</div><div class="panel report"><h3>Questions for you</h3>${list(r.questions)}</div></div>
+    ${inspirationsHtml(r.inspirations, sources)}${sourcesHtml(sources)}`;
+}
+async function runReview(ev) {
+  ev.preventDefault();
+  const name = $('#rv-name').value.trim(), notes = $('#rv-notes').value.trim(), role = $('#rv-role').value, exKey = $('#rv-existing').value;
+  const ex = exKey ? allChars().find(c => c.key === exKey) : null;
+  const imgs = rvImages.map(f => f.file);
+  if (ex && ex.mine && ex.sprite && !imgs.length) imgs.push(dataUrlToBlob(ex.sprite));
+  if (!name && !notes && !imgs.length && !ex) { toast('Add a picture, a name or some notes first.'); return; }
+  const out = $('#rv-out'); const ctl = new AbortController(); const status = working(out, ctl); $('#rv-go').disabled = true;
+  const exText = ex ? `\nThis is an EXISTING file in the archive. Review it as it is now:\n${charLine(ex)}\n${ex.passive ? 'Game passive: ' + ex.passive : ''}\n${(ex.archive || []).slice(0, 3).join('\n')}` : '';
+  const prompt = `${digest()}
+
+=== TASK ===
+Review a character the author is working on, and say where it could fit in the FAL-125 universe.
+Name: ${name || (ex ? ex.name : '(not named yet)')}
+Author's notes: ${notes || '(none)'}
+Role the author wants: ${role || 'not decided, suggest one'}${exText}
+${imgs.length ? imgs.length + ' picture(s) of the character are attached (drawings, sketch pages or sprites). Read any handwriting carefully. If a word is unclear, ask about it in "questions" instead of guessing.' : 'No picture is attached.'}
+The next free file number is ${nextFreeId()}.
+
+Answer with this JSON shape:
+{"name":"","first_impression":"2-4 sentences","scores":{"design":0,"originality":0,"fits_universe":0,"story_potential":0},"strengths":[""],"problems":["honest problems"],"similar_existing":[{"name":"existing character or story beat","why":"how it is similar","keep_different":"how to keep the new one distinct"}],"place":{"where":"world, saga or moment in the timeline","why":"","story_role":"what they do in the story","first_scene":"a short idea for their first appearance","connections":[{"name":"existing character","relation":""}]},"file":{"role":"Tank|Damage|Healer","type":"Angel|Demon|Human|Hybrid|Other","title":"","ability":"","ability_plus":"","containment":"Low|Medium|High|Extreme|Unknown","threat":"Low|Medium|High|Extreme","scent":""},"ideas":[""],"questions":[""],"inspirations":[{"title":"","why":"","url":"","search":""}]}
+Scores are whole numbers from 1 to 10. Be strict: 5 is average.`;
+  try {
+    const { data, sources } = await AI.run({ prompt, images: imgs, search: $('#rv-search').checked, onStatus: status, signal: ctl.signal });
+    const rec = await save('reviews', { id: uid('r'), created: Date.now(), name: data.name || name || (ex && ex.name) || 'Unnamed', review: data, sources, existing: exKey || '' });
+    showReview(rec); renderHistories();
+  } catch (e) { failed(out, e); }
+  finally { $('#rv-go').disabled = false; }
+}
+function showReview(rec) {
+  const out = $('#rv-out');
+  const ex = rec.existing ? allChars().find(c => c.key === rec.existing) : null;
+  out.innerHTML = reviewHtml(rec.review, rec.sources) + `<div class="row">${ex && !ex.mine ? '' : `<button class="btn primary" type="button" id="rvSave">${ex ? 'Attach to ' + esc(ex.name) + "'s file" : 'Save as a new character file'}</button>`}<button class="btn" type="button" id="rvAbil">Ability ideas for this character</button></div>`;
+  const sv = $('#rvSave');
+  if (sv) sv.onclick = async () => {
+    const r = rec.review, f = r.file || {};
+    if (ex && ex.mine) { await save('chars', Object.assign({}, ex.raw, { review: r }), 'Review attached'); location.hash = '#file-' + ex.key; return; }
+    let image = '';
+    if (rvImages[0]) { try { image = await shrinkToDataUrl(rvImages[0].file); } catch (e) {} }
+    window.__prefill = { name: r.name || $('#rv-name').value, role: f.role, type: f.type, title: f.title, ability: f.ability, abilityPlus: f.ability_plus, containment: f.containment, threat: f.threat, scent: f.scent, desc: $('#rv-notes').value + (r.place && r.place.story_role ? '\n\nWhere they fit: ' + r.place.where + '. ' + r.place.story_role : ''), image, review: r };
+    location.hash = '#new';
+  };
+  $('#rvAbil').onclick = () => { $('#ab-theme').value = (rec.review.name || '') + ': ' + (rec.review.first_impression || ''); if (ex) $('#ab-char').value = ex.key; location.hash = '#abilities'; };
+}
+
+/* ---------- abilities ---------- */
+function abilityHtml(a, i, sources, saved) {
+  const real = new Set((sources || []).map(s => s.url));
+  const insp = a.inspiration && (a.inspiration.title || a.inspiration.search) ? (() => { const ok = a.inspiration.url && real.has(a.inspiration.url); return `<div><span class="lab">Inspired by</span><br><a href="${esc(ok ? a.inspiration.url : searchUrl(a.inspiration.search || a.inspiration.title))}" target="_blank" rel="noopener">${esc(a.inspiration.title || a.inspiration.search)}</a><span class="src-tag">${ok ? 'Found online' : 'Search'}</span></div>`; })() : '';
+  return `<div class="ability">
+    <div class="row" style="justify-content:space-between"><h3>${esc(a.name)}</h3><span class="pill" style="color:var(--muted)">${esc([a.role, a.build].filter(Boolean).join(' · '))}</span></div>
+    <div><span class="lab">Sheet</span><br>${esc(a.sheet)}</div>
+    ${a.plus ? `<div><span class="lab">Ability+</span><br>${esc(a.plus)}</div>` : ''}
+    ${a.cost ? `<div><span class="lab">Cost or weakness</span><br>${esc(a.cost)}</div>` : ''}
+    <details><summary class="lab" style="cursor:pointer">Battle game version</summary>
+      ${a.passive ? `<div class="skill" style="margin-top:8px"><b>Passive</b>${esc(a.passive)}</div>` : ''}
+      ${(a.skills || []).map(s => `<div class="skill"><b>${esc(s.name)}${s.cd ? ` <span class="note">(cooldown ${esc(s.cd)})</span>` : ''}</b>${esc(s.desc)}</div>`).join('')}
+    </details>
+    ${a.closest_existing ? `<div class="note"><b>Closest one you already have:</b> ${esc(a.closest_existing)}${a.why_different ? '. ' + esc(a.why_different) : ''}</div>` : ''}
+    ${insp}
+    <div class="row">${saved ? `<button class="btn small danger" type="button" data-abdel="${esc(saved)}">Delete</button>` : `<button class="btn small" type="button" data-absave="${i}">Save</button>`}<button class="btn small" type="button" data-abcopy="${i}">Copy</button></div>
+  </div>`;
+}
+let abLast = { list: [], sources: [], forChar: '' };
+async function runAbilities(ev) {
+  ev.preventDefault();
+  const theme = $('#ab-theme').value.trim(), role = $('#ab-role').value, type = $('#ab-type').value, power = $('#ab-power').value, n = +$('#ab-n').value, ck = $('#ab-char').value;
+  const ch = ck ? allChars().find(c => c.key === ck) : null;
+  if (!theme && !ch) { toast('Write an idea or pick a character first.'); return; }
+  const out = $('#ab-out'); const ctl = new AbortController(); const status = working(out, ctl); $('#ab-go').disabled = true;
+  const prompt = `${digest()}
+
+=== TASK ===
+Invent ${n} original abilit${n === 1 ? 'y' : 'ies'} for the FAL-125 universe.
+Idea or theme: ${theme || '(none, build from the character)'}
+Role: ${role || 'any'}. Type: ${type || 'any'}. Power level: ${power}.
+${ch ? 'It is for this character:\n' + charLine(ch) + (ch.passive ? '\nCurrent game passive: ' + ch.passive : '') : 'It is not for a specific character yet.'}
+Every ability must be clearly different from the abilities in the files above. Each needs a real cost or weakness. Write the sheet text the way the existing files are written: short and direct.
+Also turn it into the battle game's format: one passive and 3 skills (the first is a basic attack or action with cooldown 0, the other two have cooldowns of 2 to 5 turns). Pick the closest general build for its role: Damage = ${BUILDS.Damage.join(', ')}; Healer = ${BUILDS.Healer.join(', ')}; Tank = ${BUILDS.Tank.join(', ')}.
+
+Answer with this JSON shape:
+{"abilities":[{"name":"","sheet":"","plus":"Ability+ upgrade","cost":"","role":"Tank|Damage|Healer","build":"","passive":"","skills":[{"name":"","cd":0,"desc":""}],"closest_existing":"name of the most similar existing ability and its owner, or none","why_different":"","inspiration":{"title":"","url":"","search":""}}]}`;
+  try {
+    const { data, sources } = await AI.run({ prompt, search: $('#ab-search').checked, effort: 'medium', onStatus: status, signal: ctl.signal });
+    abLast = { list: Array.isArray(data.abilities) ? data.abilities : [], sources, forChar: ck };
+    out.innerHTML = abLast.list.map((a, i) => abilityHtml(a, i, sources)).join('') + sourcesHtml(sources);
+  } catch (e) { failed(out, e); }
+  finally { $('#ab-go').disabled = false; }
+}
+function abilityText(a) { return `${a.name}\nSheet: ${a.sheet}\nAbility+: ${a.plus || ''}\nCost: ${a.cost || ''}\nPassive: ${a.passive || ''}\n${(a.skills || []).map(s => `- ${s.name} (cd ${s.cd || 0}): ${s.desc}`).join('\n')}`; }
+async function copyText(t) { try { await navigator.clipboard.writeText(t); toast('Copied'); } catch (e) { toast('Copy did not work here. Select the text and copy it yourself.'); } }
+
+/* ---------- critic ---------- */
+const VERDICT = { works: 'Works', needs_work: 'Needs work', wont_work: "Won't work" };
+const STAMP = { works: 'APPROVED', needs_work: 'REVISE', wont_work: 'REJECTED' };
+function critiqueHtml(c, sources) {
+  const v = VERDICT[c.verdict] ? c.verdict : 'needs_work';
+  return `
+    <div class="panel report"><div class="stampbox"><span class="stampmark ${v}">${STAMP[v]}</span><div style="min-width:0;flex:1"><div class="eyebrow">${esc(VERDICT[v])} · ${esc(c.score)}/10</div><h2 style="margin-top:4px">${esc(c.one_line)}</h2></div></div></div>
+    <div class="grid2"><div class="panel report"><h3>What works</h3>${list(c.what_works)}</div><div class="panel report"><h3>Problems</h3>${list(c.problems)}</div></div>
+    <div class="panel report"><h3>You already have something like this</h3>${list(c.already_have, x => `<b>${esc(x.name)}</b>: ${esc(x.how_similar)}${x.make_it_different ? `<br><span class="note">To make it different: ${esc(x.make_it_different)}</span>` : ''}`)}</div>
+    <div class="panel report"><h3>Breaks your canon</h3>${list(c.canon_conflicts, x => `${esc(x.problem)}${x.conflicts_with ? ` <span class="note">(conflicts with: ${esc(x.conflicts_with)})</span>` : ''}`)}</div>
+    <div class="grid2"><div class="panel report"><h3>How to fix it</h3>${list(c.fixes)}</div><div class="panel report"><h3>Questions to answer</h3>${list(c.questions)}</div></div>
+    ${inspirationsHtml(c.inspirations, sources)}${sourcesHtml(sources)}`;
+}
+async function runCritic(ev) {
+  ev.preventDefault();
+  const idea = $('#cr-idea').value.trim(), kind = $('#cr-kind').value, where = $('#cr-where').value;
+  if (idea.length < 15) { toast('Write a bit more about the idea first.'); return; }
+  const out = $('#cr-out'); const ctl = new AbortController(); const status = working(out, ctl); $('#cr-go').disabled = true;
+  const whereLabel = (ANCHORS().find(a => a.id === where) || {}).label || 'not decided';
+  const prompt = `${digest()}
+
+=== TASK ===
+Give honest criticism of a story idea for FAL-125.
+Kind of idea: ${kind}. Where it would go: ${whereLabel}.
+The idea:
+"""
+${idea}
+"""
+Judge it: Does it work as a story? Is it clear, with real stakes and a reason to care? Does it break any established fact above? Does the author already have a character, world or story beat like it (name them exactly)? Does it fit the tone of the existing story text? If it would not work, say so plainly.
+
+Answer with this JSON shape:
+{"verdict":"works|needs_work|wont_work","score":0,"one_line":"one sentence with your judgment","what_works":[""],"problems":[""],"canon_conflicts":[{"problem":"","conflicts_with":""}],"already_have":[{"name":"","how_similar":"","make_it_different":""}],"fixes":[""],"questions":[""],"inspirations":[{"title":"","why":"","url":"","search":""}]}
+The score is a whole number from 1 to 10. Be strict: 5 is average. Empty lists are fine when there is nothing to say.`;
+  try {
+    const { data, sources } = await AI.run({ prompt, search: $('#cr-search').checked, onStatus: status, signal: ctl.signal });
+    const rec = await save('ideas', { id: uid('i'), created: Date.now(), idea, kind, where, critique: data, sources });
+    out.innerHTML = critiqueHtml(rec.critique, rec.sources); renderHistories();
+  } catch (e) { failed(out, e); }
+  finally { $('#cr-go').disabled = false; }
+}
+
+/* ---------- histories, selects ---------- */
+const when = t => new Date(t).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+function renderHistories() {
+  const rv = S.user.reviews.slice().sort((a, b) => b.created - a.created);
+  $('#rv-hist').innerHTML = rv.length ? rv.map(r => `<div class="hist"><span class="t"><b>${esc(r.name)}</b> <span class="note">· ${when(r.created)}</span></span><span class="row"><button class="btn small" data-rvopen="${esc(r.id)}">Open</button><button class="btn small danger" data-rvdel="${esc(r.id)}">Delete</button></span></div>`).join('') : '<div class="empty">No reviews yet.</div>';
+  $$('[data-rvopen]').forEach(b => b.onclick = () => { showReview(S.user.reviews.find(r => r.id === b.dataset.rvopen)); $('#rv-out').scrollIntoView({ behavior: 'smooth' }); });
+  $$('[data-rvdel]').forEach(b => b.onclick = () => confirmBtn(b, async () => { await Store.del('reviews', b.dataset.rvdel); renderHistories(); }));
+
+  const ideas = S.user.ideas.slice().sort((a, b) => b.created - a.created);
+  $('#cr-hist').innerHTML = ideas.length ? ideas.map(r => { const v = (r.critique && r.critique.verdict) || 'needs_work'; return `<div class="hist"><span class="t"><span class="pill ${esc(v)}">${esc(VERDICT[v] || v)}</span> ${esc(trim(r.idea, 90))}</span><span class="row"><button class="btn small" data-cropen="${esc(r.id)}">Open</button><button class="btn small danger" data-crdel="${esc(r.id)}">Delete</button></span></div>`; }).join('') : '<div class="empty">No ideas judged yet.</div>';
+  $$('[data-cropen]').forEach(b => b.onclick = () => { const r = S.user.ideas.find(x => x.id === b.dataset.cropen); $('#cr-idea').value = r.idea; $('#cr-kind').value = r.kind; $('#cr-where').value = r.where; $('#cr-out').innerHTML = critiqueHtml(r.critique, r.sources); $('#cr-out').scrollIntoView({ behavior: 'smooth' }); });
+  $$('[data-crdel]').forEach(b => b.onclick = () => confirmBtn(b, async () => { await Store.del('ideas', b.dataset.crdel); renderHistories(); }));
+
+  const ab = S.user.abilities.slice().sort((a, b) => b.created - a.created);
+  const names = Object.fromEntries(allChars().map(c => [c.key, c.name]));
+  $('#ab-saved').innerHTML = ab.length ? ab.map(r => `<div><div class="note" style="margin-bottom:4px">${r.forChar && names[r.forChar] ? 'For ' + esc(names[r.forChar]) + ' · ' : ''}${when(r.created)}</div>${abilityHtml(r.ability, 's' + r.id, r.sources, r.id)}</div>`).join('') : '<div class="empty">Saved abilities will be kept here.</div>';
+  $$('[data-abdel]').forEach(b => b.onclick = () => confirmBtn(b, async () => { await Store.del('abilities', b.dataset.abdel); renderHistories(); }));
+  $$('#ab-saved [data-abcopy]').forEach(b => b.onclick = () => { const r = S.user.abilities.find(x => 's' + x.id === b.dataset.abcopy); if (r) copyText(abilityText(r.ability)); });
+}
+function fillSelects() {
+  const opts = allChars().slice().sort((a, b) => a.name.localeCompare(b.name)).map(c => `<option value="${esc(c.key)}">${esc(c.name)}${c.mine ? ' (new)' : ''}</option>`).join('');
+  ['#rv-existing', '#ab-char'].forEach(s => { const el = $(s), v = el.value; el.innerHTML = el.options[0].outerHTML + opts; el.value = v; });
+  const an = ANCHORS().map(a => `<option value="${esc(a.id)}">${esc(a.label)}</option>`).join('');
+  const lf = $('#lf-after'), lv = lf.value; lf.innerHTML = an; lf.value = lv || 'after';
+  const cw = $('#cr-where'), cv = cw.value; cw.innerHTML = '<option value="">Not decided</option>' + an; cw.value = cv;
+}
+
+/* ---------- setup ---------- */
+function renderSetup() {
+  const el = $('#aiSetup');
+  if (AI.mode === 'claude') {
+    el.innerHTML = `<p><span class="dot on"></span><b>Connected to your Claude account.</b> The Review, Abilities and Critic tools use it. The first time, Claude asks you to allow it.</p><p class="note">Inside the Claude app, Claude cannot search the web. Inspiration links open a web search for the right words. For real web search with source links, open this site from GitHub Pages and add an API key there.</p>`;
+  } else {
+    const has = !!lsGet('apikey', '');
+    el.innerHTML = `<p><span class="dot ${has ? 'on' : 'off'}"></span><b>${has ? 'API key saved.' : 'No Claude connection yet.'}</b> Outside the Claude app, the AI tools use a Claude API key. Claude can then search the web and show the pages it used.</p>
+      <label class="field"><span>Claude API key</span><input type="password" id="keyIn" placeholder="sk-ant-…" autocomplete="off" value="${has ? '••••••••••••' : ''}"></label>
+      <div class="row" style="margin-top:10px"><button class="btn primary" type="button" id="keySave">Save key</button>${has ? '<button class="btn danger" type="button" id="keyDel">Remove key</button>' : ''}</div>
+      <p class="note">Get a key at console.anthropic.com (it costs a little per use). The key is kept only in this browser. Anyone who uses this browser could use it, so do not save it on a shared computer.</p>`;
+    $('#keySave').onclick = () => { const v = $('#keyIn').value.trim(); if (!v || v.startsWith('•')) { toast('Paste your key first.'); return; } lsSet('apikey', v); AI.mode = 'api'; aiNote(); renderSetup(); toast('Key saved'); };
+    const d = $('#keyDel'); if (d) d.onclick = () => { lsSet('apikey', null); AI.mode = 'none'; aiNote(); renderSetup(); toast('Key removed'); };
+  }
+  $('#storeSetup').innerHTML = Store.mode === 'cloud' ? '<p><span class="dot on"></span><b>Saved in your Claude account.</b> Your new files, lore, reviews and ideas are kept with this archive and show up on every device where you open it.</p>'
+    : Store.mode === 'local' ? '<p><span class="dot off"></span><b>Saved in this browser only.</b> Export a backup now and then. You can import it on another device.</p>'
+    : '<p><span class="dot off"></span><b>Not saved.</b> This browser blocks storage, so your work is lost when you close the page. Export a backup before you leave.</p>';
+  $('#aboutData').textContent = `The ${S.canon.characters.length} built-in files and the ${S.canon.worlds.length} worlds come from your game (${S.canon.version || 'FAL-125'}) and the Character Book. Sheet values marked "Guess" were filled in as a starting point and are not your own canon yet.`;
+}
+async function exportBackup() {
+  const data = JSON.stringify({ app: 'fal125-story-archive', exported: new Date().toISOString(), data: S.user }, null, 1);
+  const name = 'fal125-archive-backup-' + new Date().toISOString().slice(0, 10) + '.json';
+  if (window.claude && window.claude.use) {
+    const dl = await window.claude.use('downloads').catch(() => null);
+    if (dl) { try { await dl.save({ filename: name, data }); return; } catch (e) { if (e && e.code === 'cancelled') return; } }
+  }
+  try { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([data], { type: 'application/json' })); a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 4000); }
+  catch (e) { toast('Downloads are blocked here.'); }
+}
+async function importBackup(file) {
+  try {
+    const j = JSON.parse(await file.text()); const d = j.data || j; let n = 0;
+    for (const c of COLS) for (const doc of (d[c] || [])) { if (doc && doc.id) { await Store.put(c, doc); n++; } }
+    toast('Imported ' + n + ' items'); rerender();
+  } catch (e) { toast('That file is not an archive backup.'); }
+}
+
+/* ---------- start ---------- */
+function wire() {
+  window.addEventListener('hashchange', route);
+  $('#q').oninput = e => { F.q = e.target.value; renderFiles(); };
+  $$('#roleChips button').forEach(b => b.onclick = () => { F.role = b.dataset.role; $$('#roleChips button').forEach(x => x.setAttribute('aria-pressed', String(x === b))); renderFiles(); });
+  $('#typeSel').onchange = e => { F.type = e.target.value; renderFiles(); };
+  $('#originSel').onchange = e => { F.origin = e.target.value; renderFiles(); };
+  $('#sortSel').onchange = e => { F.sort = e.target.value; renderFiles(); };
+
+  wireDrop($('#cf-drop'), $('#cf-file'), async files => { if (!files[0]) return; try { editImage = await shrinkToDataUrl(files[0]); drawEditThumb(); } catch (e) { toast('That picture could not be read.'); } });
+  $('#charForm').onsubmit = async e => {
+    e.preventDefault();
+    const doc = editing ? Object.assign({}, S.user.chars.find(x => x.id === editing)) : { id: uid('c'), created: Date.now() };
+    ['name', 'title', 'role', 'type', 'containment', 'threat', 'scent', 'color', 'ability', 'abilityPlus', 'desc', 'notes'].forEach(f => { doc[f] = $('#cf-' + f).value.trim(); });
+    doc.cid = $('#cf-cid').value.trim(); doc.image = editImage;
+    if (!editing && window.__prefillReview) doc.review = window.__prefillReview;
+    if (doc.color && !/^#[0-9a-f]{3,8}$/i.test(doc.color)) doc.color = '';
+    await save('chars', doc, 'File saved');
+    window.__prefillReview = null;
+    location.hash = '#file-' + doc.id;
+  };
+
+  $('#loreAddBtn').onclick = () => openLoreForm(null);
+  $('#lf-cancel').onclick = () => { $('#loreForm').hidden = true; loreEditing = null; };
+  $('#lf-critic').onclick = () => { $('#cr-idea').value = ($('#lf-title').value ? $('#lf-title').value + '\n\n' : '') + $('#lf-text').value; $('#cr-where').value = $('#lf-after').value; location.hash = '#critic'; };
+  $('#loreForm').onsubmit = async e => {
+    e.preventDefault();
+    const old = loreEditing ? S.user.lore.find(x => x.id === loreEditing) : null;
+    const after = $('#lf-after').value;
+    const doc = Object.assign({}, old || { id: uid('l'), created: Date.now() }, { title: $('#lf-title').value.trim(), text: $('#lf-text').value.trim(), chars: $('#lf-chars').value.trim(), after });
+    if (!old || old.after !== after) doc.order = S.user.lore.filter(x => x.after === after).length;
+    await save('lore', doc, 'Entry saved');
+    $('#loreForm').hidden = true; loreEditing = null; renderLore();
+  };
+
+  wireDrop($('#rv-drop'), $('#rv-file'), files => { for (const f of files) if (rvImages.length < 4) rvImages.push({ file: f, url: URL.createObjectURL(f) }); drawRvThumbs(); });
+  $('#revForm').onsubmit = runReview;
+  $('#abForm').onsubmit = runAbilities;
+  $('#ab-out').addEventListener('click', async e => {
+    const s = e.target.closest('[data-absave]'), c = e.target.closest('[data-abcopy]');
+    if (s) { const a = abLast.list[+s.dataset.absave]; await save('abilities', { id: uid('a'), created: Date.now(), ability: a, sources: abLast.sources, forChar: abLast.forChar }, 'Ability saved'); s.disabled = true; s.textContent = 'Saved'; renderHistories(); }
+    if (c) copyText(abilityText(abLast.list[+c.dataset.abcopy]));
+  });
+  $('#crForm').onsubmit = runCritic;
+  $('#exportBtn').onclick = exportBackup;
+  $('#importBtn').onclick = () => $('#importFile').click();
+  $('#importFile').onchange = e => { if (e.target.files[0]) importBackup(e.target.files[0]); e.target.value = ''; };
+}
+async function start() {
+  wire();
+  route();
+  try {
+    const r = await fetch('data/universe.json');
+    S.canon = await r.json();
+  } catch (e) { $('#cards').innerHTML = '<div class="empty">Could not load the built-in files. Reload the page.</div>'; }
+  await Promise.all([Store.init(), AI.init()]);
+  S.ready = true;
+  aiNote(); fillSelects(); renderHistories(); route();
+}
+start();
+</script>
+</body>
+</html>
