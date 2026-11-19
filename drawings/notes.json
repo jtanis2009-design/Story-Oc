@@ -279,5 +279,57 @@
    "y": 0.602,
    "bg": "#fafafa"
   }
+ },
+ "devourer": {
+  "sheet": {
+   "date": "Nov 9, 2026",
+   "id": "",
+   "focus_x": 0.198,
+   "abilities": [
+    {
+     "name": "Meal to Heal",
+     "text": "(flesh)"
+    }
+   ],
+   "info": [
+    "Mask 1 (drawn top right).",
+    "Mouth open (drawn bottom middle)."
+   ],
+   "unclear": [],
+   "name": "Devourer"
+  },
+  "ar": 1.857,
+  "crop": {
+   "x": 0.198,
+   "y": 0.573,
+   "bg": "#fafafa"
+  },
+  "drawn": "Nov 9, 2026",
+  "file": "devourer-sheet.webp",
+  "main": true
+ },
+ "devourer-2024": {
+  "char": "devourer",
+  "ar": 1.986,
+  "crop": {
+   "x": 0.42,
+   "y": 0.5,
+   "bg": "#fafafa"
+  },
+  "drawn": "2024",
+  "file": "devourer-2024.webp",
+  "caption": "Devourer, older version with Mask 1 and Mask 2"
+ },
+ "devourer-2022": {
+  "char": "devourer",
+  "ar": 1.986,
+  "crop": {
+   "x": 0.41,
+   "y": 0.55,
+   "bg": "#fafafa"
+  },
+  "drawn": "2022",
+  "file": "devourer-2022.webp",
+  "caption": "Devourer, first version with the first mask and Mask 2"
  }
 }

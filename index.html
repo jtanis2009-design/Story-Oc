@@ -837,7 +837,7 @@ function renderFile(key) {
   if (c.mine && c.ident) sec('lore', 'Description and lore', `<div class="entry">${esc(c.ident)}</div>`);
   if (c.passive || (c.skills || []).length) sec('game', 'In the game', `${c.ident && !c.mine ? `<p>${esc(c.ident)}</p>` : ''}${c.passive ? `<div class="skill"><b>Passive</b>${esc(c.passive)}</div>` : ''}${c.skills.map(s => `<div class="skill"><b>${esc(s.name)}</b>${esc(s.desc)}</div>`).join('')}`);
   sec('drawings', 'Main drawings', `<div class="row" style="justify-content:flex-end;margin:-6px 0 10px"><button class="btn small" type="button" id="artAdd">+ Add drawings</button><input type="file" id="artFile" accept="image/*" multiple hidden></div>
-    ${arts.length ? `<div class="gal">${arts.map((a, i) => `<div class="g" style="cursor:default"><button type="button" class="im" data-lb="art:${i}" style="border:0;padding:0;cursor:zoom-in" aria-label="Open ${esc(a.caption || 'drawing')}">${a.main ? '<span class="star">MAIN</span>' : ''}<img src="${esc(artSrc(a))}" alt="${esc(a.caption || c.name)}" loading="lazy"></button><div class="cap">${esc(a.caption || 'Drawing')}</div><div class="art-tools">${a.main ? '' : `<button class="btn small" type="button" data-artmain="${esc(a.id)}">Make main</button>`}<button class="btn small" type="button" data-artcap="${esc(a.id)}">Rename</button><button class="btn small" type="button" data-artcrop="${esc(a.id)}">Center on card</button><button class="btn small danger" type="button" data-artdel="${esc(a.id)}">Delete</button></div></div>`).join('')}</div>`
+    ${arts.length ? `<div class="gal">${arts.map((a, i) => `<div class="g" style="cursor:default"><button type="button" class="im" data-lb="art:${i}" style="border:0;padding:0;cursor:zoom-in" aria-label="Open ${esc(a.caption || 'drawing')}">${a.main ? '<span class="star">MAIN</span>' : ''}<img src="${esc(artSrc(a))}" alt="${esc(a.caption || c.name)}" loading="lazy"></button><div class="cap">${esc(a.caption || 'Drawing')}${artDate(a) ? ` <span class="note">· ${esc(artDate(a))}</span>` : ''}</div><div class="art-tools">${a.main ? '' : `<button class="btn small" type="button" data-artmain="${esc(a.id)}">Make main</button>`}<button class="btn small" type="button" data-artcap="${esc(a.id)}">Rename</button><button class="btn small" type="button" data-artdate="${esc(a.id)}">Set date</button><button class="btn small" type="button" data-artcrop="${esc(a.id)}">Center on card</button><button class="btn small danger" type="button" data-artdel="${esc(a.id)}">Delete</button></div></div>`).join('')}</div>`
       : `<p class="note" style="margin:0">No main drawing yet. Add your own drawings of ${esc(c.name)}; the one marked main becomes the big picture at the top of this page, and the notes written on it become the ability text.</p>`}`);
   sec('sprites', 'Sprites in the game', galleryHtml(c));
   if ((c.archive || []).length) sec('archive', 'Archive entries', c.archive.map(a => `<p class="entry">${esc(a)}</p>`).join(''));
@@ -845,14 +845,17 @@ function renderFile(key) {
   if (c.mine && c.raw.review) sec('review', 'Last review', '<div id="fileReview"></div>');
   sec('notes', 'Your notes', `<textarea id="noteBox" rows="4" placeholder="Anything to remember about ${esc(c.name)}…">${esc(c.mine ? (c.raw.notes || '') : c.note)}</textarea><div class="row" style="margin-top:8px"><button class="btn small" type="button" id="noteSave">Save note</button></div>`);
   const heroDrawing = main ? `<img src="${esc(artSrc(main))}" alt="${esc(c.name)}, main drawing">` : '';
+  const byDate = arts.slice().sort((a, b) => (dateKey(artDate(a)) || '9999') < (dateKey(artDate(b)) || '9999') ? -1 : (dateKey(artDate(a)) || '9999') > (dateKey(artDate(b)) || '9999') ? 1 : 0);
+  const capOf = a => (a.caption || 'Main drawing') + (artDate(a) && !(a.caption || '').includes(artDate(a)) ? ' · ' + artDate(a) : '');
   el.innerHTML = `
     <div class="head"><div><a href="#files" class="note">← All files</a><div class="file-no" style="margin-top:8px">ITEM FAL-${esc(c.id || '????')}${c.origin === 'book' ? ' · CHARACTER BOOK ONLY' : c.mine ? ' · NEW FILE' : ''}</div><h1>${esc(c.name)}</h1>${c.title ? `<p class="lede">${esc(c.title)}</p>` : ''}</div>
       <div class="row">${c.mine ? `<a class="btn" href="#edit-${esc(c.key)}">Edit</a><button class="btn danger" type="button" id="delChar">Delete</button>` : ''}<button class="btn" type="button" id="toReview">Review with Claude</button><button class="btn" type="button" id="toAbil">Ability ideas</button></div></div>
     <figure class="hero">
       <div class="pswitch" role="group" aria-label="Picture">${main ? '<button type="button" data-pv="drawing" aria-pressed="true">Main drawing</button>' : ''}<button type="button" data-pv="sprite" aria-pressed="${main ? 'false' : 'true'}">In game</button></div>
       <div class="vchips" id="vchips" ${main ? 'hidden' : ''}>${(c.versions || []).length > 1 ? c.versions.map((v, i) => `<button type="button" data-ver="${i}" aria-pressed="${i === c.versions.length - 1}">${esc(v.label.replace(' (now)', ''))}<small>${i === c.versions.length - 1 ? 'now' : esc(v.note.replace('game ', ''))}</small></button>`).join('') : ''}</div>
+      <div class="vchips" id="dchips" ${main && arts.length > 1 ? '' : 'hidden'}>${byDate.map(a => `<button type="button" data-dv="${esc(a.id)}" aria-pressed="${a === main}">${esc(dateKey(artDate(a)).slice(0, 4) || 'Undated')}<small>${a === main ? 'main' : esc(artDate(a) && artDate(a).length > 4 ? artDate(a) : '')}</small></button>`).join('')}</div>
       <button type="button" class="hero-img" id="heroPic" aria-label="Open picture">${main ? heroDrawing : picHtml(c)}</button>
-      <figcaption class="hero-cap" id="heroCap">${main ? esc(main.caption || 'Main drawing') : 'In-game sprite' + (arts.length ? '' : ' · no main drawing yet, add one in Main drawings below')}</figcaption>
+      <figcaption class="hero-cap" id="heroCap">${main ? esc(capOf(main)) : 'In-game sprite' + (arts.length ? '' : ' · no main drawing yet, add one in Main drawings below')}</figcaption>
     </figure>
     <div class="wiki">
       <article class="wiki-main">
@@ -867,14 +870,16 @@ function renderFile(key) {
       </aside>
     </div>`;
   if (c.mine && c.raw.review) $('#fileReview').innerHTML = reviewHtml(c.raw.review, [], { compact: true });
-  let heroMode = main ? 'drawing' : 'sprite', heroVer = -1;
+  let heroMode = main ? 'drawing' : 'sprite', heroVer = -1, heroArt = 0;
   const vers = c.versions || [];
   const setHero = m => {
     heroMode = m;
     $$('#v-file [data-pv]').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.pv === m)));
     $('#heroPic').innerHTML = m === 'drawing' ? heroDrawing : picHtml(c);
-    $('#heroCap').textContent = m === 'drawing' ? (main.caption || 'Main drawing') : 'In-game sprite' + (vers.length > 1 ? ' · ' + vers[vers.length - 1].label : '');
+    $('#heroCap').textContent = m === 'drawing' ? capOf(main) : 'In-game sprite' + (vers.length > 1 ? ' · ' + vers[vers.length - 1].label : '');
     $('#vchips').hidden = m === 'drawing' || vers.length < 2;
+    $('#dchips').hidden = m !== 'drawing' || arts.length < 2; heroArt = 0;
+    $$('#dchips [data-dv]').forEach(x => x.setAttribute('aria-pressed', String(!!main && x.dataset.dv === main.id)));
     $$('#vchips [data-ver]').forEach(x => x.setAttribute('aria-pressed', String(+x.dataset.ver === vers.length - 1)));
   };
   $$('#vchips [data-ver]').forEach(x => x.onclick = () => {
@@ -884,11 +889,17 @@ function renderFile(key) {
     $('#heroCap').textContent = `In-game sprite · ${v.label} · ${v.note}`;
     heroVer = +x.dataset.ver;
   });
+  $$('#dchips [data-dv]').forEach(x => x.onclick = () => {
+    const a = arts.find(y => y.id === x.dataset.dv);
+    $$('#dchips [data-dv]').forEach(y => y.setAttribute('aria-pressed', String(y === x)));
+    $('#heroPic').innerHTML = `<img src="${esc(artSrc(a))}" alt="${esc(c.name)}, ${esc(a.caption || 'drawing')}">`;
+    $('#heroCap').textContent = capOf(a); heroArt = arts.indexOf(a);
+  });
   $$('#v-file [data-pv]').forEach(x => x.onclick = () => setHero(x.dataset.pv));
   $$('#v-file [data-pv-go]').forEach(x => x.onclick = () => { setHero(x.dataset.pvGo); $('.hero').scrollIntoView({ behavior: 'smooth', block: 'start' }); });
   $$('#v-file [data-toc]').forEach(x => x.onclick = () => $('#sec-' + x.dataset.toc).scrollIntoView({ behavior: 'smooth', block: 'start' }));
-  const lbItems = { art: arts.map(a => ({ src: artSrc(a), label: a.caption || 'Main drawing' })), gal: galleryItems(c) };
-  $('#heroPic').onclick = () => heroMode === 'drawing' ? openLightbox(lbItems.art, 0) : (vers.length > 1 ? openLightbox(lbItems.gal, heroVer >= 0 ? heroVer : vers.length - 1) : c.sprite && openLightbox([{ src: c.sprite, label: c.name + ' · in game' }].concat(lbItems.gal), 0));
+  const lbItems = { art: arts.map(a => ({ src: artSrc(a), label: capOf(a) })), gal: galleryItems(c) };
+  $('#heroPic').onclick = () => heroMode === 'drawing' ? openLightbox(lbItems.art, heroArt) : (vers.length > 1 ? openLightbox(lbItems.gal, heroVer >= 0 ? heroVer : vers.length - 1) : c.sprite && openLightbox([{ src: c.sprite, label: c.name + ' · in game' }].concat(lbItems.gal), 0));
   if (!main && vers.length > 1) setHero('sprite');
   $$('#v-file [data-lb]').forEach(x => x.onclick = () => { const [set, i] = x.dataset.lb.split(':'); openLightbox(lbItems[set], +i); });
   $('#artAdd').onclick = () => $('#artFile').click();
@@ -899,6 +910,13 @@ function renderFile(key) {
     cap.innerHTML = `<input type="text" value="${esc(a.caption || '')}" aria-label="Drawing name" style="padding:4px 6px">`;
     const inp = $('input', cap); inp.focus(); inp.select();
     const done = async () => { await save('art', Object.assign({}, a, { caption: inp.value.trim() })); renderFile(c.key); };
+    inp.onkeydown = ev => { if (ev.key === 'Enter') done(); if (ev.key === 'Escape') renderFile(c.key); }; inp.onblur = done;
+  });
+  $$('#v-file [data-artdate]').forEach(x => x.onclick = () => {
+    const a = arts.find(y => y.id === x.dataset.artdate); const cap = x.closest('.g').querySelector('.cap');
+    cap.innerHTML = `<input type="text" value="${esc(a.drawn || (a.sheet && a.sheet.date) || '')}" placeholder="e.g. 2022 or Nov 9, 2026" aria-label="When it was drawn" style="padding:4px 6px">`;
+    const inp = $('input', cap); inp.focus(); inp.select();
+    const done = async () => { await save('art', Object.assign({}, a, { drawn: inp.value.trim() }), 'Date saved'); renderFile(c.key); };
     inp.onkeydown = ev => { if (ev.key === 'Enter') done(); if (ev.key === 'Escape') renderFile(c.key); }; inp.onblur = done;
   });
   $$('#v-file [data-artcrop]').forEach(x => x.onclick = () => { const a = arts.find(y => y.id === x.dataset.artcrop); pickCenter(a, async k => { await save('art', Object.assign({}, a, { crop: Object.assign({}, a.crop || {}, k) }), 'Card centre saved'); renderFile(c.key); }); });
@@ -960,6 +978,14 @@ Answer with this JSON shape:
 }
 
 /* ---------- main drawings (your own art) and the game's alternate sprites ---------- */
+/* When a drawing was made: what was typed with "Set date", else the date read from the sheet. */
+function artDate(a) { return (a && (a.drawn || (a.sheet && a.sheet.date))) || ''; }
+function dateKey(s) {
+  s = String(s || '').trim(); if (!s) return '';
+  const t = Date.parse(s.replace(/(\d)(st|nd|rd|th)\b/g, '$1'));
+  if (!isNaN(t) && /\d{4}/.test(s)) { const d = new Date(t); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+  const y = s.match(/\b(19|20)\d{2}\b/); return y ? y[0] + '-00-00' : '';
+}
 function artFor(key) { return S.user.art.filter(a => a.char === key).sort((a, b) => (b.main ? 1 : 0) - (a.main ? 1 : 0) || (a.created || 0) - (b.created || 0)); }
 function mainArt(key) { return artFor(key)[0] || null; }
 function artSrc(a) { return a.assetId ? '/_blob/' + a.assetId : (a.src || ''); }
