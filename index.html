@@ -458,7 +458,7 @@ const searchUrl = q => 'https://www.google.com/search?q=' + encodeURIComponent(q
 
 /* ---------- state ---------- */
 const COLS = ['chars', 'lore', 'reviews', 'ideas', 'abilities', 'notes', 'art'];
-const S = { canon: { characters: [], worlds: [] }, user: Object.fromEntries(COLS.map(c => [c, []])), ready: false };
+const S = { canon: { characters: [], worlds: [] }, user: Object.fromEntries(COLS.map(c => [c, []])), staticArt: [], ready: false };
 const BUILDS = { Damage: ['Burst', 'Charger', 'Controller', 'Bomber', 'Duelist', 'Execute', 'Hunter', 'Leech', 'Plague', 'Sweeper'], Healer: ['Medic', 'Warden', 'Amplifier', 'Debuffer', 'Leech'], Tank: ['Guardian', 'Protector', 'Disruptor', 'Bruiser', 'Regenerator', 'Retaliator'] };
 
 /* Backstory and connections the author confirmed (from the game's project notes). */
@@ -774,8 +774,9 @@ function cropOf(a) {
 }
 function coverImg(a, alt) {
   const k = cropOf(a), z = (a.crop && a.crop.zoom) || 0.92;
+  const src = a.thumb || artSrc(a);
   const x = Math.min(1, Math.max(0, k.x)), y = Math.min(1, Math.max(0, k.y));
-  return `<img class="cover" src="${esc(artSrc(a))}" alt="${esc(alt)}" loading="lazy" style="height:${(z * 100).toFixed(0)}%;transform:translate(-${(x * 100).toFixed(1)}%,-${(y * 100).toFixed(1)}%)">`;
+  return `<img class="cover" src="${esc(src)}" alt="${esc(alt)}" loading="lazy" style="height:${(z * 100).toFixed(0)}%;transform:translate(-${(x * 100).toFixed(1)}%,-${(y * 100).toFixed(1)}%)">`;
 }
 async function autoCrop(blob) {
   const bmp = await createImageBitmap(blob);
@@ -922,7 +923,8 @@ function renderFile(key) {
   $$('#v-file [data-artcrop]').forEach(x => x.onclick = () => { const a = arts.find(y => y.id === x.dataset.artcrop); pickCenter(a, async k => { await save('art', Object.assign({}, a, { crop: Object.assign({}, a.crop || {}, k) }), 'Card centre saved'); renderFile(c.key); }); });
   $$('#v-file [data-artdel]').forEach(x => x.onclick = () => confirmBtn(x, async () => {
     const a = arts.find(y => y.id === x.dataset.artdel);
-    await Store.del('art', a.id);
+    if (Store.mode !== 'cloud' && S.staticArt.some(b => b.id === a.id)) await save('art', { id: a.id, char: a.char, deleted: true });
+    else await Store.del('art', a.id);
     if (a.assetId && Store.assets) { try { await Store.assets.delete(a.assetId); } catch (e) {} }
     if (a.main) { const rest = artFor(c.key); if (rest[0]) await save('art', Object.assign({}, rest[0], { main: true })); }
     toast('Drawing deleted'); renderFile(c.key);
@@ -971,7 +973,7 @@ Answer with this JSON shape:
 {"name":"","id":"","date":"","abilities":[{"name":"","text":""}],"info":[""],"unclear":[""],"focus_x":0.5}`;
     const { data } = await AI.run({ prompt, images: [blob], search: false, effort: 'medium' });
     const sheet = { name: data.name || '', id: data.id || '', date: data.date || '', abilities: (data.abilities || []).filter(x => x && x.name), info: (data.info || []).filter(Boolean), unclear: (data.unclear || []).filter(Boolean), focus_x: typeof data.focus_x === 'number' ? data.focus_x : 0.5, read: Date.now() };
-    const fresh = S.user.art.find(x => x.id === a.id) || a;
+    const fresh = S.user.art.find(x => x.id === a.id) || allArt().find(x => x.id === a.id) || a;
     await save('art', Object.assign({}, fresh, { sheet }), sheet.abilities.length ? 'Ability notes copied from the drawing' : 'No ability notes found on the drawing');
     if (c && (location.hash || '').slice(1) === 'file-' + c.key) renderFile(c.key);
   } catch (e) { toast(e.message || 'Could not read the drawing.'); }
@@ -986,7 +988,14 @@ function dateKey(s) {
   if (!isNaN(t) && /\d{4}/.test(s)) { const d = new Date(t); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
   const y = s.match(/\b(19|20)\d{2}\b/); return y ? y[0] + '-00-00' : '';
 }
-function artFor(key) { return S.user.art.filter(a => a.char === key).sort((a, b) => (b.main ? 1 : 0) - (a.main ? 1 : 0) || (a.created || 0) - (b.created || 0)); }
+function allArt() {
+  if (Store.mode === 'cloud') return S.user.art;
+  const mine = new Map(S.user.art.map(a => [a.id, a]));
+  const base = S.staticArt.map(a => mine.get(a.id) || a);
+  const extra = S.user.art.filter(a => !S.staticArt.some(b => b.id === a.id));
+  return base.concat(extra).filter(a => !a.deleted);
+}
+function artFor(key) { return allArt().filter(a => a.char === key).sort((a, b) => (b.main ? 1 : 0) - (a.main ? 1 : 0) || (a.created || 0) - (b.created || 0)); }
 function mainArt(key) { return artFor(key)[0] || null; }
 function artSrc(a) { return a.assetId ? '/_blob/' + a.assetId : (a.src || ''); }
 async function addArt(key, files) {
@@ -1447,6 +1456,7 @@ async function start() {
   try {
     const r = await fetch('data/universe.json');
     S.canon = await r.json();
+    try { S.staticArt = await (await fetch('data/art.json')).json(); } catch (e) { S.staticArt = []; }
   } catch (e) { $('#cards').innerHTML = '<div class="empty">Could not load the built-in files. Reload the page.</div>'; }
   await Promise.all([Store.init(), AI.init()]);
   S.ready = true;

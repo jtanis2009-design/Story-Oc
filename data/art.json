@@ -1,0 +1,3029 @@
+[
+{
+"ar": 1.857,
+"caption": "Anigari, character sheet (ID 0017)",
+"char": "anigari",
+"created": 1795200005000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.772,
+"y": 0.487
+},
+"drawn": "May 10, 2026",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "The Bullseye Paradox",
+"text": "Anything she marks with vision, every object thrown close, debris, bullets, whatever, will be pulled towards them like a magnet."
+},
+{
+"name": "Instability",
+"text": "When attacked she can make everything move through her body. This also allows her to slide across anything she wants."
+},
+{
+"name": "Consumption",
+"text": "She can bite stuff out of existence in rooms/space-temporality, like sound/light."
+},
+{
+"name": "Reconstruction",
+"text": "If 1 of her body parts gets fed to someone, she incarnates in them."
+}
+],
+"date": "May 10, 2026",
+"focus_x": 0.772,
+"id": "0017",
+"info": [
+"Moved to the new universe."
+],
+"name": "Anigari",
+"unclear": []
+},
+"updated": 1795200005000,
+"id": "a-anigari-sheet",
+"src": "drawings/anigari-sheet.webp",
+"thumb": "drawings/thumb/anigari-sheet.webp"
+},
+{
+"ar": 1.781,
+"caption": "Bearer, old version",
+"char": "bearer",
+"created": 1795220003000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.488,
+"y": 0.573
+},
+"drawn": "2024",
+"main": false,
+"sheet": {
+"abilities": [],
+"date": "Feb 2024",
+"focus_x": 0.488,
+"id": "",
+"info": [],
+"name": "",
+"unclear": [
+"The date is hard to read: \"Feb 2?th, 202?\". I read the year as 2024."
+]
+},
+"updated": 1795230001000,
+"id": "a-bearer-old",
+"src": "drawings/bearer-old.webp",
+"thumb": "drawings/thumb/bearer-old.webp"
+},
+{
+"ar": 1.857,
+"caption": "Bearer, character sheet (ID 0005)",
+"char": "bearer",
+"created": 1795220002000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.235,
+"y": 0.532
+},
+"drawn": "Oct 7, 2026",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Demon Spawn",
+"text": "Hosts 9 demons inside of it and can use all their power at once."
+}
+],
+"date": "Oct 7, 2026",
+"focus_x": 0.235,
+"id": "0005",
+"info": [
+"Can stretch out its arm.",
+"Just a blade, real lethal though.",
+"He doesn't have a soul, he's just a robot. But there are around 9 demons inside of its body which actively try to break out but can't.",
+"The demons fight for control inside while slaughtering humans, because of how early this entity appeared.",
+"The government couldn't do anything for a while. After a struggle with the military they captured it and locked him in Fal-125's first cell."
+],
+"name": "Bearer",
+"unclear": []
+},
+"updated": 1795220002000,
+"id": "a-bearer-sheet",
+"src": "drawings/bearer-sheet.webp",
+"thumb": "drawings/thumb/bearer-sheet.webp"
+},
+{
+"ar": 1.85,
+"caption": "Bloodspike, character sheet (ID 0088)",
+"char": "bloodspike",
+"created": 1795140006000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.515,
+"y": 0.522
+},
+"drawn": "March 26, 2025",
+"main": true,
+"sheet": {
+"abilities": [],
+"date": "March 26, 2025",
+"focus_x": 0.515,
+"id": "0088",
+"info": [],
+"name": "Bloodspike",
+"unclear": []
+},
+"updated": 1795140006000,
+"id": "a-bloodspike-sheet",
+"src": "drawings/bloodspike-sheet.webp",
+"thumb": "drawings/thumb/bloodspike-sheet.webp"
+},
+{
+"ar": 1.986,
+"caption": "Bloodspike, black and white sketch",
+"char": "bloodspike",
+"created": 1795140007000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.55,
+"y": 0.49
+},
+"drawn": "2024",
+"main": false,
+"updated": 1795150100000,
+"id": "a-bloodspike-sketch",
+"src": "drawings/bloodspike-sketch.webp",
+"thumb": "drawings/thumb/bloodspike-sketch.webp"
+},
+{
+"ar": 1.85,
+"caption": "Bonesaw with his demon friend (ID 0075)",
+"char": "bonesaw",
+"created": 1795170010000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.293,
+"y": 0.607
+},
+"drawn": "Feb 16, 2025",
+"main": true,
+"sheet": {
+"abilities": [],
+"date": "Feb 16, 2025",
+"focus_x": 0.293,
+"id": "0075",
+"info": [
+"Drawn with his demon friend (with a crown) and his weapon, an uzi."
+],
+"name": "",
+"unclear": []
+},
+"updated": 1795170010000,
+"id": "a-bonesaw-sheet",
+"src": "drawings/bonesaw-sheet.webp",
+"thumb": "drawings/thumb/bonesaw-sheet.webp"
+},
+{
+"ar": 1.779,
+"caption": "Bonesaw sketch, with \"the demon that is his friend\"",
+"char": "bonesaw",
+"created": 1795170011000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.27,
+"y": 0.436
+},
+"drawn": "2024",
+"main": false,
+"updated": 1795170200000,
+"id": "a-bonesaw-sketch",
+"src": "drawings/bonesaw-sketch.webp",
+"thumb": "drawings/thumb/bonesaw-sketch.webp"
+},
+{
+"ar": 1.779,
+"caption": "Bonesaw sketch (\"Space\")",
+"char": "bonesaw",
+"created": 1795170012000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.52,
+"y": 0.45
+},
+"drawn": "2022",
+"main": false,
+"updated": 1795170200000,
+"id": "a-bonesaw-space",
+"src": "drawings/bonesaw-space.webp",
+"thumb": "drawings/thumb/bonesaw-space.webp"
+},
+{
+"ar": 1.85,
+"caption": "C-Ruin, character sheet (April 21, 2025)",
+"char": "cruin",
+"created": 1795100009000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.493,
+"y": 0.494
+},
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Gravitational Manipulation",
+"text": ""
+},
+{
+"name": "Side Swap",
+"text": ""
+},
+{
+"name": "Slowing Time",
+"text": ""
+}
+],
+"date": "April 21, 2025",
+"focus_x": 0.45,
+"id": "0079",
+"info": [],
+"name": "",
+"unclear": []
+},
+"updated": 1795120000000,
+"id": "a-cruin-sheet",
+"src": "drawings/cruin-sheet.webp",
+"thumb": "drawings/thumb/cruin-sheet.webp"
+},
+{
+"ar": 1.857,
+"caption": "Cy, character sheet (ID 0031)",
+"char": "cy",
+"created": 1795190015000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.704,
+"y": 0.501
+},
+"drawn": "Sep 21, 2026",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Kinetic Burden",
+"text": "The ability to absorb, store and manipulate the physical concept of resistance. Every time Cy pushes against a force (heavy winds, a punch, dragging something heavy, or battling their own mental state), his body stores that kinetic friction as burden. With this Cy can weaponize this weight and momentum in a lot of ways. Because this ability needs struggle to charge, Cy is always stuck in his loop, enduring constant pain and exhaustion to access their full potential."
+},
+{
+"name": "Incline",
+"text": "Projects weight outward into a 20 feet radius. Enemies face extreme gravity changes, violently draining stamina."
+},
+{
+"name": "Bouldering",
+"text": "Channels energy into their fist/weapon to deal massive amounts of damage."
+},
+{
+"name": "Downhill",
+"text": "Cy releases everything for 10 seconds, giving super speed for those 10 seconds."
+},
+{
+"name": "Anchor",
+"text": "Floods the skeleton with weight, crushing them from the inside."
+},
+{
+"name": "Sensory Overload",
+"text": "Grinds weight into the ground/air to create shockwaves."
+}
+],
+"date": "Sep 21, 2026",
+"focus_x": 0.704,
+"id": "0031",
+"info": [
+"Inspirations include Thatcher Davis, Shota Aizawa, Sisyphus.",
+"Drawn: how he sees himself, and how he sees everybody (\"I fear what's coming\"), so he's afraid of humans.",
+"He smells like Monster Noir Voskanian perfume.",
+"He barely eats, but he likes to eat meat.",
+"Because he sees people like that, he can often attack immediately as \"self defense\".",
+"He trains with boulders, heavy ones.",
+"He lives isolated in the mountains mostly."
+],
+"name": "Cy",
+"unclear": []
+},
+"updated": 1795190100000,
+"id": "a-cy-sheet",
+"src": "drawings/cy-sheet.webp",
+"thumb": "drawings/thumb/cy-sheet.webp"
+},
+{
+"ar": 1.896,
+"caption": "Abomination Devic, moved to the new universe (Feb 15, 2025)",
+"char": "devic",
+"created": 1795100011000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.348,
+"y": 0.602
+},
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Forced Fusion",
+"text": "Forces things together to make something new."
+}
+],
+"date": "Feb 15, 2025",
+"focus_x": 0.33,
+"id": "0025",
+"info": [
+"Moved to the new universe."
+],
+"name": "",
+"unclear": []
+},
+"updated": 1795120000000,
+"id": "a-devic-sheet",
+"src": "drawings/devic-sheet.webp",
+"thumb": "drawings/thumb/devic-sheet.webp"
+},
+{
+"ar": 1.986,
+"caption": "Devourer, first version with the first mask and Mask 2",
+"char": "devourer",
+"created": 1795130003000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.41,
+"y": 0.55
+},
+"drawn": "2022",
+"main": false,
+"updated": 1795130003000,
+"id": "a-devourer-2022",
+"src": "drawings/devourer-2022.webp",
+"thumb": "drawings/thumb/devourer-2022.webp"
+},
+{
+"ar": 1.986,
+"caption": "Devourer, older version with Mask 1 and Mask 2",
+"char": "devourer",
+"created": 1795130002000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.42,
+"y": 0.5
+},
+"drawn": "2024",
+"main": false,
+"updated": 1795130002000,
+"id": "a-devourer-2024",
+"src": "drawings/devourer-2024.webp",
+"thumb": "drawings/thumb/devourer-2024.webp"
+},
+{
+"ar": 1.857,
+"caption": "Devourer, character sheet",
+"char": "devourer",
+"created": 1795130001000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.198,
+"y": 0.573
+},
+"drawn": "Nov 9, 2026",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Meal to Heal",
+"text": "(flesh)"
+}
+],
+"date": "Nov 9, 2026",
+"focus_x": 0.198,
+"id": "",
+"info": [
+"Mask 1 (drawn top right).",
+"Mouth open (drawn bottom middle)."
+],
+"name": "Devourer",
+"unclear": []
+},
+"updated": 1795130001000,
+"id": "a-devourer-sheet",
+"src": "drawings/devourer-sheet.webp",
+"thumb": "drawings/thumb/devourer-sheet.webp"
+},
+{
+"ar": 1.857,
+"caption": "Dia, character sheet (ID 0032)",
+"char": "dia",
+"created": 1795190016000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.444,
+"y": 0.539
+},
+"drawn": "Jan 28, 2025",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Frozen Clock (Destroy It All)",
+"text": "Basically just time stop for 5-10 seconds."
+}
+],
+"date": "Jan 28, 2025",
+"focus_x": 0.444,
+"id": "0032",
+"info": [
+"He was born in the freezing point of the earth, the continent that's only inhabited by less than 1000 people.",
+"He was born into the Neico Clan, a clan of 200 people, the strongest of the west region, mainly because the most dangerous creatures come from there.",
+"He's a top soldier for the clan.",
+"Moved to the new universe."
+],
+"name": "Dia",
+"unclear": []
+},
+"updated": 1795190016000,
+"id": "a-dia-sheet",
+"src": "drawings/dia-sheet.webp",
+"thumb": "drawings/thumb/dia-sheet.webp"
+},
+{
+"ar": 1.85,
+"caption": "Dragonfire, character sheet (ID 0024)",
+"char": "dragonfire",
+"created": 1795200001000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.25,
+"y": 0.5
+},
+"drawn": "Nov 12, 2025",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Mech Circuit / Laser",
+"text": "Is able to connect and use most weapons; its body can also be upgraded easily. Can use lasers: shoots them out of its chest eyes and arms. This is extremely precise, being able to hit a 1 pound coin from 10 km with ease. At max this can blow up entire ships."
+}
+],
+"date": "Nov 12, 2025",
+"focus_x": 0.25,
+"id": "0024",
+"info": [
+"Controller on its arm: X = launches a slow attack, O = fires, Triangle = lock on target (from 10 km away).",
+"Drawn: the both-arms laser and the single-arm laser.",
+"A UK soldier. When they were creating Dragonfire they tried to connect it to a dead body, which revived him. After, he turned into a cyborg zombie, slowly rotting and being used as a puppet to erase the UK's filthy past.",
+"Moved to the new universe."
+],
+"name": "Dragonfire",
+"unclear": []
+},
+"updated": 1795200001000,
+"id": "a-dragonfire-sheet",
+"src": "drawings/dragonfire-sheet.webp",
+"thumb": "drawings/thumb/dragonfire-sheet.webp"
+},
+{
+"ar": 1.779,
+"caption": "Eyianix, 2022 version (the first one)",
+"char": "eyianix",
+"created": 1795230004000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.507,
+"y": 0.604
+},
+"drawn": "2022",
+"main": false,
+"updated": 1795230004000,
+"id": "a-eyianix-2022",
+"src": "drawings/eyianix-2022.webp",
+"thumb": "drawings/thumb/eyianix-2022.webp"
+},
+{
+"ar": 1.779,
+"caption": "Eyianix, 2024 version (stitched, red cross eye)",
+"char": "eyianix",
+"created": 1795230003000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.574,
+"y": 0.613
+},
+"drawn": "2024",
+"main": false,
+"sheet": {
+"abilities": [
+{
+"name": "Ult",
+"text": "\"Fuck You\" (written in the Ult box)"
+}
+],
+"date": "2024",
+"focus_x": 0.574,
+"id": "",
+"info": [
+"The template boxes on the right say Age, Name and Ult. Age and Name are empty."
+],
+"name": "",
+"unclear": []
+},
+"updated": 1795230003000,
+"id": "a-eyianix-2024",
+"src": "drawings/eyianix-2024.webp",
+"thumb": "drawings/thumb/eyianix-2024.webp"
+},
+{
+"ar": 1.779,
+"caption": "Eyianix, character sheet (ID 0008)",
+"char": "eyianix",
+"created": 1795230002000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.784,
+"y": 0.548
+},
+"drawn": "Oct 13, 2026",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Eye Spy",
+"text": "The eyes that float around 0008 can be used as cameras, which 0008 can see through at all times. He can also deploy them as eye drones and turn them into weapons by infusing energy into the eyes. The eyes can be destroyed, but usually they heal extremely fast and can just revive themselves."
+}
+],
+"date": "Oct 13, 2026",
+"focus_x": 0.784,
+"id": "0008",
+"info": [],
+"name": "Eyianix",
+"unclear": []
+},
+"updated": 1795230002000,
+"id": "a-eyianix-sheet",
+"src": "drawings/eyianix-sheet.webp",
+"thumb": "drawings/thumb/eyianix-sheet.webp"
+},
+{
+"ar": 1.85,
+"caption": "Flick, character sheet (ID 0019)",
+"char": "flick",
+"created": 1795200007000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.691,
+"y": 0.582
+},
+"drawn": "Dec 31, 2025",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Flipside",
+"text": "User can take damage taken and transfer it onto objects/living beings. Only when it's active, its skin and body inverts, but it can't be seen by the human eyes. Its mouth: if you look into it you also get stunned."
+}
+],
+"date": "Dec 31, 2025",
+"focus_x": 0.691,
+"id": "0019",
+"info": [
+"His lower half got cut off when he was young.",
+"He's blind and goes off the sounds it hears.",
+"Moved to the new universe."
+],
+"name": "Flick",
+"unclear": []
+},
+"updated": 1795200007000,
+"id": "a-flick-sheet",
+"src": "drawings/flick-sheet.webp",
+"thumb": "drawings/thumb/flick-sheet.webp"
+},
+{
+"ar": 1.779,
+"caption": "Fuja, character sheet (ID 0006)",
+"char": "fuja",
+"created": 1795220004000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.727,
+"y": 0.472
+},
+"drawn": "Oct 8, 2026",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Black Hole Stomach",
+"text": "Has a literal black hole in its stomach that can consume anything and destroy it permanently. This has the side effect of always being hungry."
+}
+],
+"date": "Oct 8, 2026",
+"focus_x": 0.727,
+"id": "0006",
+"info": [
+"No matter how much good you try to do, sometimes in the end it doesn't even matter.",
+"For Fuja it showed: being 1 of the 2 founders of Fal-125, only to end up as the thing he wanted to contain.",
+"He locked himself up and now just stays depressed in his cell all day. He could easily break out, but he's too broken to do anything anymore."
+],
+"name": "Fuja",
+"unclear": []
+},
+"updated": 1795220004000,
+"id": "a-fuja-sheet",
+"src": "drawings/fuja-sheet.webp",
+"thumb": "drawings/thumb/fuja-sheet.webp"
+},
+{
+"ar": 1.779,
+"caption": "Ghost, character sheet (ID 0072)",
+"char": "ghost_0072",
+"created": 1795170013000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.218,
+"y": 0.508
+},
+"drawn": "May 2026",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Save File",
+"text": ""
+},
+{
+"name": "Dead Media Manipulation",
+"text": ""
+}
+],
+"date": "May 2026",
+"focus_x": 0.218,
+"id": "0072",
+"info": [],
+"name": "Ghost",
+"unclear": []
+},
+"updated": 1795170100000,
+"id": "a-ghost-sheet",
+"src": "drawings/ghost-sheet.webp",
+"thumb": "drawings/thumb/ghost-sheet.webp"
+},
+{
+"ar": 1.781,
+"caption": "Glitch, growing (Nov 27, 2023)",
+"char": "glitch",
+"created": 1795100007000,
+"crop": {
+"bg": "#000000",
+"x": 0.607,
+"y": 0.607
+},
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Chaos Pulse",
+"text": ""
+},
+{
+"name": "Digital Death",
+"text": ""
+}
+],
+"date": "Nov 27, 2023",
+"focus_x": 0.55,
+"id": "0050",
+"info": [
+"Drawn in three sizes, growing from small to huge."
+],
+"name": "",
+"unclear": []
+},
+"updated": 1795120000000,
+"id": "a-glitch-sheet",
+"src": "drawings/glitch-sheet.webp",
+"thumb": "drawings/thumb/glitch-sheet.webp"
+},
+{
+"ar": 1.779,
+"caption": "Gutter, character sheet (Nov 15, 2026)",
+"char": "gutter",
+"created": 1795100001000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.231,
+"y": 0.523
+},
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Human Storage",
+"text": "The user creates a pocket dimension where they can store anything they want. In there, there's infinite space. They spit out what the user needs on demand. A limitation is he can't enter it physically himself."
+}
+],
+"date": "Nov 15, 2026",
+"focus_x": 0.22,
+"id": "0102",
+"info": [
+"He likes to create weapons from things/people he's defeated.",
+"He's a contracted merc for Fal-125.",
+"The red on his eye is a tumor.",
+"He's 19."
+],
+"name": "",
+"unclear": []
+},
+"updated": 1795120000000,
+"id": "a-gutter-sheet",
+"src": "drawings/gutter-sheet.webp",
+"thumb": "drawings/thumb/gutter-sheet.webp"
+},
+{
+"ar": 1.85,
+"caption": "Haz-225, character sheet (ID 0059)",
+"char": "haz225",
+"created": 1795180010000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.508,
+"y": 0.57
+},
+"drawn": "July 18, 2025",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Room",
+"text": "Creates a white room which only allows it and its target to be in."
+}
+],
+"date": "July 18, 2025",
+"focus_x": 0.508,
+"id": "0059",
+"info": [
+"Signature item: AR-0225."
+],
+"name": "Haz-225",
+"unclear": []
+},
+"updated": 1795180010000,
+"id": "a-haz225-sheet",
+"src": "drawings/haz225-sheet.webp",
+"thumb": "drawings/thumb/haz225-sheet.webp"
+},
+{
+"ar": 1.85,
+"caption": "Haz-378, character sheet (ID 0060)",
+"char": "haz378",
+"created": 1795180011000,
+"crop": {
+"bg": "#606369",
+"x": 0.548,
+"y": 0.574
+},
+"drawn": "July 18, 2025",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Charge",
+"text": ""
+}
+],
+"date": "July 18, 2025",
+"focus_x": 0.548,
+"id": "0060",
+"info": [
+"Weapon: K-0378 melee (a blade)."
+],
+"name": "Haz-378",
+"unclear": []
+},
+"updated": 1795180011000,
+"id": "a-haz378-sheet",
+"src": "drawings/haz378-sheet.webp",
+"thumb": "drawings/thumb/haz378-sheet.webp"
+},
+{
+"ar": 1.986,
+"caption": "Hollowpoint, first version",
+"char": "hollowpoint",
+"created": 1795170015000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.491,
+"y": 0.457
+},
+"drawn": "Oct 27, 2023",
+"main": false,
+"sheet": {
+"abilities": [
+{
+"name": "Leech",
+"text": "Leeches off every kill it makes to heal his wound for a short while (5 hours)."
+},
+{
+"name": "Void Shot",
+"text": "Turns bullets into empty voids, sucking anyone it touches up, killing them and making it disappear."
+}
+],
+"date": "Oct 27, 2023",
+"focus_x": 0.491,
+"id": "",
+"info": [
+"The wound will kill the entity if not healed for 2 days.",
+"His shotgun: also the shotgun he tried to kill himself with."
+],
+"name": "",
+"unclear": []
+},
+"updated": 1795170015000,
+"id": "a-hollowpoint-2023",
+"src": "drawings/hollowpoint-2023.webp",
+"thumb": "drawings/thumb/hollowpoint-2023.webp"
+},
+{
+"ar": 1.85,
+"caption": "Hollowpoint, character sheet (ID 0071)",
+"char": "hollowpoint",
+"created": 1795170014000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.421,
+"y": 0.561
+},
+"drawn": "Dec 14, 2025",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Leeching Void",
+"text": ""
+}
+],
+"date": "Dec 14, 2025",
+"focus_x": 0.421,
+"id": "0071",
+"info": [
+"Drawn: his bullets.",
+"The name, containment level and info are still empty on the sheet."
+],
+"name": "",
+"unclear": []
+},
+"updated": 1795170014000,
+"id": "a-hollowpoint-sheet",
+"src": "drawings/hollowpoint-sheet.webp",
+"thumb": "drawings/thumb/hollowpoint-sheet.webp"
+},
+{
+"ar": 1.986,
+"caption": "Hollowpoint, sketch with the weak spot",
+"char": "hollowpoint",
+"created": 1795170016000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.472,
+"y": 0.422
+},
+"drawn": "",
+"main": false,
+"sheet": {
+"abilities": [
+{
+"name": "Leech",
+"text": "His weak spot rips out a bit every 5 hours, but when he kills it heals."
+},
+{
+"name": "Void Shot",
+"text": ""
+}
+],
+"date": "",
+"focus_x": 0.472,
+"id": "",
+"info": [
+"The shotgun he blew his head with.",
+"This spot rips out a bit every 5 hours. If nothing is done about it, his entire skull breaks off."
+],
+"name": "",
+"unclear": []
+},
+"updated": 1795170016000,
+"id": "a-hollowpoint-sketch",
+"src": "drawings/hollowpoint-sketch.webp",
+"thumb": "drawings/thumb/hollowpoint-sketch.webp"
+},
+{
+"ar": 1.781,
+"caption": "Hound Dog (ID 0020)",
+"char": "hounddog",
+"created": 1795200002000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.684,
+"y": 0.535
+},
+"drawn": "Jan 1, 2026",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Hunger Protocol",
+"text": ""
+}
+],
+"date": "Jan 1, 2026",
+"focus_x": 0.684,
+"id": "0020",
+"info": [
+"Moved to the new universe."
+],
+"name": "Hound Dog",
+"unclear": []
+},
+"updated": 1795200002000,
+"id": "a-hounddog-sheet",
+"src": "drawings/hounddog-sheet.webp",
+"thumb": "drawings/thumb/hounddog-sheet.webp"
+},
+{
+"ar": 1.779,
+"caption": "Intervein, sketch (angry face, long axe, half an arm)",
+"char": "intervein",
+"created": 1795190011000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.55,
+"y": 0.42
+},
+"drawn": "2022",
+"main": false,
+"updated": 1795190200000,
+"id": "a-intervein-angry",
+"src": "drawings/intervein-angry.webp",
+"thumb": "drawings/thumb/intervein-angry.webp"
+},
+{
+"ar": 1.872,
+"caption": "Intervein, character sheet (ID 0041)",
+"char": "intervein",
+"created": 1795190010000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.376,
+"y": 0.572
+},
+"drawn": "Nov 27, 2025",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Gold Absorption",
+"text": "Can absorb gold from anything into its body, and uses this to make its body more sturdy. It also absorbs all gold in a 10 km radius, which is how it gets so much in."
+}
+],
+"date": "Nov 27, 2025",
+"focus_x": 0.376,
+"id": "0041",
+"info": [
+"Containment Level: Medium.",
+"A 29 year old male.",
+"The gold spreads on his body like veins under its clothes. He is 70% gold.",
+"He needs to get rid of the gold on his body: he needs a sacrifice every 8 days to get 60% of the gold out of his body.",
+"Extra arms drawn on the left."
+],
+"name": "Intervein",
+"unclear": []
+},
+"updated": 1795190010000,
+"id": "a-intervein-sheet",
+"src": "drawings/intervein-sheet.webp",
+"thumb": "drawings/thumb/intervein-sheet.webp"
+},
+{
+"ar": 1.779,
+"caption": "Intervein, sketch",
+"char": "intervein",
+"created": 1795190012000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.58,
+"y": 0.4
+},
+"drawn": "2023",
+"main": false,
+"updated": 1795190200000,
+"id": "a-intervein-sketch",
+"src": "drawings/intervein-sketch.webp",
+"thumb": "drawings/thumb/intervein-sketch.webp"
+},
+{
+"ar": 1.986,
+"caption": "Kaleido, early sketch",
+"char": "kaleido",
+"created": 1795170008000,
+"crop": {
+"bg": "#ff0401",
+"x": 0.564,
+"y": 0.6
+},
+"drawn": "",
+"main": false,
+"updated": 1795170008000,
+"id": "a-kaleido-old",
+"src": "drawings/kaleido-old.webp",
+"thumb": "drawings/thumb/kaleido-old.webp"
+},
+{
+"ar": 1.965,
+"caption": "Kaleido (ID 0076)",
+"char": "kaleido",
+"created": 1795170007000,
+"crop": {
+"bg": "#de0400",
+"x": 0.531,
+"y": 0.545
+},
+"drawn": "December 1, 2024",
+"main": true,
+"sheet": {
+"abilities": [],
+"date": "December 1, 2024",
+"focus_x": 0.531,
+"id": "0076",
+"info": [],
+"name": "",
+"unclear": []
+},
+"updated": 1795170100000,
+"id": "a-kaleido-sheet",
+"src": "drawings/kaleido-sheet.webp",
+"thumb": "drawings/thumb/kaleido-sheet.webp"
+},
+{
+"ar": 1.85,
+"caption": "Kasugu, character sheet (ID 0084)",
+"char": "kasugu",
+"created": 1795160003000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.537,
+"y": 0.557
+},
+"drawn": "March 1, 2025",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Digital Manipulation",
+"text": ""
+},
+{
+"name": "Overload Anger",
+"text": ""
+},
+{
+"name": "Demon Speed Dash",
+"text": ""
+},
+{
+"name": "Thunder Spike Slash",
+"text": ""
+},
+{
+"name": "Dark Thunder Breathing",
+"text": ""
+}
+],
+"date": "March 1, 2025",
+"focus_x": 0.537,
+"id": "0084",
+"info": [
+"Height: 5'2\".",
+"Nationality: Japanese/American.",
+"Age: 22.",
+"Faces drawn: the current face, the chasing face (angry, red eyes), and the normal (usual) face."
+],
+"name": "Kasugu",
+"unclear": []
+},
+"updated": 1795160100000,
+"id": "a-kasugu-sheet",
+"src": "drawings/kasugu-sheet.webp",
+"thumb": "drawings/thumb/kasugu-sheet.webp"
+},
+{
+"ar": 1.986,
+"caption": "Lifewire? early sketch",
+"char": "lifewire",
+"created": 1795190018000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.472,
+"y": 0.45
+},
+"drawn": "July 11, 2023",
+"main": false,
+"updated": 1795190018000,
+"id": "a-lifewire-2023",
+"src": "drawings/lifewire-2023.webp",
+"thumb": "drawings/thumb/lifewire-2023.webp"
+},
+{
+"ar": 1.857,
+"caption": "Lifewire, character sheet (ID 0030)",
+"char": "lifewire",
+"created": 1795190017000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.332,
+"y": 0.478
+},
+"drawn": "Sep 1, 2026",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Lifewire",
+"text": "The wires across its body steal power/electricity from anything it can find, passively. He stores this up, and the more he's got, the more fatal his attacks become. For example he can discharge and kill people easily in seconds if provoked. The wires can also shoot out lightning bolts."
+}
+],
+"date": "Sep 1, 2026",
+"focus_x": 0.332,
+"id": "0030",
+"info": [
+"He got caught in a tub of wires on a job site once, which burned him into being unrecognizable.",
+"While he does long for his old life back, he knows he'll kill them if he decides to come back. That's the cost of his humanity; the rest he threw away.",
+"Each one of its teeth has a hole drilled into it.",
+"Backside drawn.",
+"Moved to the new universe."
+],
+"name": "Lifewire",
+"unclear": []
+},
+"updated": 1795190017000,
+"id": "a-lifewire-sheet",
+"src": "drawings/lifewire-sheet.webp",
+"thumb": "drawings/thumb/lifewire-sheet.webp"
+},
+{
+"ar": 1.85,
+"caption": "Maw, character sheet (ID 0044)",
+"char": "maw",
+"created": 1795190007000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.28,
+"y": 0.479
+},
+"drawn": "Nov 4, 2023",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Needy Spiral",
+"text": "Plants lies in people's heads around him. Most people weaken over time because of this."
+},
+{
+"name": "Banana Chip",
+"text": "Banana chips are something he loves. They appear out of nowhere 10 times a day around him, like an entire bag full. It gives him a strength boost, and he can use them as explosives."
+}
+],
+"date": "Nov 4, 2023",
+"focus_x": 0.28,
+"id": "0044",
+"info": [
+"Containment Level: High.",
+"Signature weapon: crowbar.",
+"His personality: loves taunting people and making them mad.",
+"He hates his enemy Walker.",
+"His favourite food is banana chips."
+],
+"name": "Maw",
+"unclear": []
+},
+"updated": 1795190007000,
+"id": "a-maw-sheet",
+"src": "drawings/maw-sheet.webp",
+"thumb": "drawings/thumb/maw-sheet.webp"
+},
+{
+"ar": 1.986,
+"caption": "Maw, sketch with a gun (\"1x32\")",
+"char": "maw",
+"created": 1795190008000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.53,
+"y": 0.4
+},
+"drawn": "2022",
+"main": false,
+"updated": 1795190100000,
+"id": "a-maw-sketch",
+"src": "drawings/maw-sketch.webp",
+"thumb": "drawings/thumb/maw-sketch.webp"
+},
+{
+"ar": 1.965,
+"caption": "Mindbender (ID 0074)",
+"char": "mindbender",
+"created": 1795170009000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.507,
+"y": 0.564
+},
+"drawn": "May 9, 2024",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Hide",
+"text": ""
+},
+{
+"name": "Psycho Shift",
+"text": ""
+},
+{
+"name": "Teleport",
+"text": ""
+},
+{
+"name": "Wonder Room",
+"text": ""
+}
+],
+"date": "May 9, 2024",
+"focus_x": 0.507,
+"id": "0074",
+"info": [],
+"name": "Mindbender",
+"unclear": []
+},
+"updated": 1795170009000,
+"id": "a-mindbender-sheet",
+"src": "drawings/mindbender-sheet.webp",
+"thumb": "drawings/thumb/mindbender-sheet.webp"
+},
+{
+"ar": 1.857,
+"caption": "Monstro (ID 0015)",
+"char": "monstro",
+"created": 1795200003000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.396,
+"y": 0.551
+},
+"drawn": "Feb 2, 2026",
+"main": true,
+"sheet": {
+"abilities": [],
+"date": "Feb 2, 2026",
+"focus_x": 0.396,
+"id": "0015",
+"info": [
+"Moved to the new universe."
+],
+"name": "Monstro",
+"unclear": []
+},
+"updated": 1795200003000,
+"id": "a-monstro-sheet",
+"src": "drawings/monstro-sheet.webp",
+"thumb": "drawings/thumb/monstro-sheet.webp"
+},
+{
+"ar": 1.986,
+"caption": "Moon, first sketch with the second moon",
+"char": "moon",
+"created": 1795190014000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.6,
+"y": 0.45
+},
+"drawn": "Feb 2023",
+"main": false,
+"sheet": {
+"abilities": [],
+"date": "Feb 2023",
+"focus_x": 0.6,
+"id": "",
+"info": [
+"\"Second Moon\" drawn on the left (song reference: Two Moons by BoyWithUke).",
+"Wind blowing that way."
+],
+"name": "Moon",
+"unclear": []
+},
+"updated": 1795190014000,
+"id": "a-moon-2023",
+"src": "drawings/moon-2023.webp",
+"thumb": "drawings/thumb/moon-2023.webp"
+},
+{
+"ar": 1.781,
+"caption": "Moon with her helper (ID 0039)",
+"char": "moon",
+"created": 1795190013000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.253,
+"y": 0.568
+},
+"drawn": "2023",
+"main": true,
+"sheet": {
+"abilities": [],
+"date": "",
+"focus_x": 0.253,
+"id": "0039",
+"info": [
+"Containment Level: None.",
+"Moon is a singer who mixes pop/metal music.",
+"She also has moon based powers. She doesn't use them to harm; she sends her helper (who's 6.6) to do the \"dirty work\". The helper is drawn on the right."
+],
+"name": "Moon",
+"unclear": []
+},
+"updated": 1795190100000,
+"id": "a-moon-sheet",
+"src": "drawings/moon-sheet.webp",
+"thumb": "drawings/thumb/moon-sheet.webp"
+},
+{
+"ar": 1.857,
+"caption": "Mushroom (ID 0066, written mirrored)",
+"char": "proto_0066",
+"created": 1795190001000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.504,
+"y": 0.548
+},
+"drawn": "2026",
+"main": true,
+"sheet": {
+"abilities": [],
+"date": "2026",
+"focus_x": 0.504,
+"id": "0066",
+"info": [
+"The ID and date are written mirrored.",
+"Drawn with a small nail creature next to it."
+],
+"name": "",
+"unclear": []
+},
+"updated": 1795190001000,
+"id": "a-mushroom-sheet",
+"src": "drawings/mushroom-sheet.webp",
+"thumb": "drawings/thumb/mushroom-sheet.webp"
+},
+{
+"ar": 1.965,
+"caption": "Naginata, older sheet (Battle Ready and Skin Leaver)",
+"char": "naginata",
+"created": 1795140005000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.527,
+"y": 0.547
+},
+"drawn": "March 14, 2024",
+"main": false,
+"sheet": {
+"abilities": [
+{
+"name": "Battle Ready",
+"text": "Increases the size of its blade hands."
+},
+{
+"name": "Paralyzing Spore",
+"text": "Its orange things create spores which, when victims get stabbed, get into their bodies."
+},
+{
+"name": "Skin Leaver",
+"text": "Leaves its skin to make its skeleton chase someone, or make body parts come out of his mouth."
+}
+],
+"date": "March 14, 2024",
+"focus_x": 0.527,
+"id": "",
+"info": [
+"Humans are naturally oil.",
+"Kidnaps people 24/7 to prove you can fly in the rain.",
+"Victims: 100+."
+],
+"name": "Naginata",
+"unclear": [
+"The year on this sheet is hard to read (2024?)."
+]
+},
+"updated": 1795140005000,
+"id": "a-naginata-old",
+"src": "drawings/naginata-old.webp",
+"thumb": "drawings/thumb/naginata-old.webp"
+},
+{
+"ar": 1.781,
+"caption": "Naginata, character sheet (ID 0089)",
+"char": "naginata",
+"created": 1795140004000,
+"crop": {
+"bg": "#8e8e8e",
+"x": 0.555,
+"y": 0.572
+},
+"drawn": "",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Paralyzing Spore",
+"text": "It shoots out orange spores into the air, paralyzing anyone in a 10 meter radius. If they can resist, he stabs it into the victim."
+},
+{
+"name": "Slicing Blade",
+"text": "Increases the sharpness by 10 times, to slice with its blade hands."
+},
+{
+"name": "Soul Eater",
+"text": "It eats the souls of victims for its own lifespan."
+}
+],
+"date": "",
+"focus_x": 0.555,
+"id": "0089",
+"info": [
+"Kidnaps people, 2 a day, and throws them off buildings.",
+"It believes that humans can fly because of the oil in human bodies. This theory is driving it insane.",
+"Known victims: 153.",
+"Assassination attempts: 7.",
+"Presumed victims: 200+."
+],
+"name": "Naginata",
+"unclear": [
+"The end of \"This theory is driving it insane\" is cut off at the edge of the picture."
+]
+},
+"updated": 1795140004000,
+"id": "a-naginata-sheet",
+"src": "drawings/naginata-sheet.webp",
+"thumb": "drawings/thumb/naginata-sheet.webp"
+},
+{
+"ar": 1.85,
+"caption": "Nane, character sheet (ID 0082)",
+"char": "nanenane",
+"created": 1795170002000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.533,
+"y": 0.523
+},
+"drawn": "April 16, 2025",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Sound Blast",
+"text": ""
+},
+{
+"name": "Energy Punch",
+"text": ""
+},
+{
+"name": "Sound Breathing",
+"text": ""
+},
+{
+"name": "Seeing Sound",
+"text": ""
+}
+],
+"date": "April 16, 2025",
+"focus_x": 0.533,
+"id": "0082",
+"info": [
+"Alternate costumes: one taken from an alternate universe version of itself, and a beta costume.",
+"Drawn: the face, and a pink and gold blade."
+],
+"name": "Nane",
+"unclear": []
+},
+"updated": 1795170002000,
+"id": "a-nanenane-sheet",
+"src": "drawings/nanenane-sheet.webp",
+"thumb": "drawings/thumb/nanenane-sheet.webp"
+},
+{
+"ar": 1.857,
+"caption": "Nose (ID 0042)",
+"char": "nose",
+"created": 1795190009000,
+"crop": {
+"bg": "#606369",
+"x": 0.366,
+"y": 0.481
+},
+"drawn": "Feb 8, 2025",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Fireworks",
+"text": ""
+}
+],
+"date": "Feb 8, 2025",
+"focus_x": 0.366,
+"id": "0042",
+"info": [
+"He has a clown's cut-off face stitched to his face (not by himself)."
+],
+"name": "Nose",
+"unclear": []
+},
+"updated": 1795190009000,
+"id": "a-nose-sheet",
+"src": "drawings/nose-sheet.webp",
+"thumb": "drawings/thumb/nose-sheet.webp"
+},
+{
+"ar": 1.857,
+"caption": "Nukasaurus, character sheet (March 24, 2026)",
+"char": "nukasaurus",
+"created": 1795100005000,
+"crop": {
+"bg": "#606369",
+"x": 0.725,
+"y": 0.395
+},
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Poison Nuke",
+"text": "+ Domain Expansion: the Nuke Field gives a 100% hit success and no way to escape."
+}
+],
+"date": "March 24, 2026",
+"focus_x": 0.64,
+"id": "0038",
+"info": [
+"Fal-125's attempt to create new life with old dinosaur DNA mixed with living entities, to create a new weapon. It sort of worked, leading to this."
+],
+"name": "",
+"unclear": []
+},
+"updated": 1795120000000,
+"id": "a-nukasaurus-sheet",
+"src": "drawings/nukasaurus-sheet.webp",
+"thumb": "drawings/thumb/nukasaurus-sheet.webp"
+},
+{
+"ar": 1.781,
+"caption": "Outbreak (ID 0078)",
+"char": "outbreak",
+"created": 1795170006000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.474,
+"y": 0.547
+},
+"drawn": "December 21, 2024",
+"main": true,
+"sheet": {
+"abilities": [],
+"date": "December 21, 2024",
+"focus_x": 0.474,
+"id": "0078",
+"info": [],
+"name": "",
+"unclear": []
+},
+"updated": 1795170006000,
+"id": "a-outbreak-sheet",
+"src": "drawings/outbreak-sheet.webp",
+"thumb": "drawings/thumb/outbreak-sheet.webp"
+},
+{
+"ar": 1.857,
+"caption": "Ox (ID 0057)",
+"char": "ox",
+"created": 1795180012000,
+"crop": {
+"bg": "#c6221e",
+"x": 0.398,
+"y": 0.592
+},
+"drawn": "March 23, 2026",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Red Rooms",
+"text": ""
+}
+],
+"date": "March 23, 2026",
+"focus_x": 0.398,
+"id": "0057",
+"info": [],
+"name": "Ox",
+"unclear": []
+},
+"updated": 1795180012000,
+"id": "a-ox-sheet",
+"src": "drawings/ox-sheet.webp",
+"thumb": "drawings/thumb/ox-sheet.webp"
+},
+{
+"ar": 1.965,
+"caption": "Pyrelash (ID 0077)",
+"char": "pyrelash",
+"created": 1795170005000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.514,
+"y": 0.591
+},
+"drawn": "May 14, 2024",
+"main": true,
+"sheet": {
+"abilities": [],
+"date": "May 14, 2024",
+"focus_x": 0.514,
+"id": "0077",
+"info": [],
+"name": "",
+"unclear": []
+},
+"updated": 1795170005000,
+"id": "a-pyrelash-sheet",
+"src": "drawings/pyrelash-sheet.webp",
+"thumb": "drawings/thumb/pyrelash-sheet.webp"
+},
+{
+"ar": 1.857,
+"caption": "Radiant, character sheet (ID 0007)",
+"char": "radiant",
+"created": 1795220005000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.233,
+"y": 0.431
+},
+"drawn": "Oct 12, 2026",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Radiation Storage",
+"text": "Simply just lets him store radiation in his own body. He can also shoot it out and use it as a weapon."
+}
+],
+"date": "Oct 12, 2026",
+"focus_x": 0.233,
+"id": "0007",
+"info": [
+"Being the second person to help with Fal-125: after seeing Fuja go insane he tried to find ways to turn him back. As his final resort he decided to break the habit and test with radioactive material, which also caused his flesh to burn away and caused his ability to form."
+],
+"name": "Radiant",
+"unclear": []
+},
+"updated": 1795220005000,
+"id": "a-radiant-sheet",
+"src": "drawings/radiant-sheet.webp",
+"thumb": "drawings/thumb/radiant-sheet.webp"
+},
+{
+"ar": 1.85,
+"caption": "Reflux, character sheet (ID 0083)",
+"char": "reflux",
+"created": 1795170001000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.646,
+"y": 0.536
+},
+"drawn": "March 1, 2024",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Timestop (10 sec)",
+"text": ""
+},
+{
+"name": "Blood Sucking",
+"text": ""
+},
+{
+"name": "Blood Freezing",
+"text": ""
+},
+{
+"name": "Ultra Strength",
+"text": ""
+},
+{
+"name": "Vampire Regeneration",
+"text": ""
+}
+],
+"date": "March 1, 2024",
+"focus_x": 0.646,
+"id": "0083",
+"info": [
+"Spirit: The Lasher (drawn on the left).",
+"Personality: arrogant and tactical. Views himself as a god. Loves toying with victims."
+],
+"name": "Reflux",
+"unclear": []
+},
+"updated": 1795170100000,
+"id": "a-reflux-sheet",
+"src": "drawings/reflux-sheet.webp",
+"thumb": "drawings/thumb/reflux-sheet.webp"
+},
+{
+"ar": 1.857,
+"caption": "Ronin (ID 0070)",
+"char": "ronin",
+"created": 1795170017000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.747,
+"y": 0.513
+},
+"drawn": "May 22, 2026",
+"main": true,
+"sheet": {
+"abilities": [],
+"date": "May 22, 2026",
+"focus_x": 0.747,
+"id": "0070",
+"info": [
+"Drawn with a sword and a small grenade-like object."
+],
+"name": "",
+"unclear": [
+"The date is hard to read (May 22, 2026?)."
+]
+},
+"updated": 1795170017000,
+"id": "a-ronin-sheet",
+"src": "drawings/ronin-sheet.webp",
+"thumb": "drawings/thumb/ronin-sheet.webp"
+},
+{
+"ar": 1.857,
+"caption": "Sadie and The Stray, character sheet (ID 0018)",
+"char": "sadie",
+"created": 1795200006000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.234,
+"y": 0.486
+},
+"drawn": "May 3, 2026",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Good Girl Lure",
+"text": "Can use Sadie's old voice at times to lure people (also laughter and cries)."
+},
+{
+"name": "Echo Location Bark",
+"text": "It emits a low frequency growl that can map entire buildings via sound, in some cases allowing it to see through walls."
+},
+{
+"name": "Scavenged Camouflage",
+"text": "Can hide in metal/trash to hide itself completely."
+}
+],
+"date": "May 3, 2026",
+"focus_x": 0.234,
+"id": "0018",
+"info": [
+"The Stray can punch through solid metal.",
+"Drawn on the right: Sadie before she got trapped inside of the Stray.",
+"Moved to the new universe."
+],
+"name": "Sadie and The Stray",
+"unclear": []
+},
+"updated": 1795200006000,
+"id": "a-sadie-sheet",
+"src": "drawings/sadie-sheet.webp",
+"thumb": "drawings/thumb/sadie-sheet.webp"
+},
+{
+"ar": 1.781,
+"caption": "Seam (Jan 4, 2026)",
+"char": "seam",
+"created": 1795100004000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.267,
+"y": 0.523
+},
+"main": true,
+"sheet": {
+"abilities": [],
+"date": "Jan 4, 2026",
+"focus_x": 0.25,
+"id": "0049",
+"info": [],
+"name": "",
+"unclear": []
+},
+"updated": 1795120000000,
+"id": "a-seam-sheet",
+"src": "drawings/seam-sheet.webp",
+"thumb": "drawings/thumb/seam-sheet.webp"
+},
+{
+"ar": 1.857,
+"caption": "Sevalio (ID 0014)",
+"char": "sevalio",
+"created": 1795200008000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.344,
+"y": 0.527
+},
+"drawn": "July 17, 2026",
+"main": true,
+"sheet": {
+"abilities": [],
+"date": "July 17, 2026",
+"focus_x": 0.344,
+"id": "0014",
+"info": [
+"The ID was first written as 0013, then changed to 0014.",
+"Moved to the new universe."
+],
+"name": "Sevalio",
+"unclear": []
+},
+"updated": 1795200008000,
+"id": "a-sevalio-sheet",
+"src": "drawings/sevalio-sheet.webp",
+"thumb": "drawings/thumb/sevalio-sheet.webp"
+},
+{
+"ar": 1.85,
+"caption": "Shamoon, Sinister 7 (1/7) (April 21, 2025)",
+"char": "shamoon",
+"created": 1795100002000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.553,
+"y": 0.558
+},
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Absorbing Light",
+"text": ""
+},
+{
+"name": "Shadow Puppeteering",
+"text": ""
+},
+{
+"name": "Shadow Sword",
+"text": "Shadow Slash"
+},
+{
+"name": "Umbra Claw",
+"text": ""
+},
+{
+"name": "Shadow Armour",
+"text": ""
+}
+],
+"date": "April 21, 2025",
+"focus_x": 0.56,
+"id": "",
+"info": [
+"Sinister 7 (1/7)"
+],
+"name": "",
+"unclear": []
+},
+"updated": 1795120000000,
+"id": "a-shamoon-sheet",
+"src": "drawings/shamoon-sheet.webp",
+"thumb": "drawings/thumb/shamoon-sheet.webp"
+},
+{
+"ar": 1.781,
+"caption": "Back Shatter, normal and active (ID 0045)",
+"char": "shatter",
+"created": 1795190004000,
+"crop": {
+"bg": "#ffffff",
+"x": 0.72,
+"y": 0.55
+},
+"drawn": "Dec 17, 2024",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Back Shatter",
+"text": "Its back gets destroyed but turns into a mini black hole, sucking everything around it into it. It can move normally while active. Nothing ever came back from it."
+}
+],
+"date": "Dec 17, 2024",
+"focus_x": 0.72,
+"id": "0045",
+"info": [
+"Drawn: the back when the ability is active (\"the eye watches\") and the normal look.",
+"Inspirations: black holes, Thirteen (MHA)."
+],
+"name": "",
+"unclear": []
+},
+"updated": 1795190004000,
+"id": "a-shatter-sheet",
+"src": "drawings/shatter-sheet.webp",
+"thumb": "drawings/thumb/shatter-sheet.webp"
+},
+{
+"ar": 1.986,
+"caption": "Back Shatter, early sketch",
+"char": "shatter",
+"created": 1795190005000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.23,
+"y": 0.4
+},
+"drawn": "2023",
+"main": false,
+"sheet": {
+"abilities": [
+{
+"name": "Back Shatter",
+"text": "Back when active: smoke that destroys his back and sucks up everything that has contact with his back end."
+}
+],
+"date": "",
+"focus_x": 0.23,
+"id": "",
+"info": [
+"\"The eye watches.\" Normal form without active drawn on the right.",
+"Inspiration: MHA Thirteen, Defeat, Hazmat Headcase (TF2).",
+"Song inspiration: Smoke It Off."
+],
+"name": "Back Shatter",
+"unclear": []
+},
+"updated": 1795190100000,
+"id": "a-shatter-sketch",
+"src": "drawings/shatter-sketch.webp",
+"thumb": "drawings/thumb/shatter-sketch.webp"
+},
+{
+"ar": 1.779,
+"caption": "Smiley, moved to the new universe (May 18, 2026)",
+"char": "smiley",
+"created": 1795100010000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.211,
+"y": 0.551
+},
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Smiling Glitch",
+"text": "Once you are targeted by it, your vision will blur till you pass out. Usually he grabs you, then drowns you or slits your throat. A smiley appears randomly close to the area of the murder."
+}
+],
+"date": "May 18, 2026",
+"focus_x": 0.2,
+"id": "0026",
+"info": [
+"Moved to the new universe."
+],
+"name": "",
+"unclear": [
+"The ability name looks like \"Smiling Glitch\"; the Character Book has \"Smiling Blight\"."
+]
+},
+"updated": 1795120000000,
+"id": "a-smiley-sheet",
+"src": "drawings/smiley-sheet.webp",
+"thumb": "drawings/thumb/smiley-sheet.webp"
+},
+{
+"ar": 1.986,
+"caption": "The original Smiley (\"Smiley / System Crash\")",
+"char": "smileywires",
+"created": 1795180002000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.62,
+"y": 0.5
+},
+"drawn": "2023",
+"main": false,
+"sheet": {
+"abilities": [
+{
+"name": "0%",
+"text": ""
+}
+],
+"date": "",
+"focus_x": 0.62,
+"id": "",
+"info": [
+"Original Smiley.",
+"Commands unresponsive. 2005 ERROR.",
+"Smiley was created for a scam in 2005.",
+"Creator: Rune Blomqvist (Swedish). Status: dead. Body found in 2017."
+],
+"name": "Smiley / System Crash",
+"unclear": []
+},
+"updated": 1795180100000,
+"id": "a-smileywires-original",
+"src": "drawings/smileywires-original.webp",
+"thumb": "drawings/thumb/smileywires-original.webp"
+},
+{
+"ar": 1.85,
+"caption": "Smiley.wires, character sheet (ID 0067)",
+"char": "smileywires",
+"created": 1795180001000,
+"crop": {
+"bg": "#ffffff",
+"x": 0.45,
+"y": 0.5
+},
+"drawn": "August 20, 2024",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "0%",
+"text": ""
+},
+{
+"name": "Power Outage",
+"text": ""
+}
+],
+"date": "August 20, 2024",
+"focus_x": 0.45,
+"id": "0067",
+"info": [
+"Made (born): August 20th, 2024.",
+"Creator: REDACTED.",
+"Written on the body: Fatal Error, System Unresponsive, System Wipe."
+],
+"name": "Smiley.wires",
+"unclear": []
+},
+"updated": 1795180300000,
+"id": "a-smileywires-sheet",
+"src": "drawings/smileywires-sheet.webp",
+"thumb": "drawings/thumb/smileywires-sheet.webp"
+},
+{
+"ar": 1.779,
+"caption": "Sna, older version (named \"Snake\", old ID 5521)",
+"char": "sna",
+"created": 1795210005000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.398,
+"y": 0.562
+},
+"drawn": "Jan 21, 2025",
+"main": false,
+"sheet": {
+"abilities": [
+{
+"name": "Snake Symbiote",
+"text": ""
+}
+],
+"date": "Jan 21, 2025",
+"focus_x": 0.398,
+"id": "5521",
+"info": [
+"Original name: Snake. Old ID: 5521."
+],
+"name": "Snake",
+"unclear": []
+},
+"updated": 1795210005000,
+"id": "a-sna-2025",
+"src": "drawings/sna-2025.webp",
+"thumb": "drawings/thumb/sna-2025.webp"
+},
+{
+"ar": 1.779,
+"caption": "Sna, character sheet (ID 0004)",
+"char": "sna",
+"created": 1795210004000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.279,
+"y": 0.577
+},
+"drawn": "Sep 30, 2026",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Snake Symbiote",
+"text": ""
+}
+],
+"date": "Sep 30, 2026",
+"focus_x": 0.279,
+"id": "0004",
+"info": [],
+"name": "Sna",
+"unclear": []
+},
+"updated": 1795210004000,
+"id": "a-sna-sheet",
+"src": "drawings/sna-sheet.webp",
+"thumb": "drawings/thumb/sna-sheet.webp"
+},
+{
+"ar": 1.986,
+"caption": "Snavo, first sketch",
+"char": "snavo",
+"created": 1795210003000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.525,
+"y": 0.487
+},
+"drawn": "Nov 30, 2022",
+"main": false,
+"updated": 1795210003000,
+"id": "a-snavo-2022",
+"src": "drawings/snavo-2022.webp",
+"thumb": "drawings/thumb/snavo-2022.webp"
+},
+{
+"ar": 1.85,
+"caption": "Snavo, version with claw arms",
+"char": "snavo",
+"created": 1795210002000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.477,
+"y": 0.531
+},
+"drawn": "2024",
+"main": false,
+"updated": 1795220001000,
+"id": "a-snavo-claws",
+"src": "drawings/snavo-claws.webp",
+"thumb": "drawings/thumb/snavo-claws.webp"
+},
+{
+"ar": 1.779,
+"caption": "Snavo, character sheet (ID 0003)",
+"char": "snavo",
+"created": 1795210001000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.402,
+"y": 0.537
+},
+"drawn": "Sep 30, 2026",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Devilish Snakes",
+"text": "Cursed with demonic snakes. He controls the snakes however he pleases, with the drawback: the snakes control him when he's unconscious. He can control the length of the snakes and can shoot them out easily; they can bite through steel and bone. If a snake is killed it will regenerate quickly, but leaves a blob of dead skin behind. When touched, it bonds onto another person, making them a host."
+}
+],
+"date": "Sep 30, 2026",
+"focus_x": 0.402,
+"id": "0003",
+"info": [
+"First entity, technically."
+],
+"name": "Snavo",
+"unclear": []
+},
+"updated": 1795210001000,
+"id": "a-snavo-sheet",
+"src": "drawings/snavo-sheet.webp",
+"thumb": "drawings/thumb/snavo-sheet.webp"
+},
+{
+"ar": 1.857,
+"caption": "Corridor Stalker, character sheet (ID 0058)",
+"char": "stalker",
+"created": 1795180013000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.253,
+"y": 0.484
+},
+"drawn": "March 25, 2026",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Neverland",
+"text": "When touched by the entity you get transported to an empty maze with yellow, uncanny vibe and a buzzing sound. This space is in the domain, 10 km in each direction, which increases based on how big the domain is cast (10 m = 10 km). Your goal is to find an exit and avoid 5538. If he sees you, he starts chasing till you're caught. Caught = death. But if you find the exit you get transported to the final showdown, where he sees you always and chases you till you get to the exit. The run is at minimum 10 km, same as before (10 m = 10 km). Every minute here is 0.1 seconds in real life; this counts in the entire domain."
+}
+],
+"date": "March 25, 2026",
+"focus_x": 0.253,
+"id": "0058",
+"info": [
+"Height: 7.3 ft tall.",
+"His neck can extend, but not far.",
+"He can also let out noises that sound like someone dying, but can instantly mute itself.",
+"Faces drawn: in icy zones, when in dark zones, and the chasing face.",
+"Zones in the main level: Red Rooms (if you stand in it, he hears it, gets aggressive and chases to you), Dark Zones (he gets night vision and can see you, gets pupils; causes illusions), Icy Zones (slows you down but also slows him down; can cause frost bites)."
+],
+"name": "Corridor Stalker",
+"unclear": []
+},
+"updated": 1795180013000,
+"id": "a-stalker-sheet",
+"src": "drawings/stalker-sheet.webp",
+"thumb": "drawings/thumb/stalker-sheet.webp"
+},
+{
+"ar": 1.781,
+"caption": "Stitchheart, dark red version",
+"char": "stitchheart",
+"created": 1795140002000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.531,
+"y": 0.464,
+"zoom": 1.6
+},
+"drawn": "March 18, 2025",
+"main": false,
+"updated": 1795140002000,
+"id": "a-stitchheart-2025",
+"src": "drawings/stitchheart-2025.webp",
+"thumb": "drawings/thumb/stitchheart-2025.webp"
+},
+{
+"ar": 1.781,
+"caption": "Stitchheart (ID 0087)",
+"char": "stitchheart",
+"created": 1795140001000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.517,
+"y": 0.596
+},
+"drawn": "2025",
+"main": true,
+"sheet": {
+"abilities": [],
+"date": "",
+"focus_x": 0.517,
+"id": "0087",
+"info": [],
+"name": "",
+"unclear": []
+},
+"updated": 1795150000000,
+"id": "a-stitchheart-sheet",
+"src": "drawings/stitchheart-sheet.webp",
+"thumb": "drawings/thumb/stitchheart-sheet.webp"
+},
+{
+"ar": 1.85,
+"caption": "Stitchheart, black and white sketch with the heart tail",
+"char": "stitchheart",
+"created": 1795140003000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.524,
+"y": 0.488
+},
+"drawn": "2025",
+"main": false,
+"updated": 1795150000000,
+"id": "a-stitchheart-sketch",
+"src": "drawings/stitchheart-sketch.webp",
+"thumb": "drawings/thumb/stitchheart-sketch.webp"
+},
+{
+"ar": 1.85,
+"caption": "Sunburst, character sheet (ID 0064, old ID 5513)",
+"char": "sunburst",
+"created": 1795180008000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.48,
+"y": 0.522
+},
+"drawn": "Dec 17, 2026",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Flaming Core",
+"text": "It can create burning shock waves and set its arms ablaze, plus claws. Though it can fight long distance, it prefers close ranged combat."
+}
+],
+"date": "Dec 17, 2026",
+"focus_x": 0.48,
+"id": "0064",
+"info": [
+"It wears the suit to contain his flames. They would be 60% stronger without the suit.",
+"Old ID: 5513. The suit is drawn on the left."
+],
+"name": "Sunburst",
+"unclear": []
+},
+"updated": 1795180200000,
+"id": "a-sunburst-sheet",
+"src": "drawings/sunburst-sheet.webp",
+"thumb": "drawings/thumb/sunburst-sheet.webp"
+},
+{
+"ar": 1.779,
+"caption": "Sunburst, early sketch",
+"char": "sunburst",
+"created": 1795180009000,
+"crop": {
+"bg": "#faf6f2",
+"x": 0.27,
+"y": 0.45
+},
+"drawn": "2022",
+"main": false,
+"updated": 1795180200000,
+"id": "a-sunburst-sketch",
+"src": "drawings/sunburst-sketch.webp",
+"thumb": "drawings/thumb/sunburst-sketch.webp"
+},
+{
+"ar": 1.779,
+"caption": "Sunshine (ID 0033)",
+"char": "sunshine",
+"created": 1795190019000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.641,
+"y": 0.462
+},
+"drawn": "Feb 18, 2026",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Killer Sunrise",
+"text": ""
+}
+],
+"date": "Feb 18, 2026",
+"focus_x": 0.641,
+"id": "0033",
+"info": [
+"Moved to the new universe."
+],
+"name": "Sunshine",
+"unclear": []
+},
+"updated": 1795190100000,
+"id": "a-sunshine-sheet",
+"src": "drawings/sunshine-sheet.webp",
+"thumb": "drawings/thumb/sunshine-sheet.webp"
+},
+{
+"ar": 1.965,
+"caption": "Tearwing, older version (with the face without the mask)",
+"char": "tearwing",
+"created": 1795160002000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.501,
+"y": 0.595
+},
+"drawn": "March 7, 2024",
+"main": false,
+"sheet": {
+"abilities": [],
+"date": "March 7, 2024",
+"focus_x": 0.501,
+"id": "",
+"info": [
+"Top right: the face without the mask."
+],
+"name": "",
+"unclear": []
+},
+"updated": 1795160002000,
+"id": "a-tearwing-2024",
+"src": "drawings/tearwing-2024.webp",
+"thumb": "drawings/thumb/tearwing-2024.webp"
+},
+{
+"ar": 1.85,
+"caption": "Tearwing (ID 0086)",
+"char": "tearwing",
+"created": 1795160001000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.465,
+"y": 0.569
+},
+"drawn": "March 12, 2025",
+"main": true,
+"sheet": {
+"abilities": [],
+"date": "March 12, 2025",
+"focus_x": 0.465,
+"id": "0086",
+"info": [
+"Original name: Weeping Angel (written on the drawing). It was renamed to Tearwing because there was already a Weeping Angel (0046).",
+"Note on the drawing (in Dutch): \"Kleur was per ongeluk weggehaald. Had dit nog opgeslagen. Do Not Edit\" = The colour was removed by accident. I still had this saved. Do not edit."
+],
+"name": "",
+"unclear": []
+},
+"updated": 1795160100000,
+"id": "a-tearwing-sheet",
+"src": "drawings/tearwing-sheet.webp",
+"thumb": "drawings/thumb/tearwing-sheet.webp"
+},
+{
+"ar": 1.85,
+"caption": "Thorn (ID 0051)",
+"char": "thorn",
+"created": 1795190002000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.753,
+"y": 0.517
+},
+"drawn": "Dec 30, 2025",
+"main": true,
+"sheet": {
+"abilities": [],
+"date": "Dec 30, 2025",
+"focus_x": 0.753,
+"id": "0051",
+"info": [
+"Name and ability lines are still empty."
+],
+"name": "",
+"unclear": []
+},
+"updated": 1795190002000,
+"id": "a-thorn-sheet",
+"src": "drawings/thorn-sheet.webp",
+"thumb": "drawings/thumb/thorn-sheet.webp"
+},
+{
+"ar": 1.986,
+"caption": "Thorn, early sketch (name and ability empty)",
+"char": "thorn",
+"created": 1795190003000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.5,
+"y": 0.45
+},
+"drawn": "2023",
+"main": false,
+"updated": 1795190100000,
+"id": "a-thorn-sketch",
+"src": "drawings/thorn-sketch.webp",
+"thumb": "drawings/thumb/thorn-sketch.webp"
+},
+{
+"ar": 1.85,
+"caption": "Triggerfinger, dark red version",
+"char": "triggerfinger",
+"created": 1795170004000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.55,
+"y": 0.541
+},
+"drawn": "April 9, 2025",
+"main": false,
+"updated": 1795170004000,
+"id": "a-triggerfinger-red",
+"src": "drawings/triggerfinger-red.webp",
+"thumb": "drawings/thumb/triggerfinger-red.webp"
+},
+{
+"ar": 1.85,
+"caption": "Triggerfinger, with the crow (ID 0081)",
+"char": "triggerfinger",
+"created": 1795170003000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.5,
+"y": 0.48
+},
+"drawn": "April 9, 2025",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Beacon of the Lost Soul",
+"text": ""
+},
+{
+"name": "Land Mine Eruption",
+"text": ""
+},
+{
+"name": "Speed Dash",
+"text": ""
+}
+],
+"date": "April 9, 2025",
+"focus_x": 0.5,
+"id": "0081",
+"info": [],
+"name": "Triggerfinger",
+"unclear": []
+},
+"updated": 1795170003000,
+"id": "a-triggerfinger-sheet",
+"src": "drawings/triggerfinger-sheet.webp",
+"thumb": "drawings/thumb/triggerfinger-sheet.webp"
+},
+{
+"ar": 1.781,
+"caption": "Umbra, older version with the yellow eye",
+"char": "proto_0065",
+"created": 1795180007000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.541,
+"y": 0.5
+},
+"drawn": "Dec 17, 2024",
+"main": false,
+"updated": 1795180007000,
+"id": "a-umbra-2024",
+"src": "drawings/umbra-2024.webp",
+"thumb": "drawings/thumb/umbra-2024.webp"
+},
+{
+"ar": 1.857,
+"caption": "Umbra (ID 0065, old ID 5558)",
+"char": "proto_0065",
+"created": 1795180006000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.692,
+"y": 0.507
+},
+"drawn": "Sep 19, 2026",
+"main": true,
+"sheet": {
+"abilities": [],
+"date": "Sep 19, 2026",
+"focus_x": 0.692,
+"id": "0065",
+"info": [
+"Old ID: 5558."
+],
+"name": "",
+"unclear": [
+"The date is cut off at the edge (Sep 19th, 2026?)."
+]
+},
+"updated": 1795180006000,
+"id": "a-umbra-sheet",
+"src": "drawings/umbra-sheet.webp",
+"thumb": "drawings/thumb/umbra-sheet.webp"
+},
+{
+"ar": 1.781,
+"caption": "Uquna, character sheet (ID 0090)",
+"char": "uquna",
+"created": 1795140008000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.346,
+"y": 0.501
+},
+"drawn": "Nov 24, 2025",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Monochrome Hell",
+"text": ""
+}
+],
+"date": "Nov 24, 2025",
+"focus_x": 0.346,
+"id": "0090",
+"info": [
+"Containment Level: Extreme.",
+"It is sort of an alien-ish creature that is contained 70 meters underground, only able to be seen when someone goes down the elevator willingly.",
+"It needs daily feeding, usually 3-5 dead cows. Even with this it attacks the walls 24/7, hoping to get out.",
+"Its cell is made of thick metal, very thick metal. Even with that, there are huge dents in the walls and a black liquid everywhere.",
+"Most of its skin is fur.",
+"The guts hanging out of its stomach are real, and used as a capture weapon."
+],
+"name": "Uquna",
+"unclear": []
+},
+"updated": 1795150200000,
+"id": "a-uquna-sheet",
+"src": "drawings/uquna-sheet.webp",
+"thumb": "drawings/thumb/uquna-sheet.webp"
+},
+{
+"ar": 1.986,
+"caption": "\"Ugomo\", first version",
+"char": "uquna",
+"created": 1795140010000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.464,
+"y": 0.397
+},
+"drawn": "July 7, 2023",
+"main": false,
+"sheet": {
+"abilities": [
+{
+"name": "Guts and Glory",
+"text": ""
+}
+],
+"date": "7 July 2023",
+"focus_x": 0.464,
+"id": "",
+"info": [
+"Drawn next to it: the ability in use.",
+"The name Ugomo is inspired by Yugo Kanno.",
+"Inspiration: Half-Life zombies, Overdrive, a sonic.exe thing."
+],
+"name": "Ugomo",
+"unclear": [
+"The date looks like \"7 July 2023\" (it could be \"7 Jan 2023\")."
+]
+},
+"updated": 1795140010000,
+"id": "a-uquna-ugomo-2023",
+"src": "drawings/uquna-ugomo-2023.webp",
+"thumb": "drawings/thumb/uquna-ugomo-2023.webp"
+},
+{
+"ar": 1.986,
+"caption": "\"Ugoonu\", early version",
+"char": "uquna",
+"created": 1795140009000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.515,
+"y": 0.451
+},
+"drawn": "July 19, 2023",
+"main": false,
+"sheet": {
+"abilities": [
+{
+"name": "Guts and Glory",
+"text": ""
+}
+],
+"date": "19/7 2023",
+"focus_x": 0.515,
+"id": "",
+"info": [
+"Drawn next to it: the entity using the ability Guts and Glory.",
+"Inspiration: Half-Life zombie, Overdrive."
+],
+"name": "Ugoonu",
+"unclear": [
+"The date looks like \"19/7 2023\"."
+]
+},
+"updated": 1795140009000,
+"id": "a-uquna-ugoonu-2023",
+"src": "drawings/uquna-ugoonu-2023.webp",
+"thumb": "drawings/thumb/uquna-ugoonu-2023.webp"
+},
+{
+"ar": 1.85,
+"caption": "Voltage 77, character sheet (Oct 22, 2025)",
+"char": "voltage77",
+"created": 1795100008000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.234,
+"y": 0.585
+},
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Adrenaline Spike",
+"text": "When hit with something, adrenaline immediately kicks in, increasing speed and damage massively."
+},
+{
+"name": "Sound Spikes",
+"text": "It can launch huge shock waves from its body, and can increase its power by using an (easily replaceable) spike. It can also use the spikes as melee weapons."
+}
+],
+"date": "Oct 22, 2025",
+"focus_x": 0.21,
+"id": "0073",
+"info": [],
+"name": "",
+"unclear": []
+},
+"updated": 1795120000000,
+"id": "a-voltage77-sheet",
+"src": "drawings/voltage77-sheet.webp",
+"thumb": "drawings/thumb/voltage77-sheet.webp"
+},
+{
+"ar": 1.986,
+"caption": "Walker sketch with the tailor's own axe",
+"char": "walker",
+"created": 1795180005000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.493,
+"y": 0.427
+},
+"drawn": "2024",
+"main": false,
+"sheet": {
+"abilities": [],
+"date": "",
+"focus_x": 0.493,
+"id": "",
+"info": [
+"Holds the tailor's own axe."
+],
+"name": "",
+"unclear": []
+},
+"updated": 1795180200000,
+"id": "a-walker-axe",
+"src": "drawings/walker-axe.webp",
+"thumb": "drawings/thumb/walker-axe.webp"
+},
+{
+"ar": 1.85,
+"caption": "Walker (ID 0068)",
+"char": "walker",
+"created": 1795180003000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.735,
+"y": 0.524
+},
+"drawn": "2026",
+"main": true,
+"sheet": {
+"abilities": [],
+"date": "",
+"focus_x": 0.735,
+"id": "0068",
+"info": [
+"Ability: ??? (not decided yet). Date: ???"
+],
+"name": "Walker",
+"unclear": []
+},
+"updated": 1795180200000,
+"id": "a-walker-sheet",
+"src": "drawings/walker-sheet.webp",
+"thumb": "drawings/thumb/walker-sheet.webp"
+},
+{
+"ar": 1.986,
+"caption": "Walker sketch (red eye)",
+"char": "walker",
+"created": 1795180004000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.535,
+"y": 0.395
+},
+"drawn": "2023",
+"main": false,
+"updated": 1795180200000,
+"id": "a-walker-sketch",
+"src": "drawings/walker-sketch.webp",
+"thumb": "drawings/thumb/walker-sketch.webp"
+},
+{
+"ar": 1.85,
+"caption": "The Watcher (Oct 9, 2023)",
+"char": "watcher",
+"created": 1795100003000,
+"crop": {
+"bg": "#606369",
+"x": 0.538,
+"y": 0.552
+},
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Screech",
+"text": ""
+}
+],
+"date": "Oct 9, 2023",
+"focus_x": 0.54,
+"id": "0043",
+"info": [],
+"name": "",
+"unclear": []
+},
+"updated": 1795120000000,
+"id": "a-watcher-sheet",
+"src": "drawings/watcher-sheet.webp",
+"thumb": "drawings/thumb/watcher-sheet.webp"
+},
+{
+"ar": 1.779,
+"caption": "Weeping Angel, early sketch (\"Black out / Hallowed\")",
+"char": "weepingangel",
+"created": 1795190101000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.561,
+"y": 0.544
+},
+"drawn": "2023",
+"main": false,
+"sheet": {
+"abilities": [],
+"date": "",
+"focus_x": 0.561,
+"id": "",
+"info": [
+"Written on it: \"Black out\" and \"Hallowed\"."
+],
+"name": "",
+"unclear": []
+},
+"updated": 1795190200000,
+"id": "a-weepingangel-hallowed",
+"src": "drawings/weepingangel-hallowed.webp",
+"thumb": "drawings/thumb/weepingangel-hallowed.webp"
+},
+{
+"ar": 1.85,
+"caption": "Weeping Angel (ID 0046)",
+"char": "weepingangel",
+"created": 1795190006000,
+"crop": {
+"bg": "#606369",
+"x": 0.519,
+"y": 0.548
+},
+"drawn": "March 17, 2025",
+"main": true,
+"sheet": {
+"abilities": [],
+"date": "March 17, 2025",
+"focus_x": 0.519,
+"id": "0046",
+"info": [],
+"name": "Weeping Angel",
+"unclear": []
+},
+"updated": 1795190006000,
+"id": "a-weepingangel-sheet",
+"src": "drawings/weepingangel-sheet.webp",
+"thumb": "drawings/thumb/weepingangel-sheet.webp"
+},
+{
+"ar": 1.857,
+"caption": "Spiral (Sep 27, 2026)",
+"char": "whorl",
+"created": 1795100006000,
+"crop": {
+"bg": "#660200",
+"x": 0.733,
+"y": 0.469
+},
+"main": true,
+"sheet": {
+"abilities": [],
+"date": "Sep 27, 2026",
+"focus_x": 0.75,
+"id": "0037",
+"info": [],
+"name": "",
+"unclear": []
+},
+"updated": 1795120000000,
+"id": "a-whorl-sheet",
+"src": "drawings/whorl-sheet.webp",
+"thumb": "drawings/thumb/whorl-sheet.webp"
+},
+{
+"ar": 1.857,
+"caption": "Wugang (Blindspot), character sheet (ID 0016)",
+"char": "wugang",
+"created": 1795200004000,
+"crop": {
+"bg": "#fafafa",
+"x": 0.769,
+"y": 0.578
+},
+"drawn": "May 10, 2026",
+"main": true,
+"sheet": {
+"abilities": [
+{
+"name": "Observer's Burden",
+"text": "Wugang can sense everything around itself. If you look at him he knows. If they look at him long enough, their vision starts to get blurry depending on how he views them: bad = extreme blur, friendly = nothing."
+},
+{
+"name": "Fist Full of Sin",
+"text": "Every punch he does, the victim's guilt and sins come back. The more they feel, the more the punches do."
+},
+{
+"name": "Domain",
+"text": "The ultimate move. In a 100 meter radius every sense gets dulled to 0, and every sin and guilt comes in at once."
+}
+],
+"date": "May 10, 2026",
+"focus_x": 0.769,
+"id": "0016",
+"info": [
+"Age 26.",
+"A fighter who's been born blind, but to compensate he was trained by his dad to extreme limits to unlock extreme senses.",
+"The spear he carries is a relic of his bloodline: the Spear of Sinful Punishment. It is toxic and can bring back traumatic stuff and delusions. The more people it hits, the more purple it glows.",
+"Drawn: his eyes under the bandages.",
+"Moved to the new universe."
+],
+"name": "Wugang (Blindspot)",
+"unclear": []
+},
+"updated": 1795200004000,
+"id": "a-wugang-sheet",
+"src": "drawings/wugang-sheet.webp",
+"thumb": "drawings/thumb/wugang-sheet.webp"
+},
+{
+"ar": 1.857,
+"caption": "Xekna (ID 0069)",
+"char": "xekna",
+"created": 1795170018000,
+"crop": {
+"bg": "#9ba1a6",
+"x": 0.727,
+"y": 0.535
+},
+"drawn": "August 16, 2026",
+"main": true,
+"sheet": {
+"abilities": [],
+"date": "August 16, 2026",
+"focus_x": 0.727,
+"id": "0069",
+"info": [
+"The ability line on the sheet is still empty."
+],
+"name": "Xekna",
+"unclear": []
+},
+"updated": 1795170100000,
+"id": "a-xekna-sheet",
+"src": "drawings/xekna-sheet.webp",
+"thumb": "drawings/thumb/xekna-sheet.webp"
+}
+]

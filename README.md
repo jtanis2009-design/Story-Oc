@@ -15,6 +15,8 @@ Inspirations always come with links.
 1. **In the Claude app** (the published Artifact): uses your Claude account, no key needed. Your work is saved in your Claude account. Claude cannot search the web there, so links open a web search.
 2. **As a normal website** (GitHub Pages, or open `index.html` through any web server): add a Claude API key in Setup. Claude then searches the web and shows the pages it used. Your work is saved in that browser; use Export a backup.
 
+The main drawings now show on the GitHub Pages copy too: `data/art.json` is a snapshot of all your drawing records (names, dates, notes, picture centers), with the pictures in `drawings/` (small card versions in `drawings/thumb/`). In the Claude app the live records win. The snapshot is refreshed by asking Claude to export it.
+
 To turn on GitHub Pages: repository Settings > Pages > Deploy from a branch > pick the branch and `/ (root)`.
 
 ## Files
